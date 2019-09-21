@@ -3,9 +3,13 @@
 #### Issues
 
 UNASSIGNED
+
 function tep_count_unassigned_orders() in general.php
 
+~~~ sql
 select o.order_id, o.date_schedualed, o.order_total, ot.name as order_type_name, o.order_status_id, os.order_status_name, a.house_number, a.street_name, a.city, o.order_issue from orders o, order_types ot, orders_statuses os, addresses a, users u where  o.order_type_id = ot.order_type_id and o.user_id = u.user_id and o.order_status_id = os.order_status_id and o.order_status_id > 0 and o.order_status_id != '3' and o.order_status_id != '4' and o.address_id = a.address_id
+~~~
+
 
 Selects orders, where orders.order_status_id > 0 and != 3 and !=4
 There is no 'count' in SQL-query. After executing SQL, counts number of result row inside of a function.
