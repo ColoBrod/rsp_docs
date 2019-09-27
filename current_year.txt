@@ -1,0 +1,186 @@
+variable $today is incorrect, I suppose. It stores timestamp of YESTERDAY, instead of today. 
+
+When it was 27-09-19 11:28 MSK (04:28 EDT)
+it shows 26-09-2019 00:00:00
+
+
+In every SQL-query there are useless conditions like "where o.date_added > 0" and "o.order_status_id != '4' ".
+
+
+Today (placed): 
+
+  $count_install_today, $value_install_today:
+
+    Counts all orders from the beginning of current day.
+    where order_status_id != '4' order_type_id ='1'
+    Sums the column 'order_total'
+
+    select count(o.order_id) as count, sum(order_total) as value from orders o, addresses a , order_types ot, orders_statuses os, users u where o.order_type_id = ot.order_type_id and o.user_id = u.user_id and o.order_status_id = os.order_status_id and o.order_status_id != '4' and o.address_id = a.address_id and o.order_type_id = '1' and o.date_added > 0 and o.date_added >= '1569470400'
+
+  $countCC, $valueCC
+
+    Counts all orders from the beginning of current day.
+    where order_status_id != '4' and order_type_id = '1' and billing_method_id = '1'
+    Sums the column 'order_total'
+
+    select count(o.order_id) as count, sum(order_total) as value from orders o, addresses a , order_types ot, orders_statuses os, users u where o.order_type_id = ot.order_type_id and o.user_id = u.user_id and o.order_status_id = os.order_status_id and o.order_status_id != '4' and o.address_id = a.address_id and o.order_type_id = '1' and o.billing_method_id = '1' and o.date_added > 0 and o.date_added >= '1569470400'
+
+  # of Installs
+  ['today']['number_of_installs']                                       => $count_install_today
+  $ value of orders placed today
+  ['today']['value_of_orders_placed']                                   => number_format($value_install_today,2)
+  $ value / # of installs
+  ['today']['value_number_of_installs']                                 => ($count_install_today>0 ? number_format(($value_install_today/$count_install_today),2) : "0.00")
+  $ of CC Orders
+  ['today']['amount_of_cc_orders']                                      => number_format($valueCC,2)
+  $ of Invoice Orders
+  ['today']['value_of_invoice_orders']                                  => number_format($valueIO,2)
+
+Month (placed): 
+
+  $count_install_month, $value_install_month
+
+    Counts orders, where date_added (table 'orders') starts from the beginning of month (e.g. 01-09-2019 00:00:00) and until the beginning of tomorrow (e.g. 27:09:19 00:00:00). 
+    Where order_status_id != '4' and order_type_id = '1'
+    Sums the column 'order_total'
+
+    select count(o.order_id) as count, sum(order_total) as value from orders o, addresses a , order_types ot, orders_statuses os, users u where o.order_type_id = ot.order_type_id and o.user_id = u.user_id and o.order_status_id != '4' and o.order_status_id = os.order_status_id and o.address_id = a.address_id and o.order_type_id = '1' and o.date_added > 0 and o.date_added >= '1567310400' and o.date_added < '1569556800'
+
+  # of Installs
+  ['month']['placed']['number_of_installs']                             => $count_install_month
+  $ value of orders placed this month
+  ['month']['placed']['value_of_orders_placed']                         => number_format($value_install_month,2)
+  $ value / # of installs
+  ['month']['placed']['value_number_of_installs']                       => ($count_install_month>0 ? number_format(($value_install_month/$count_install_month),2) : "0.00")
+
+Month (completed): 
+
+  $this_month_complete_count, $this_month_complete_value:
+
+    Counts all orders between the month first date (e.g. 01-09-19 00:00:00) and the beginning of tomorrow (e.g. 27-09-19 00:00:00). Where order_type_id = '1' and order_status_id = '3'
+    Sums the column 'order_total'
+
+    select count(o.order_id) as count, sum(order_total) as value from orders o, addresses a , order_types ot, orders_statuses os, users u where o.order_type_id = ot.order_type_id and o.user_id = u.user_id and o.order_status_id = os.order_status_id and o.address_id = a.address_id and o.order_type_id = '1' and o.order_status_id = '3' and o.date_completed > 0 and o.date_completed >= '1567310400' and o.date_completed < '1569556800'
+
+  $countCC_month
+
+    Following SQLs are pretty much the same as the one above but for CC (Credit Cards)
+    sum(order_total) in SQL statement is not used!
+
+    select count(o.order_id) as count, sum(order_total) as value from orders o, addresses a , order_types ot, orders_statuses os, users u where o.order_type_id = ot.order_type_id and o.user_id = u.user_id and o.order_status_id = os.order_status_id and o.order_status_id != '4' and o.order_status_id = '3' and o.address_id = a.address_id and o.order_type_id = '1' and o.billing_method_id = '1' and o.date_added > 0 and o.date_added >= '1567310400' and o.date_added < '1569556800'
+    
+  $countIO_month
+
+    Following SQLs are pretty much the same as the one above but for IO (Invoice Orders)
+    sum(order_total) in SQL statement is not used!
+
+    select count(o.order_id) as count, sum(order_total) as value from orders o, addresses a , order_types ot, orders_statuses os, users u where o.order_type_id = ot.order_type_id and o.user_id = u.user_id and o.order_status_id = os.order_status_id and o.order_status_id != '4' and o.order_status_id = '3' and o.address_id = a.address_id and o.order_type_id = '1' and o.billing_method_id IN (2,3) and o.date_added > 0 and o.date_added >= '1567310400' and o.date_added < '1569556800'
+
+  $count_all_stuff = $countIO_month+$countCC_month;
+  $countCC_percentage_month = $count_all_stuff
+      ? ($countCC_month * 100) / $count_all_stuff
+      : 0;
+  ($countIO_month==0) ? $countIO_percentage_month = 0 : $countIO_percentage_month = 100-$countCC_percentage_month;
+
+  # of Installs
+  ['month']['completed']['number_of_installs']                          => $this_month_complete_count
+  $ value of orders completed this month
+  ['month']['completed']['value_of_orders_placed']                      => number_format($this_month_complete_value,2)
+  $ value / # of installs
+  ['month']['completed']['value_number_of_installs']                    => ($this_month_complete_count>0 ? number_format(($this_month_complete_value/$this_month_complete_count),2) : "0.00")
+  $ of CC Orders
+  ['month']['completed']['amount_of_cc_orders']                         => number_format($countCC_percentage_month,2)
+  $ of Invoice Orders
+  ['month']['completed']['value_of_invoice_orders']                     => number_format($countIO_percentage_month,2)
+
+YTD (completed): 
+
+  I think we don't need at all this order_status_id != '4' in SQL-query.
+  I think we don't need at all this date_completed > 0 in SQL -query
+
+  $count_install_ytd, $value_install_ytd:
+
+    Counts orders where date_completed (table 'orders') starts from the beginnig of year (e.g. 01-01-2019 00:00:00) and ends at the beginning of tomorrow (e.g. 28-09-2019 00:00:00). Where order_status_id IS NOT '4' and order_status_id IS '3' and order_type_id IS '1'.
+    Sums all values in order_total column.
+
+    select count(o.order_id) as count, sum(order_total) as value from orders o, addresses a , order_types ot, orders_statuses os, users u where o.order_type_id = ot.order_type_id and o.user_id = u.user_id and o.order_status_id != '4' and o.order_status_id = '3' and o.order_status_id = os.order_status_id and o.address_id = a.address_id and o.order_type_id = '1' and o.date_completed > 0 and o.date_completed >= '1546318800' and o.date_completed < '1569556800'
+
+  $countCC_year:
+    
+    Counts all orders between year first date and the beginning of tomorrow.
+    Where order_status_id IS NOT '4' and order_status_id = '3' and order_type_id = '1' and billing_method_id = '1'
+    Sums the column 'order_total'
+
+    select count(o.order_id) as count, sum(order_total) as value from orders o, addresses a , order_types ot, orders_statuses os, users u where o.order_type_id = ot.order_type_id and o.user_id = u.user_id and o.order_status_id = os.order_status_id and o.order_status_id != '4' and o.order_status_id = '3' and o.address_id = a.address_id and o.order_type_id = '1' and o.billing_method_id = '1' and o.date_completed > 0 and o.date_completed >= '1546318800' and o.date_completed < '1569556800'
+
+  $countIO_year:
+
+    Counts all orders between year first date and the beginning of tomorrow.
+    Where order_status_id IS NOT '4'
+    order_status_id = '3'
+    order_type_id = '1'
+    billing_method_id = '2' or '3'
+
+    Sums the column 'order_total'
+
+    select count(o.order_id) as count, sum(order_total) as value from orders o, addresses a , order_types ot, orders_statuses os, users u where o.order_type_id = ot.order_type_id and o.user_id = u.user_id and o.order_status_id = os.order_status_id and o.order_status_id != '4' and o.order_status_id = '3' and o.address_id = a.address_id and o.order_type_id = '1' and o.billing_method_id IN (2,3) and o.date_completed > 0 and o.date_completed >= '1546318800' and o.date_completed < '1569556800'
+
+  $countCC_percentage_year = $count_all_stuff
+    ? ($countCC_year * 100) / $count_all_stuff
+    : 0;
+  ($countIO_year==0) ? $countIO_percentage_year = 0 : $countIO_percentage_year = 100-$countCC_percentage_year;
+
+  # of Installs
+  ['month']['ytd']['completed']['number_of_installs']                   => $count_install_ytd
+  $ value of orders completed from Jan 1
+  ['month']['ytd']['completed']['value_of_orders_placed']               => number_format($value_install_ytd,2)
+  $ value / # of installs
+  ['month']['ytd']['completed']['value_number_of_installs']             => ($count_install_ytd>0 ? number_format(($value_install_ytd/$count_install_ytd),2) : "0.00")
+  % of CC Orders
+  ['month']['ytd']['completed']['amount_of_cc_orders']                  => number_format ($countCC_percentage_year,2)
+  % of Invoice Orders
+  ['month']['ytd']['completed']['value_of_invoice_orders']              => number_format ($countIO_percentage_year,2)
+
+Previous Month (completed): 
+
+  IMPORTANT!!!
+  I think there is also a mistake. The previous month in SQL-queries is actually Current month. "01-09-19 00:00:00"
+  Ant the end of the previous month is the beginning of next month. "01-10-19 00:00:00"
+
+  '1567310400' named as $previous_month_start
+  '1569902400' named as $previous_month_end
+
+  $previous_month_count, $previous_month_value:
+
+    Following SQL-query counts all orders between the beginning of current month and the beginning of the next month. 
+    Where order_type_id = '1' and order_status_id = '3'
+    Sums column 'order_total'
+
+    select count(o.order_id) as count, sum(order_total) as value from orders o, addresses a , order_types ot, orders_statuses os, users u where o.order_type_id = ot.order_type_id and o.user_id = u.user_id and o.order_status_id = os.order_status_id and o.address_id = a.address_id and o.order_type_id = '1' and o.order_status_id = '3' and o.date_completed > 0 and o.date_completed >= '1567310400' and o.date_completed < '1569902400'
+
+  $countCC_prev_month:
+
+    Following SQL-query counts all orders between the beginning of current month and the beginning of the next month. 
+    Where  order_type_id = '1' and order_status_id != '4' and order_status_id = '3' and billing_method_id = '1'
+    Sums column 'order_total'
+
+    select count(o.order_id) as count, sum(order_total) as value from orders o, addresses a , order_types ot, orders_statuses os, users u where o.order_type_id = ot.order_type_id and o.user_id = u.user_id and o.order_status_id = os.order_status_id and o.order_status_id != '4' and o.order_status_id = '3' and o.address_id = a.address_id and o.order_type_id = '1' and o.billing_method_id = '1' and o.date_completed > 0 and o.date_completed >= '1567310400' and o.date_completed < '1569902400'
+
+  $countIO_prev_month:
+
+    Following SQL-query counts all orders between the beginning of current month and the beginning of the next month. 
+    Where  order_type_id = '1' and order_status_id != '4' and order_status_id = '3' and billing_method_id = IN (2,3)
+    Sums column 'order_total'
+
+    select count(o.order_id) as count, sum(order_total) as value from orders o, addresses a , order_types ot, orders_statuses os, users u where o.order_type_id = ot.order_type_id and o.user_id = u.user_id and o.order_status_id = os.order_status_id and o.order_status_id != '4' and o.order_status_id = '3' and o.address_id = a.address_id and o.order_type_id = '1' and o.billing_method_id IN (2,3) and o.date_completed > 0 and o.date_completed >= '1567310400' and o.date_completed < '1569902400'
+
+  # of Installs
+  ['month']['previous_month']['completed']['number_of_installs']        => $previous_month_count
+  $ value of orders completed previous month
+  ['month']['previous_month']['completed']['value_of_orders_placed']    => number_format($previous_month_value,2)
+  $ value / # of installs
+  ['month']['previous_month']['completed']['value_number_of_installs']  => ($previous_month_count>0 ? number_format(($previous_month_value/$previous_month_count),2) : "0.00")
+  $ of CC Orders
+  ['month']['previous_month']['completed']['amount_of_cc_orders']       => number_format($countCC_percentage_prev_month,2)
+  $ of Invoice Orders
+  ['month']['previous_month']['completed']['value_of_invoice_orders']   => number_format($countIO_percentage_prev_month,2)
