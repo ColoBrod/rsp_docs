@@ -381,17 +381,101 @@ $countIO, $valueIO
 ['today']['value_of_invoice_orders'] => number_format($valueIO,2)
 ~~~
 
-### Month (placed):	
+### Month (placed):
+
+Counts orders from the beginning of month (e.g. 01-09-2019 00:00:00) and until the beginning of tomorrow (e.g. 27:09:19 00:00:00).
+
 __# of Installs:__
 __$ value of orders placed this month:__
+
+Both are received from 1 SQL-statement.
+Counts orders where order_status_id IS NOT '4' ('Cancelled') AND order_type_id = '1' _(Thats the Count of orders)_
+Sums the column 'order_total' _(Thats the Value of orders)_
+
+_SQL example:_
+~~~sql
+select count(o.order_id) as count, sum(order_total) as value from orders o, addresses a , order_types ot, orders_statuses os, users u where o.order_type_id = ot.order_type_id and o.user_id = u.user_id and o.order_status_id != '4' and o.order_status_id = os.order_status_id and o.address_id = a.address_id and o.order_type_id = '1' and o.date_added > 0 and o.date_added >= '1567310400' and o.date_added < '1569556800'
+~~~
+
+_Variables:_
+~~~php
+$count_install_month
+['month']['placed']['number_of_installs'] => $count_install_month
+$value_install_month
+['month']['placed']['value_of_orders_placed'] => number_format($value_install_month,2)
+~~~
+
 __$ value / # of installs:__
 
-### Month (completed):	
+Simply divides "Value of installs" / "Count of installs"
+
+_Variables:_
+~~~php
+['month']['placed']['value_number_of_installs'] => ($count_install_month>0 ? number_format(($value_install_month/$count_install_month),2) : "0.00")
+~~~
+
+### Month (completed):
+
+Counts orders between the month first date (e.g. 01-09-19 00:00:00) and the beginning of tomorrow (e.g. 27-09-19 00:00:00). 
+
 __# of Installs:__
 __$ value of orders completed this month:__
+
+Both values are received from 1 SQL-statement.
+
+Where order_type_id = '1' and order_status_id = '3'
+Sums the column 'order_total'
+
+_SQL example:_
+~~~sql
+select count(o.order_id) as count, sum(order_total) as value from orders o, addresses a , order_types ot, orders_statuses os, users u where o.order_type_id = ot.order_type_id and o.user_id = u.user_id and o.order_status_id = os.order_status_id and o.address_id = a.address_id and o.order_type_id = '1' and o.order_status_id = '3' and o.date_completed > 0 and o.date_completed >= '1567310400' and o.date_completed < '1569556800'
+~~~
+
+_Variables:_
+~~~php
+$this_month_complete_count, $this_month_complete_value
+['month']['completed']['number_of_installs'] => $this_month_complete_count
+['month']['completed']['value_of_orders_placed'] => number_format($this_month_complete_value,2)
+~~~
+
 __$ value / # of installs:__
+
+_Variables:_
+~~~php
+['month']['completed']['value_number_of_installs'] => ($this_month_complete_count>0 ? number_format(($this_month_complete_value/$this_month_complete_count),2) : "0.00")
+~~~
+
 __% of CC Orders:__
+
+Following SQLs are pretty much the same as the one above but for CC (Credit Cards)
+[sum(order_total) in SQL statement is not used!](). So, I think we can remove it from SQL query.
+
+_SQL example:_
+~~~sql
+select count(o.order_id) as count, sum(order_total) as value from orders o, addresses a , order_types ot, orders_statuses os, users u where o.order_type_id = ot.order_type_id and o.user_id = u.user_id and o.order_status_id = os.order_status_id and o.order_status_id != '4' and o.order_status_id = '3' and o.address_id = a.address_id and o.order_type_id = '1' and o.billing_method_id = '1' and o.date_added > 0 and o.date_added >= '1567310400' and o.date_added < '1569556800'
+~~~
+
+_Variables:_
+~~~php
+$count_all_stuff = $countIO_month+$countCC_month;
+$countCC_percentage_month = $count_all_stuff
+  ? ($countCC_month * 100) / $count_all_stuff
+  : 0;
+['month']['completed']['amount_of_cc_orders'] => number_format($countCC_percentage_month,2)
+~~~
+
 __% of Invoice Orders:__
+
+_SQL example:_
+~~~sql
+select count(o.order_id) as count, sum(order_total) as value from orders o, addresses a , order_types ot, orders_statuses os, users u where o.order_type_id = ot.order_type_id and o.user_id = u.user_id and o.order_status_id = os.order_status_id and o.order_status_id != '4' and o.order_status_id = '3' and o.address_id = a.address_id and o.order_type_id = '1' and o.billing_method_id IN (2,3) and o.date_added > 0 and o.date_added >= '1567310400' and o.date_added < '1569556800'
+~~~
+
+_Variables:_
+~~~php
+($countIO_month==0) ? $countIO_percentage_month = 0 : $countIO_percentage_month = 100-$countCC_percentage_month;
+['month']['completed']['value_of_invoice_orders'] => number_format($countIO_percentage_month,2)
+~~~
 
 ### YTD (completed):	
 __# of Installs:__
