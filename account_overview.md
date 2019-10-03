@@ -1,6 +1,4 @@
-### Account Overview
-
-#### Issues
+# Issues
 
 ##### UNASSIGNED
 
@@ -37,7 +35,7 @@ where order_status_id = 5 (table 'orders')
 select count(o.order_id) as count from orders o, addresses a , order_types ot, orders_statuses os, users u where o.order_type_id = ot.order_type_id and o.user_id = u.user_id and o.order_status_id = os.order_status_id and o.order_status_id = '5' and o.address_id = a.address_id
 ~~~
 
-#### Miss Unity
+# Miss Unity
 
 ##### Open:       
 
@@ -89,7 +87,7 @@ Percentage is get via this formula:
 
 some useless code, that doesn't do anything useful?! (I have to review code one more time from line 706)
 
-#### ORDERED TODAY:
+# ORDERED TODAY:
 
 ##### Installs
 
@@ -109,7 +107,7 @@ select count(o.order_id) as count from orders o, addresses a , order_types ot, o
 select count(o.order_id) as count from orders o, addresses a , order_types ot, orders_statuses os, users u where o.order_type_id = ot.order_type_id and o.user_id = u.user_id and o.order_status_id = os.order_status_id and o.address_id = a.address_id and o.order_type_id = '2' and o.date_added > 0 and o.date_added >= NOW()
 ~~~
 
-#### RESCHEDULED TODAY:
+# RESCHEDULED TODAY:
 
 ##### Removals Rescheduled
 
@@ -122,7 +120,7 @@ Instead of 1569013200 we use 'midnight' built-in - strtotime("midnight")
 ##### Pushed Back: TODO (798 - 807 in account_overview.php)
 ##### Moved Up:    TODO
 
-#### Post Total Change for Yesterday:
+# Post Total Change for Yesterday:
 
 It takes the time for Yesterday between 00:00:01 and 23:59:59
 
@@ -130,14 +128,14 @@ It takes the time for Yesterday between 00:00:01 and 23:59:59
 select count(o.order_id) as count from orders o, addresses a , order_types ot, orders_statuses os, users u where o.order_type_id = ot.order_type_id and o.user_id = u.user_id and o.order_status_id = os.order_status_id and o.order_status_id = '3' and o.address_id = a.address_id and o.date_completed >= 1568926801 and o.date_completed < 1569013199 and o.order_type_id = '1'
 ~~~
 
-#### Post Total Change for Last Week:
+# Post Total Change for Last Week:
 
 Pretty much the same as previous, but for DateStartLastWeek:
 strtotime('midnight - 6days 00:00:01')
 And for the DateEndLastWeek:
 strtotime('today 23:59:59')
 
-#### Overdue Orders: 
+# Overdue Orders: 
 
 ##### Pending:
 
@@ -155,7 +153,7 @@ This SQL-query is absolutely the same as previous one, except orders.order_statu
 select count(o.order_id) as count from orders o, addresses a , order_types ot, orders_statuses os, users u where o.order_type_id = ot.order_type_id and o.user_id = u.user_id and o.order_status_id = os.order_status_id and o.order_status_id = '2' and o.address_id = a.address_id and o.date_schedualed > 0 and o.date_schedualed < 1569045051
 ~~~
 
-#### Current Active Orders:
+# Current Active Orders:
 
 ##### Pending (before today + 2):
 
@@ -224,7 +222,7 @@ select count(o.order_id) as count from orders o, addresses a , order_types ot, o
 
 Just sums Install, Removals and Service Calls
 
-#### Completed Orders:
+# Completed Orders:
 
 In account_overview.php the order is opposite. Today is at the and Yesterday is under Today.
 
@@ -279,41 +277,167 @@ orders.date_completed from today's midnight and to this moment (now)
 >> Total:
   Just sums Installs, Removals and Service Calls
 
-#### Future Orders:
+# Future Orders:
 
 
 
 
-#### Agents to be made Inactive:
+Agents to be made Inactive:
+=============================
 
-
-#### Agencies to be made Inactive:
-
-
-#### Posts in the Field: FFX, MD, PA, Total:
-
-
-#### Total Operational Posts (Installed + Pending + Scheduled + Available):
-
-
-#### Pending/Scheduled Removals:
-
-
-#### New/Active Agencies:
-
-
-#### MONEY STATISTICS:
-
-
-#### Current Year:
+Agencies to be made Inactive:
+=============================
 
 
 
-#### Previous Year (Completed):
+Posts in the Field:
+===================
 
+__FFX:__
+__MD:__
+__PA:__
+__Total:__
 
+Total Operational Posts:
+========================
 
-#### Installer Information:
+__Installed:__
+__Pending:__
+__Scheduled:__
+__Available:__
+
+Pending/Scheduled Removals:
+===========================
+
+New/Active Agencies:
+====================
+
+MONEY STATISTICS:
+=================
+
+Current Year:
+=============
+
+### Today (placed):
+
+__Time:__
+Counts orders from the beginning of current day.
+
+__# of Installs:__
+__$ value of orders placed today:__
+
+Both are received from 1 SQL-statement.
+
+Counts orders where order_status_id IS NOT '4' (Cancelled) and order_type_id = '1' (table 'orders'), Sums the column 'order_total' as value.
+
+_SQL example:_
+~~~sql
+select count(o.order_id) as count, sum(order_total) as value from orders o, addresses a , order_types ot, orders_statuses os, users u where o.order_type_id = ot.order_type_id and o.user_id = u.user_id and o.order_status_id = os.order_status_id and o.order_status_id != '4' and o.address_id = a.address_id and o.order_type_id = '1' and o.date_added > 0 and o.date_added >= '1569470400'
+~~~
+
+_Variables:_
+~~~php
+['today']['number_of_installs'] => $count_install_today
+['today']['value_of_orders_placed'] => number_format($value_install_today,2)
+~~~
+
+__$ value / # of installs:__
+
+Divides "Value of installs" / "Number of installs".
+
+_Variables:_
+~~~php
+['today']['value_number_of_installs'] => ($count_install_today>0 ? number_format(($value_install_today/$count_install_today),2) : "0.00")
+~~~
+__% of CC Orders__
+
+Counts orders where order_status_id IS NOT '4' (Cancelled) and order_type_id = '1' and billing_method_id = '1' (table 'orders')
+Sums the column 'order_total'
+
+_SQL example:_
+~~~sql
+select count(o.order_id) as count, sum(order_total) as value from orders o, addresses a , order_types ot, orders_statuses os, users u where o.order_type_id = ot.order_type_id and o.user_id = u.user_id and o.order_status_id = os.order_status_id and o.order_status_id != '4' and o.address_id = a.address_id and o.order_type_id = '1' and o.billing_method_id = '1' and o.date_added > 0 and o.date_added >= '1569470400'
+~~~
+
+_Variables:_
+~~~php
+$countCC, $valueCC
+['today']['amount_of_cc_orders'] => number_format($valueCC,2)
+~~~
+
+__% of Invoice Orders:__
+
+Counts orders where order_status_id IS NOT '4' (Cancelled) and order_type_id = '1' and billing_method_id IS '2' OR '3'
+Sums the column 'order_total'
+
+_SQL example:_
+~~~sql
+select count(o.order_id) as count, sum(order_total) as value from orders o, addresses a , order_types ot, orders_statuses os, users u where o.order_type_id = ot.order_type_id and o.user_id = u.user_id and o.order_status_id = os.order_status_id and o.order_status_id != '4' and o.address_id = a.address_id and o.order_type_id = '1' and o.billing_method_id IN (2,3) and o.date_added > 0 and o.date_added >= '1569470400'
+~~~
+
+_Variables:_
+~~~php
+$countIO, $valueIO
+['today']['value_of_invoice_orders'] => number_format($valueIO,2)
+~~~
+
+### Month (placed):	
+__# of Installs:__
+__$ value of orders placed this month:__
+__$ value / # of installs:__
+
+### Month (completed):	
+__# of Installs:__
+__$ value of orders completed this month:__
+__$ value / # of installs:__
+__% of CC Orders:__
+__% of Invoice Orders:__
+
+### YTD (completed):	
+__# of Installs:__
+__$ value of orders completed from Jan 1:__
+__$ value / # of installs:__
+__% of CC Orders:__
+__% of Invoice Orders:__
+
+### Previous Month (completed):	
+__# of Installs:__
+__$ value of orders completed previous month:__
+__$ value / # of installs:__
+__% of CC Orders:__
+__% of Invoice Orders:__
+
+Previous Year (Completed):
+==========================
+
+### Month:	
+__# of Installs:__
+__$ value of orders placed this month:__
+__$ value / # of installs:__
+__% of CC Orders__
+__% of Invoice Orders:__
+
+### YTD:	
+__# of Installs:__
+__$ value of orders placed from Jan 1:__
+__$ value / # of installs:__
+__% of CC Orders:__
+__% of Invoice Orders:__
+
+### Full Year:	
+__# of Installs:__
+__$ value of orders placed from Jan 1:__
+__$ value / # of installs:__
+__% of CC Orders:__
+__% of Invoice Orders:__
+
+Installer Information:
+======================
+
+### Installer Name
+### Last Login
+### Overdue Pendings
+### Overdue Scheduled
 
 
 
