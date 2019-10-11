@@ -4,7 +4,26 @@
 :memo: Selects all orders, where order_status_id more than 0 (table 'orders') and order_status_id is not 3
 There is no 'count' in SQL-query. After executing SQL, counts number of result row inside of a function.
 ~~~ sql
-select o.order_id, o.date_schedualed, o.order_total, ot.name as order_type_name, o.order_status_id, os.order_status_name, a.house_number, a.street_name, a.city, o.order_issue from orders o, order_types ot, orders_statuses os, addresses a, users u where  o.order_type_id = ot.order_type_id and o.user_id = u.user_id and o.order_status_id = os.order_status_id and o.order_status_id > 0 and o.order_status_id != '3' and o.order_status_id != '4' and o.address_id = a.address_id
+SELECT
+	o.order_id,
+	o.date_schedualed,
+	o.order_total,
+	ot.name as order_type_name,
+	o.order_status_id,
+	os.order_status_name,
+	a.house_number,
+	a.street_name,
+	a.city,
+	o.order_issue
+FROM ".TABLE_ORDERS." o, ".TABLE_ORDER_TYPES." ot, ".TABLE_ORDERS_STATUSES." os, ".TABLE_ADDRESSES." a, ".TABLE_USERS." u
+WHERE
+	o.order_type_id = ot.order_type_id AND
+	o.user_id = u.user_id AND
+	o.address_id = a.address_id AND
+	o.order_status_id = os.order_status_id AND
+	o.order_status_id > 0 AND
+	o.order_status_id != '3' AND
+	o.order_status_id != '4'
 ~~~
 :exclamation: function tep_count_unassigned_orders() in general.php
 #### Issues::$redFlag
@@ -556,6 +575,6 @@ Installer Information:
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTExODM4NTMzNTEsLTc3MzAxNDAzMSwtMT
-cwNzQ1NDc5NywtMTI1MDMzMDg4Nl19
+eyJoaXN0b3J5IjpbLTIwODc3MzY2ODAsLTExODM4NTMzNTEsLT
+c3MzAxNDAzMSwtMTcwNzQ1NDc5NywtMTI1MDMzMDg4Nl19
 -->
