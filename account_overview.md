@@ -296,12 +296,19 @@ where
 
 ### CompletedOrders::$completedYesterday
 
+:memo: Includes orders with `date_completed` between 
+
 #### CompletedOrders::$completedYesterday->installs
 #### CompletedOrders::$completedYesterday->removals
 #### CompletedOrders::$completedYesterday->serviceCalls
 #### CompletedOrders::$completedYesterday->total
 
 ### CompletedOrders::$completedToday
+
+#### CompletedOrders::$completedToday->installs
+#### CompletedOrders::$completedToday->removals
+#### CompletedOrders::$completedToday->serviceCalls
+#### CompletedOrders::$completedToday->total
 
 date_completed (table 'orders') is between the begining of yesterday and the begining of today (midnights)
 
@@ -635,7 +642,7 @@ Installer Information:
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTk5NjQ2OTkxMCwtMTkyNTg1NDY3MSwxND
+eyJoaXN0b3J5IjpbLTYyNjY3MDcwMywtMTkyNTg1NDY3MSwxND
 c5NTkyNzM5LDM5NTk2MTUyOCwtMTI1MTkyNDE3OCw3NTY0NzYw
 NjUsLTE0MTQ4NDI5ODMsLTE1MDA4NzY0NzcsMTA2MTkwNDkxNy
 wtMTY4NzU4ODk0MywtMjA0MjU0MjY3LC0yMDQyNTQyNjcsLTEx
