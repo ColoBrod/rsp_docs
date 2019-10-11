@@ -292,11 +292,9 @@ where
 
 :memo: Just sums Install, Removals and Service Calls
 
-# CompletedOrders:
+# class CompletedOrders:
 
-In account_overview.php the order is opposite. Today is at the and Yesterday is under Today.
-
-CompletedYesterday:
+### CompletedOrders::$completedYesterday:
 
 date_completed (table 'orders') is between the begining of yesterday and the begining of today (midnights)
 
@@ -630,10 +628,10 @@ Installer Information:
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTY0NDUwMjUxOCwtMTkyNTg1NDY3MSwxND
-c5NTkyNzM5LDM5NTk2MTUyOCwtMTI1MTkyNDE3OCw3NTY0NzYw
-NjUsLTE0MTQ4NDI5ODMsLTE1MDA4NzY0NzcsMTA2MTkwNDkxNy
-wtMTY4NzU4ODk0MywtMjA0MjU0MjY3LC0yMDQyNTQyNjcsLTEx
-ODM4NTMzNTEsLTc3MzAxNDAzMSwtMTcwNzQ1NDc5NywtMTI1MD
-MzMDg4Nl19
+eyJoaXN0b3J5IjpbLTE4NDY1ODM1MTgsLTE5MjU4NTQ2NzEsMT
+Q3OTU5MjczOSwzOTU5NjE1MjgsLTEyNTE5MjQxNzgsNzU2NDc2
+MDY1LC0xNDE0ODQyOTgzLC0xNTAwODc2NDc3LDEwNjE5MDQ5MT
+csLTE2ODc1ODg5NDMsLTIwNDI1NDI2NywtMjA0MjU0MjY3LC0x
+MTgzODUzMzUxLC03NzMwMTQwMzEsLTE3MDc0NTQ3OTcsLTEyNT
+AzMzA4ODZdfQ==
 -->
