@@ -111,7 +111,7 @@ All these values - `OrderedToday::$installs`,  `OrderedToday::$removals`, `Order
 SELECT count(o.order_id) AS count FROM ".TABLE_ORDERS." o
 WHERE o.order_type_id = '$ordered_type_id' AND o.date_added >= '".self::$today."'
 ~~~
-The difference is only in `$order_type_id`. The SQL above counts all orders from table `orders`
+The difference is only in `$order_type_id`. The SQL above counts all orders from table `orders`, that were added since the beginning of today where `order_type_id = 1 or 2 or 3`
 
 #### OrderedToday::$installs
 :memo: `order_type_id = '1'` (table 'orders')
@@ -585,8 +585,8 @@ Installer Information:
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEzNzM1MjI2MzcsMTA2MTkwNDkxNywtMT
-Y4NzU4ODk0MywtMjA0MjU0MjY3LC0yMDQyNTQyNjcsLTExODM4
-NTMzNTEsLTc3MzAxNDAzMSwtMTcwNzQ1NDc5NywtMTI1MDMzMD
-g4Nl19
+eyJoaXN0b3J5IjpbLTgxMDg2ODAwMCwxMDYxOTA0OTE3LC0xNj
+g3NTg4OTQzLC0yMDQyNTQyNjcsLTIwNDI1NDI2NywtMTE4Mzg1
+MzM1MSwtNzczMDE0MDMxLC0xNzA3NDU0Nzk3LC0xMjUwMzMwOD
+g2XX0=
 -->
