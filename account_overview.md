@@ -7,7 +7,7 @@ function tep_count_unassigned_orders() in general.php
 select o.order_id, o.date_schedualed, o.order_total, ot.name as order_type_name, o.order_status_id, os.order_status_name, a.house_number, a.street_name, a.city, o.order_issue from orders o, order_types ot, orders_statuses os, addresses a, users u where  o.order_type_id = ot.order_type_id and o.user_id = u.user_id and o.order_status_id = os.order_status_id and o.order_status_id > 0 and o.order_status_id != '3' and o.order_status_id != '4' and o.address_id = a.address_id
 ~~~
 
-Selects all orders, where order_status_id more than 0 (table 'orders') and order_status_id is not 3 and order_status_id is not 4
+:grey_exclamation: Selects all orders, where order_status_id more than 0 (table 'orders') and order_status_id is not 3 and order_status_id is not 4
 
 There is no 'count' in SQL-query. After executing SQL, counts number of result row inside of a function.
 
@@ -557,5 +557,6 @@ Installer Information:
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEyNTAzMzA4ODZdfQ==
+eyJoaXN0b3J5IjpbLTE2MjE1NzEyNDcsLTEyNTAzMzA4ODZdfQ
+==
 -->
