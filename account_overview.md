@@ -194,10 +194,14 @@ self::$endLastWeek = strtotime('today 23:59:59');
 
 #### OverdueOrders::$pending
 
-SQL-query takes the time between the `Stats::$relevantDate` (i.e. ).
+SQL-query takes the time between the `Stats::$relevantDate` (i.e. January 1 2012) and `Stats::$datePendingOverdue` (i.e. ).
 
 ~~~ sql
-select count(o.order_id) as count from orders o, addresses a , order_types ot, orders_statuses os, users u where o.order_type_id = ot.order_type_id and o.user_id = u.user_id and o.order_status_id = os.order_status_id and o.order_status_id = '1' and o.address_id = a.address_id and o.date_schedualed > 0 and o.date_schedualed < 1569045051
+SELECT count(o.order_id) AS count FROM ".TABLE_ORDERS." o
+WHERE
+	o.order_status_id = '1' AND
+	o.date_schedualed > '".self::$relevantDate."' AND
+	o.date_schedualed < '".self::$datePendingOverdue."'
 ~~~
 
 #### OverdueOrders::$scheduled
@@ -613,9 +617,9 @@ Installer Information:
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMzk1OTYxNTI4LC0xMjUxOTI0MTc4LDc1Nj
-Q3NjA2NSwtMTQxNDg0Mjk4MywtMTUwMDg3NjQ3NywxMDYxOTA0
-OTE3LC0xNjg3NTg4OTQzLC0yMDQyNTQyNjcsLTIwNDI1NDI2Ny
-wtMTE4Mzg1MzM1MSwtNzczMDE0MDMxLC0xNzA3NDU0Nzk3LC0x
-MjUwMzMwODg2XX0=
+eyJoaXN0b3J5IjpbMTIzOTM2OTEwMSwzOTU5NjE1MjgsLTEyNT
+E5MjQxNzgsNzU2NDc2MDY1LC0xNDE0ODQyOTgzLC0xNTAwODc2
+NDc3LDEwNjE5MDQ5MTcsLTE2ODc1ODg5NDMsLTIwNDI1NDI2Ny
+wtMjA0MjU0MjY3LC0xMTgzODUzMzUxLC03NzMwMTQwMzEsLTE3
+MDc0NTQ3OTcsLTEyNTAzMzA4ODZdfQ==
 -->
