@@ -24,18 +24,17 @@ where order_status_id = 5 (table 'orders')
 select count(o.order_id) as count from orders o, addresses a , order_types ot, orders_statuses os, users u where o.order_type_id = ot.order_type_id and o.user_id = u.user_id and o.order_status_id = os.order_status_id and o.order_status_id = '5' and o.address_id = a.address_id
 ~~~
 
-# class MissUnity
+# class MissUtility
 
 #### MissUtility::$open
-
+:memo: Selects all orders, where orders_status_id < 3 and orders_miss_utility.contacted = 0 and not (orders_miss_utility.agent_requested = 0 (orders_miss_utility.has_gas_lamp = 0 or orders_miss_utility.has_lamp = 0))
 ~~~ sql
 select count(o.order_id) as count from orders o left join orders_miss_utility omu on (o.order_id = omu.order_id) where o.order_status_id < 3 and omu.contacted = 0 and not (omu.agent_requested = 0 and (omu.has_gas_lamp = 0 or omu.has_lamp = 0))
 ~~~
 
-Selects all orders, where orders_status_id < 3 and orders_miss_utility.contacted = 0 and not (orders_miss_utility.agent_requested = 0 (orders_miss_utility.has_gas_lamp = 0 or orders_miss_utility.has_lamp = 0))
-
-##### Called:     
-
+#### MissUtility::$called
+:memo: Selects orders, where order_status_id < 3 and orders_miss_utility.contacted = 1
+and not (orders_miss_utility.agent_requested = 0 and (orders_miss_utility.has_gas_lamp = 0 or orders_miss_utility.has_lamp = 0) )
 ~~~ sql 
 select count(o.order_id) as count 
 from orders o 
@@ -44,10 +43,7 @@ where o.order_status_id < 3 and omu.contacted = 1
 and not (omu.agent_requested = 0 and (omu.has_gas_lamp = 0 or omu.has_lamp = 0))
 ~~~
 
-Selects orders, where order_status_id < 3 and orders_miss_utility.contacted = 1
-and not (orders_miss_utility.agent_requested = 0 and (orders_miss_utility.has_gas_lamp = 0 or orders_miss_utility.has_lamp = 0) )
-
-##### Completed:  
+#### MissUtility::$completed
 
 ~~~ sql
 select count(o.order_id) as count from orders o left join orders_miss_utility omu on (o.order_id = omu.order_id) where o.order_status_id = 3 and omu.contacted = 1 and not (omu.agent_requested = 0 and (omu.has_gas_lamp = 0 or omu.has_lamp = 0))
@@ -547,6 +543,5 @@ Installer Information:
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE0MTMyMzA2NzUsLTEyNTAzMzA4ODZdfQ
-==
+eyJoaXN0b3J5IjpbLTI5NDc5Mzg5NCwtMTI1MDMzMDg4Nl19
 -->
