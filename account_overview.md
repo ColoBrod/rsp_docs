@@ -204,7 +204,7 @@ WHERE
 	o.date_schedualed < '".self::$datePendingOverdue."'
 ~~~
 #### OverdueOrders::$scheduled
-This SQL-query is absolutely the same as previous one, except `orders.order_status_id = 2`
+:memo: This SQL-query is absolutely the same as previous one, except `orders.order_status_id = 2`
 ~~~ sql
 SELECT count(o.order_id) AS count FROM ".TABLE_ORDERS." o
 WHERE
@@ -213,11 +213,11 @@ WHERE
 	o.date_schedualed < '".self::$datePendingOverdue."'
 ~~~
 
-# Current Active Orders:
+# class CurrentActiveOrders:
 
-##### Pending (before today + 2):
+### Pending (before today + 2):
 
-###### Installs
+#### Installs
 
 Counts orders where orders.order_status_id = '1' and orders.order_type_id = '1'.
 Only orders until tomorrow midnight
@@ -228,7 +228,7 @@ select count(o.order_id) as count from orders o, addresses a , order_types ot, o
 
 Replace 1569099600 with strtotime('midnight +1 days')
 
-###### Removals
+#### Removals
 
 Counts orders where orders.order_status_id = '1' and orders.order_type_id = '3'
 Only orders until tomorrow midnight
@@ -620,9 +620,9 @@ Installer Information:
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEyMjU1MjQ2ODUsMTQ3OTU5MjczOSwzOT
-U5NjE1MjgsLTEyNTE5MjQxNzgsNzU2NDc2MDY1LC0xNDE0ODQy
-OTgzLC0xNTAwODc2NDc3LDEwNjE5MDQ5MTcsLTE2ODc1ODg5ND
-MsLTIwNDI1NDI2NywtMjA0MjU0MjY3LC0xMTgzODUzMzUxLC03
-NzMwMTQwMzEsLTE3MDc0NTQ3OTcsLTEyNTAzMzA4ODZdfQ==
+eyJoaXN0b3J5IjpbMTU5MjM3NDQ3NywxNDc5NTkyNzM5LDM5NT
+k2MTUyOCwtMTI1MTkyNDE3OCw3NTY0NzYwNjUsLTE0MTQ4NDI5
+ODMsLTE1MDA4NzY0NzcsMTA2MTkwNDkxNywtMTY4NzU4ODk0My
+wtMjA0MjU0MjY3LC0yMDQyNTQyNjcsLTExODM4NTMzNTEsLTc3
+MzAxNDAzMSwtMTcwNzQ1NDc5NywtMTI1MDMzMDg4Nl19
 -->
