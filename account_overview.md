@@ -156,8 +156,9 @@ Groups all rows in an SQL-result with same `$order_id`. Than Counts number of ro
 #### RescheduledToday::$pushedBack
 Counts results where `old_scheduled_date < new_scheduled_date`
 #### RescheduledToday::$movedUp
+Counts results where `old_scheduled_date > new_scheduled_date`
 
-# Post Total Change for Yesterday:
+# class PostTotalChange:
 
 It takes the time for Yesterday between 00:00:01 and 23:59:59
 
@@ -165,7 +166,7 @@ It takes the time for Yesterday between 00:00:01 and 23:59:59
 select count(o.order_id) as count from orders o, addresses a , order_types ot, orders_statuses os, users u where o.order_type_id = ot.order_type_id and o.user_id = u.user_id and o.order_status_id = os.order_status_id and o.order_status_id = '3' and o.address_id = a.address_id and o.date_completed >= 1568926801 and o.date_completed < 1569013199 and o.order_type_id = '1'
 ~~~
 
-# Post Total Change for Last Week:
+### 
 
 Pretty much the same as previous, but for DateStartLastWeek:
 strtotime('midnight - 6days 00:00:01')
@@ -595,8 +596,8 @@ Installer Information:
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbOTE0Mjk2NDA5LC0xNTAwODc2NDc3LDEwNj
-E5MDQ5MTcsLTE2ODc1ODg5NDMsLTIwNDI1NDI2NywtMjA0MjU0
-MjY3LC0xMTgzODUzMzUxLC03NzMwMTQwMzEsLTE3MDc0NTQ3OT
-csLTEyNTAzMzA4ODZdfQ==
+eyJoaXN0b3J5IjpbMTU4Mjc3NDM0NywtMTUwMDg3NjQ3NywxMD
+YxOTA0OTE3LC0xNjg3NTg4OTQzLC0yMDQyNTQyNjcsLTIwNDI1
+NDI2NywtMTE4Mzg1MzM1MSwtNzczMDE0MDMxLC0xNzA3NDU0Nz
+k3LC0xMjUwMzMwODg2XX0=
 -->
