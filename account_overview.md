@@ -19,7 +19,7 @@ This line of code makes all errors on site invisible. So it makes a better look 
 ### Removing banner "TEST SITE" from the top
 1. `includes/twig_templates/layout.html.twig`. Comment **\<span\>** tag at the top.
 2. 
-:question: I think, it woul be better to add 
+:question: I think, it would be better to add a variable to `configure.php` - `CFG::$mode` or something of this sort. Which ca
 
 #  class Issues
 :exclamation: Original functions of `Issues::$onHold` and `Issues::$redFlag` were located in `account_overview.php` or in `admin_service_stats` (were 2 pretty much same pieces of code).
@@ -638,11 +638,11 @@ Installer Information:
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTYwOTc2MjgyOCwtMTA3MTY1MDIyOCwtNT
-E4NTM5NjkzLDE2ODc1NzI3NzYsLTE5MjU4NTQ2NzEsMTQ3OTU5
-MjczOSwzOTU5NjE1MjgsLTEyNTE5MjQxNzgsNzU2NDc2MDY1LC
-0xNDE0ODQyOTgzLC0xNTAwODc2NDc3LDEwNjE5MDQ5MTcsLTE2
-ODc1ODg5NDMsLTIwNDI1NDI2NywtMjA0MjU0MjY3LC0xMTgzOD
-UzMzUxLC03NzMwMTQwMzEsLTE3MDc0NTQ3OTcsLTEyNTAzMzA4
-ODZdfQ==
+eyJoaXN0b3J5IjpbLTE0MDE1MTU1ODcsLTEwNzE2NTAyMjgsLT
+UxODUzOTY5MywxNjg3NTcyNzc2LC0xOTI1ODU0NjcxLDE0Nzk1
+OTI3MzksMzk1OTYxNTI4LC0xMjUxOTI0MTc4LDc1NjQ3NjA2NS
+wtMTQxNDg0Mjk4MywtMTUwMDg3NjQ3NywxMDYxOTA0OTE3LC0x
+Njg3NTg4OTQzLC0yMDQyNTQyNjcsLTIwNDI1NDI2NywtMTE4Mz
+g1MzM1MSwtNzczMDE0MDMxLC0xNzA3NDU0Nzk3LC0xMjUwMzMw
+ODg2XX0=
 -->
