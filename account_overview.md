@@ -252,12 +252,11 @@ where
 #### CurrentActiveOrders::$pending->total
 :memo: Just sums together 3 previous values (Installs, Removals, Service Calls).
 
-### CurrentActiveOrders::$pending
+### CurrentActiveOrders::$schedule
 :memo: Includes orders with `orders_status_id = '1'` (Which is 'Pending') between 1 Jan 2012 and tomorrow midnight.
-
 :exclamation: The time is before now! Not like written???
 
-###### Installs
+#### CurrentActiveOrders::$schedule->installs
 
 Counts all orders before now where orders.order_status_id = '2' and orders.order_type_id = '1'
 
@@ -265,7 +264,7 @@ Counts all orders before now where orders.order_status_id = '2' and orders.order
 select count(o.order_id) as count from orders o, addresses a , order_types ot, orders_statuses os, users u where o.order_type_id = ot.order_type_id and o.user_id = u.user_id and o.order_status_id = os.order_status_id and o.order_status_id = '2' and o.address_id = a.address_id and o.date_schedualed < '1569058378' and o.order_type_id = '1'
 ~~~
 
-###### Removals
+#### CurrentActiveOrders::$schedule->removals
 
 Counts all orders before now where orders.order_status_id = '2' and orders.order_type_id = '3'
 
@@ -273,7 +272,7 @@ Counts all orders before now where orders.order_status_id = '2' and orders.order
 select count(o.order_id) as count from orders o, addresses a , order_types ot, orders_statuses os, users u where o.order_type_id = ot.order_type_id and o.user_id = u.user_id and o.order_status_id = os.order_status_id and o.order_status_id = '2' and o.address_id = a.address_id and o.date_schedualed < '1569058378' and o.order_type_id = '3'
 ~~~
 
-###### Service Calls
+#### CurrentActiveOrders::$schedule->serviceCalls
 
 Counts all orders before now where orders.order_status_id = '2' and orders.order_type_id = '2'
 
@@ -281,7 +280,7 @@ Counts all orders before now where orders.order_status_id = '2' and orders.order
 select count(o.order_id) as count from orders o, addresses a , order_types ot, orders_statuses os, users u where o.order_type_id = ot.order_type_id and o.user_id = u.user_id and o.order_status_id = os.order_status_id and o.order_status_id = '2' and o.address_id = a.address_id and o.date_schedualed < '1569058378' and o.order_type_id = '2'
 ~~~
 
-###### Total
+#### CurrentActiveOrders::$schedule->total
 
 Just sums Install, Removals and Service Calls
 
@@ -623,10 +622,10 @@ Installer Information:
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTg2NTQ2MjQ5NiwtMTkyNTg1NDY3MSwxND
-c5NTkyNzM5LDM5NTk2MTUyOCwtMTI1MTkyNDE3OCw3NTY0NzYw
-NjUsLTE0MTQ4NDI5ODMsLTE1MDA4NzY0NzcsMTA2MTkwNDkxNy
-wtMTY4NzU4ODk0MywtMjA0MjU0MjY3LC0yMDQyNTQyNjcsLTEx
-ODM4NTMzNTEsLTc3MzAxNDAzMSwtMTcwNzQ1NDc5NywtMTI1MD
-MzMDg4Nl19
+eyJoaXN0b3J5IjpbOTIyNDczMTM4LC0xOTI1ODU0NjcxLDE0Nz
+k1OTI3MzksMzk1OTYxNTI4LC0xMjUxOTI0MTc4LDc1NjQ3NjA2
+NSwtMTQxNDg0Mjk4MywtMTUwMDg3NjQ3NywxMDYxOTA0OTE3LC
+0xNjg3NTg4OTQzLC0yMDQyNTQyNjcsLTIwNDI1NDI2NywtMTE4
+Mzg1MzM1MSwtNzczMDE0MDMxLC0xNzA3NDU0Nzk3LC0xMjUwMz
+MwODg2XX0=
 -->
