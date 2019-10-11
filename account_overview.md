@@ -15,7 +15,7 @@ o.order_status_id != '4' AND
 ito.installer_id IS NULL
 ~~~
 After previous SQL-query we have a table (list of orders). We iterate over each row in a table and filter through function `Issues::fetchAssignedOrderInstaller($order_id)`. The algorithm of this function is a little bit complex, in a nutshell it checks if the order (with `$order_id`) has an `assigned_installer` or `default_installer`. If it hasn't, returns false and we increase `Issues::$unassigned` by 1.  
-:exclamation: the original `function tep_count_unassigned_orders()` is located in `general.php`. I use slightly optimized version
+:exclamation: the primordial `function tep_count_unassigned_orders()` is located in `general.php`. 
 #### Issues::$redFlag
 :memo: Counts orders, which have `order_issue = '1'` (table 'orders').
 
@@ -613,9 +613,9 @@ Installer Information:
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEzMzA4NzA0MzMsLTEyNTE5MjQxNzgsNz
-U2NDc2MDY1LC0xNDE0ODQyOTgzLC0xNTAwODc2NDc3LDEwNjE5
-MDQ5MTcsLTE2ODc1ODg5NDMsLTIwNDI1NDI2NywtMjA0MjU0Mj
-Y3LC0xMTgzODUzMzUxLC03NzMwMTQwMzEsLTE3MDc0NTQ3OTcs
-LTEyNTAzMzA4ODZdfQ==
+eyJoaXN0b3J5IjpbMzk1OTYxNTI4LC0xMjUxOTI0MTc4LDc1Nj
+Q3NjA2NSwtMTQxNDg0Mjk4MywtMTUwMDg3NjQ3NywxMDYxOTA0
+OTE3LC0xNjg3NTg4OTQzLC0yMDQyNTQyNjcsLTIwNDI1NDI2Ny
+wtMTE4Mzg1MzM1MSwtNzczMDE0MDMxLC0xNzA3NDU0Nzk3LC0x
+MjUwMzMwODg2XX0=
 -->
