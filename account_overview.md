@@ -34,7 +34,9 @@ This line of code makes all errors on site invisible. So it makes a better look 
 
 ### Disabling cron-emails
 1. `cron_email_removal_stat.php`
-2. `cron_email_removal_stat.php`
+2. `cron_email_removal_stat.php5` 
+:question: Seems these 2 files .php5 is obsolete. Can we remove it?
+3. 
 
 :question: I think, it would be better to add a variable to `configure.php` - `CFG::$productionMode` or something of this sort. Which can be either `true` of `false`. Banners, emails, displaying errors, etc will be enabled/disabled automatically, depending on it's state. This way we can simplify updating process and prevent some errors.
 
@@ -655,7 +657,7 @@ Installer Information:
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE4MTAzMDczOTUsMjA0OTE2NTUyMCwtMT
+eyJoaXN0b3J5IjpbLTE1Njc3OTI5NDIsMjA0OTE2NTUyMCwtMT
 A3MTY1MDIyOCwtNTE4NTM5NjkzLDE2ODc1NzI3NzYsLTE5MjU4
 NTQ2NzEsMTQ3OTU5MjczOSwzOTU5NjE1MjgsLTEyNTE5MjQxNz
 gsNzU2NDc2MDY1LC0xNDE0ODQyOTgzLC0xNTAwODc2NDc3LDEw
