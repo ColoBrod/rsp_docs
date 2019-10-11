@@ -47,7 +47,9 @@ Set `$live` variable to true at following files:
 1. Remove this line:
 `SetEnv SERVER_MODE TEST`
 ### .htpasswd
-
+Remove this file  
+  
+  
 :question: I think, it would be better to add a variable to `configure.php` - `CFG::$productionMode` or something of this sort. Which can be either `true` of `false`. Banners, emails, displaying errors, etc will be enabled/disabled automatically, depending on it's state. This way we can simplify updating process and prevent some errors.
 
 #  class Issues
@@ -667,7 +669,7 @@ Installer Information:
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTA4NzEzMjU5NSwtNzY1MzM4MjM0LDk1Mj
+eyJoaXN0b3J5IjpbMjAzNDMyNjAyOSwtNzY1MzM4MjM0LDk1Mj
 AzMTc3NiwyMDQ5MTY1NTIwLC0xMDcxNjUwMjI4LC01MTg1Mzk2
 OTMsMTY4NzU3Mjc3NiwtMTkyNTg1NDY3MSwxNDc5NTkyNzM5LD
 M5NTk2MTUyOCwtMTI1MTkyNDE3OCw3NTY0NzYwNjUsLTE0MTQ4
