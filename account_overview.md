@@ -3,34 +3,25 @@
 #### Issues::$unassigned
 
 function tep_count_unassigned_orders() in general.php
-~~~ sql
-select o.order_id, o.date_schedualed, o.order_total, ot.name as order_type_name, o.order_status_id, os.order_status_name, a.house_number, a.street_name, a.city, o.order_issue from orders o, order_types ot, orders_statuses os, addresses a, users u where  o.order_type_id = ot.order_type_id and o.user_id = u.user_id and o.order_status_id = os.order_status_id and o.order_status_id > 0 and o.order_status_id != '3' and o.order_status_id != '4' and o.address_id = a.address_id
-~~~
-
-  
 :memo: Selects all orders, where order_status_id more than 0 (table 'orders') and order_status_id is not 3 and order_status_id is not 4  
 There is no 'count' in SQL-query. After executing SQL, counts number of result row inside of a function.
 
+~~~ sql
+select o.order_id, o.date_schedualed, o.order_total, ot.name as order_type_name, o.order_status_id, os.order_status_name, a.house_number, a.street_name, a.city, o.order_issue from orders o, order_types ot, orders_statuses os, addresses a, users u where  o.order_type_id = ot.order_type_id and o.user_id = u.user_id and o.order_status_id = os.order_status_id and o.order_status_id > 0 and o.order_status_id != '3' and o.order_status_id != '4' and o.address_id = a.address_id
+~~~
 #### Issues::$redFlag
-account_overview.php || admin_service_stats (also exists pretty much the same code)
-
-
-
-
+:memo: Selects all orders from these 5 tables:
+orders, addresses, order_types, orders_statuses, users
+where order_issue = 1 (table 'orders')  
 ~~~ sql
 select count(o.order_id) as count from orders o, addresses a , order_types ot, orders_statuses os, users u where o.order_type_id = ot.order_type_id and o.user_id = u.user_id and o.order_status_id = os.order_status_id and o.address_id = a.address_id and o.order_issue = '1'
 ~~~
-:memo: Selects all orders from these 5 tables:
-orders, addresses, order_types, orders_statuses, users
-where order_issue = 1 (table 'orders')
+:exclamation: account_overview.php || admin_service_stats (also exists pretty much the same code)
 
 #### Issues::$onHold
-
-Selects all orders from these 5 tables:
+:memo: Selects all orders from these 5 tables:
 orders, addresses, order_types, orders_statuses, users
-
 where order_status_id = 5 (table 'orders')
-
 ~~~ sql
 select count(o.order_id) as count from orders o, addresses a , order_types ot, orders_statuses os, users u where o.order_type_id = ot.order_type_id and o.user_id = u.user_id and o.order_status_id = os.order_status_id and o.order_status_id = '5' and o.address_id = a.address_id
 ~~~
@@ -558,5 +549,5 @@ Installer Information:
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNzY4NDIxODc5LC0xMjUwMzMwODg2XX0=
+eyJoaXN0b3J5IjpbMjE0NjQ3NTczNiwtMTI1MDMzMDg4Nl19
 -->
