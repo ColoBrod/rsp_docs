@@ -151,12 +151,7 @@ ORDER BY
 	rh.rescheduled_date
 ~~~
 #### RescheduledToday::$removalsRescheduled
-
-
-
-Instead of 1569013200 we use 'midnight' built-in - strtotime("midnight")
-
-#### Pushed Back: TODO (798 - 807 in account_overview.php)
+#### RescheduledToday::$removalsRescheduled
 #### Moved Up:    TODO
 
 # Post Total Change for Yesterday:
@@ -597,7 +592,7 @@ Installer Information:
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTg2Mjg5MDM5OCwxMDYxOTA0OTE3LC0xNj
+eyJoaXN0b3J5IjpbLTQ5NDEyMDEzNywxMDYxOTA0OTE3LC0xNj
 g3NTg4OTQzLC0yMDQyNTQyNjcsLTIwNDI1NDI2NywtMTE4Mzg1
 MzM1MSwtNzczMDE0MDMxLC0xNzA3NDU0Nzk3LC0xMjUwMzMwOD
 g2XX0=
