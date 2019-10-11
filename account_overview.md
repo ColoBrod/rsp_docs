@@ -49,19 +49,17 @@ and not (omu.agent_requested = 0 and (omu.has_gas_lamp = 0 or omu.has_lamp = 0))
 select count(o.order_id) as count from orders o left join orders_miss_utility omu on (o.order_id = omu.order_id) where o.order_status_id = 3 and omu.contacted = 1 and not (omu.agent_requested = 0 and (omu.has_gas_lamp = 0 or omu.has_lamp = 0))
 ~~~
 
-#### Percentage: 
-
-What is bgdn???
-
+#### MissUtility::$percentage
+:memo: This property is counted in private method 
 ~~~ sql
 select count(order_miss_utility_id) as count from orders_miss_utility
 ~~~
-
-$miss_utility_all_bgdn = 13884
-
 ~~~ sql
 select count(order_id) as count from orders WHERE order_id > 109892
 ~~~
+:exclamation: What is bgdn???
+
+
 
 $orders_all_bgdn = 78393
 
@@ -541,6 +539,5 @@ Installer Information:
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIxMjM2OTU5MDUsLTEyNTAzMzA4ODZdfQ
-==
+eyJoaXN0b3J5IjpbMTAyMzU4MzEzNiwtMTI1MDMzMDg4Nl19
 -->
