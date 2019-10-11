@@ -27,6 +27,7 @@ select count(o.order_id) as count from orders o, addresses a , order_types ot, o
 # class MissUtility
 ~~~php
 // Following values received via pretty much the same SQL-query
+// The difference in variable $condition
 MissUtility::$open
 MissUtility::$called
 MissUtility::$completed
@@ -36,9 +37,11 @@ SELECT count(o.order_id) AS count
 FROM "  . TABLE_ORDERS .  " o
 LEFT JOIN "  . TABLE_ORDERS_MISS_UTILITY .  " omu ON (o.order_id = omu.order_id)
 WHERE $condition
-	AND NOT (omu.agent_requested = 0 AND (omu.has_gas_lamp = 0 OR omu.has_lamp = 0))
+	AND NOT (
+		omu.agent_requested = 0 
+		AND (omu.has_gas_lamp = 0 OR omu.has_lamp = 0)
+	)
 ~~~
-
 
 #### MissUtility::$open
 :memo: Selects all orders, where orders_status_id < 3 and orders_miss_utility.contacted = 0 and not (orders_miss_utility.agent_requested = 0 (orders_miss_utility.has_gas_lamp = 0 or orders_miss_utility.has_lamp = 0))
@@ -553,6 +556,6 @@ Installer Information:
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNzcyNTEyODkyLC0xNzA3NDU0Nzk3LC0xMj
-UwMzMwODg2XX0=
+eyJoaXN0b3J5IjpbLTQyMzA5NzgwNiwtMTcwNzQ1NDc5NywtMT
+I1MDMzMDg4Nl19
 -->
