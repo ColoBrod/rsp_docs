@@ -54,7 +54,7 @@ select count(o.order_id) as count from orders o left join orders_miss_utility om
 ~~~ sql
 select count(order_miss_utility_id) as count from orders_miss_utility
 ~~~
-In following SQL-query statement order_id > 109892 is used just in order to avoid all old orders - that were added before 2012 approximately. I used pretty much same statement ()
+In following SQL-query statement order_id > 109892 is used just in order to avoid all old orders - that were added before 2012 approximately. I used pretty much same statement (o.date_added > '".Stats::\$relevantDate."' where Stats::$relevantDate is a timestamep, that represents January 1 2012)
 ~~~ sql
 select count(order_id) as count from orders WHERE order_id > 109892
 ~~~
@@ -540,6 +540,6 @@ Installer Information:
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEzNDQ4MDU4NjMsLTEyNTAzMzA4ODZdfQ
+eyJoaXN0b3J5IjpbLTE0OTE0MDMwMTYsLTEyNTAzMzA4ODZdfQ
 ==
 -->
