@@ -32,6 +32,7 @@ MissUtility::$open
 MissUtility::$called
 MissUtility::$completed
 ~~~
+:memo: Counts orders from tables 'orders' and 'orders_miss_utility'
 ~~~sql
 SELECT count(o.order_id) AS count
 FROM "  . TABLE_ORDERS .  " o
@@ -556,6 +557,6 @@ Installer Information:
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTQyMzA5NzgwNiwtMTcwNzQ1NDc5NywtMT
+eyJoaXN0b3J5IjpbMjEwNjg5MjM4NSwtMTcwNzQ1NDc5NywtMT
 I1MDMzMDg4Nl19
 -->
