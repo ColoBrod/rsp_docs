@@ -171,7 +171,7 @@ AND o.order_type_id = '1'
 AND o.date_completed >= '".self::$startYesterday."'
 AND o.date_completed < '".self::$endYesterday."'
 ~~~
-Second `$completeRemove`:
+Second `$completeRemove`, `order_status_id = 3` (i.e. 'Completed') and `order_type_id = 3`:
 ~~~sql
 SELECT count(o.order_id) AS count FROM ".TABLE_ORDERS." o
 WHERE o.order_status_id = '3'
@@ -181,12 +181,8 @@ AND o.date_completed < '".self::$endYesterday."'
 ~~~
 
 ### PostTotalChange::forLastWeek
-:heavy_exclamation_mark: IMPORTANT: It counts orders for last 7 days, not for last week
-:memo: It takes the time for Yesterday between 00:00:01 and 23:59:59
-Pretty much the same as previous, but for DateStartLastWeek:
-strtotime('midnight - 6days 00:00:01')
-And for the DateEndLastWeek:
-strtotime('today 23:59:59')
+:heavy_exclamation_mark: IMPORTANT: It counts orders for last 7 days, not for last week,
+:memo: The algorithm is absolutely same as in example above.
 
 # Overdue Orders: 
 
@@ -611,7 +607,7 @@ Installer Information:
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE4NDI1NzgxMDQsLTE1MDA4NzY0NzcsMT
+eyJoaXN0b3J5IjpbLTEwOTY5Mzg4NTQsLTE1MDA4NzY0NzcsMT
 A2MTkwNDkxNywtMTY4NzU4ODk0MywtMjA0MjU0MjY3LC0yMDQy
 NTQyNjcsLTExODM4NTMzNTEsLTc3MzAxNDAzMSwtMTcwNzQ1ND
 c5NywtMTI1MDMzMDg4Nl19
