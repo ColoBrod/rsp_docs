@@ -106,22 +106,25 @@ SELECT count(order_id) AS count FROM ".TABLE_ORDERS." WHERE order_id > 109892
 :question: What does **bgdn** stand for? I saved original variable names (converted to camel case), but I don't understand this abbreviation.
 
 # class OrderedToday:
+~~~php
+// All
+~~~
 
-#### Installs
+#### OrderedToday::$installs
 :memo: Counts all orders, which were added starting from the beginning of today with `order_type_id = '1'` (table 'orders')
 ~~~ sql
 SELECT count(o.order_id) AS count FROM ".TABLE_ORDERS." o
 WHERE o.order_type_id = '1' AND o.date_added >= '".self::$today."'
 ~~~
 
-#### Removals
+#### OrderedToday::$removals
 :memo: Counts all orders, which were added starting from the beginning of today with `order_type_id = '3'` (table 'orders')
 ~~~ sql
 SELECT count(o.order_id) AS count FROM ".TABLE_ORDERS." o
 WHERE o.order_type_id = '3' AND o.date_added >= '".self::$today."'
 ~~~
 
-#### Service Calls
+#### OrderedToday::$serviceCalls
 :memo: Counts all orders, which were added starting from the beginning of today with `order_type_id = '2'` (table 'orders')
 ~~~ sql
 SELECT count(o.order_id) AS count FROM ".TABLE_ORDERS." o
@@ -579,7 +582,8 @@ Installer Information:
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTA2MTkwNDkxNywtMTY4NzU4ODk0MywtMj
-A0MjU0MjY3LC0yMDQyNTQyNjcsLTExODM4NTMzNTEsLTc3MzAx
-NDAzMSwtMTcwNzQ1NDc5NywtMTI1MDMzMDg4Nl19
+eyJoaXN0b3J5IjpbMTc1NDQ0OTM2NCwxMDYxOTA0OTE3LC0xNj
+g3NTg4OTQzLC0yMDQyNTQyNjcsLTIwNDI1NDI2NywtMTE4Mzg1
+MzM1MSwtNzczMDE0MDMxLC0xNzA3NDU0Nzk3LC0xMjUwMzMwOD
+g2XX0=
 -->
