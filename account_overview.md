@@ -31,7 +31,9 @@ select count(o.order_id) as count from orders o, addresses a , order_types ot, o
 
 // o.order_status_id < 3 AND omu.contacted = 0
 MissUtility::$open			
+// o.order_status_id < 3 AND omu.contacted = 1
 MissUtility::$called		
+// o.order_status_id = 3 AND omu.contacted = 1
 MissUtility::$completed		
 ~~~
 :memo: Counts orders from tables `orders` and `orders_miss_utility` where `agent_requested` is not 0 and both  `has_gas_lamp` or `has_lamp` are not 0 (table `orders_miss_utility`)
@@ -559,6 +561,6 @@ Installer Information:
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbODUxMTUzMTI0LC0xNzA3NDU0Nzk3LC0xMj
-UwMzMwODg2XX0=
+eyJoaXN0b3J5IjpbLTc3MzAxNDAzMSwtMTcwNzQ1NDc5NywtMT
+I1MDMzMDg4Nl19
 -->
