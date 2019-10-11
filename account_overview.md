@@ -294,7 +294,14 @@ where
 
 # class CompletedOrders:
 
-### CompletedOrders::$completedYesterday:
+### CompletedOrders::$completedYesterday
+
+#### CompletedOrders::$completedYesterday->installs
+#### CompletedOrders::$completedYesterday->removals
+#### CompletedOrders::$completedYesterday->serviceCalls
+#### CompletedOrders::$completedYesterday->total
+
+### CompletedOrders::$completedToday
 
 date_completed (table 'orders') is between the begining of yesterday and the begining of today (midnights)
 
@@ -628,10 +635,10 @@ Installer Information:
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE4NDY1ODM1MTgsLTE5MjU4NTQ2NzEsMT
-Q3OTU5MjczOSwzOTU5NjE1MjgsLTEyNTE5MjQxNzgsNzU2NDc2
-MDY1LC0xNDE0ODQyOTgzLC0xNTAwODc2NDc3LDEwNjE5MDQ5MT
-csLTE2ODc1ODg5NDMsLTIwNDI1NDI2NywtMjA0MjU0MjY3LC0x
-MTgzODUzMzUxLC03NzMwMTQwMzEsLTE3MDc0NTQ3OTcsLTEyNT
-AzMzA4ODZdfQ==
+eyJoaXN0b3J5IjpbMTk5NjQ2OTkxMCwtMTkyNTg1NDY3MSwxND
+c5NTkyNzM5LDM5NTk2MTUyOCwtMTI1MTkyNDE3OCw3NTY0NzYw
+NjUsLTE0MTQ4NDI5ODMsLTE1MDA4NzY0NzcsMTA2MTkwNDkxNy
+wtMTY4NzU4ODk0MywtMjA0MjU0MjY3LC0yMDQyNTQyNjcsLTEx
+ODM4NTMzNTEsLTc3MzAxNDAzMSwtMTcwNzQ1NDc5NywtMTI1MD
+MzMDg4Nl19
 -->
