@@ -59,11 +59,11 @@ In following SQL-query statement order_id > 109892 is used just in order to avoi
 ~~~ sql
 select count(order_id) as count from orders WHERE order_id > 109892
 ~~~
-:question: What does bgdn stands for? I saved original variable names (converted to camel case), but I don't understand this abbreviation.
+:question: What does bgdn stand for? I saved original variable names (converted to camel case), but I don't understand this abbreviation.
+$allBgdn
+$ordersAllBgdn = 78393  
 
-$orders_all_bgdn = 78393
-
-Percentage is get via this formula:
+Percentage is received via this formula:
 (13884 * 100) / 78393 = 17.71%
 
 some useless code, that doesn't do anything useful?! (I have to review code one more time from line 706)
@@ -539,5 +539,6 @@ Installer Information:
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMzg1NTA0NDUxLC0xMjUwMzMwODg2XX0=
+eyJoaXN0b3J5IjpbLTE3MDc0NTQ3OTcsLTEyNTAzMzA4ODZdfQ
+==
 -->
