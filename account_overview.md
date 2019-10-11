@@ -152,8 +152,9 @@ ORDER BY
 ~~~
 We select from 2 tables: `reschedule_history` and `orders`, only **completed orders** with `rescheduled_date` starting from the midnight.
 #### RescheduledToday::$removalsRescheduled
-Groups all rows in Counts number
+Groups all rows in an SQL-result with same `$order_id`. Than Counts number of rows.
 #### RescheduledToday::$pushedBack
+Counts results where `old_scheduled_date < new_scheduled_date`
 #### RescheduledToday::$movedUp
 
 # Post Total Change for Yesterday:
@@ -594,8 +595,8 @@ Installer Information:
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTQ2NTczNjE3MywtMTUwMDg3NjQ3NywxMD
-YxOTA0OTE3LC0xNjg3NTg4OTQzLC0yMDQyNTQyNjcsLTIwNDI1
-NDI2NywtMTE4Mzg1MzM1MSwtNzczMDE0MDMxLC0xNzA3NDU0Nz
-k3LC0xMjUwMzMwODg2XX0=
+eyJoaXN0b3J5IjpbOTE0Mjk2NDA5LC0xNTAwODc2NDc3LDEwNj
+E5MDQ5MTcsLTE2ODc1ODg5NDMsLTIwNDI1NDI2NywtMjA0MjU0
+MjY3LC0xMTgzODUzMzUxLC03NzMwMTQwMzEsLTE3MDc0NTQ3OT
+csLTEyNTAzMzA4ODZdfQ==
 -->
