@@ -13,7 +13,12 @@ else {
 	define('BASE_URL', 'https://www.realtysignpost.com');
 }
 ~~~
-3. 
+3. Change the timezone for PHP:
+~~~php
+// Sets the EDT (Eastern daylight Time)
+date_default_timezone_set("America/New_York");
+~~~
+4. C
 :question: `ini_set('display_errors', false);`  
 This line of code makes all errors on site invisible. So it makes a better look for clients, but we also can't see any problems, debug and fix them.
 ### Removing banner "TEST SITE" from the top
@@ -640,7 +645,7 @@ Installer Information:
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNTAwMDcwMDIwLC0xMDcxNjUwMjI4LC01MT
+eyJoaXN0b3J5IjpbNzY1Mjc5NzM1LC0xMDcxNjUwMjI4LC01MT
 g1Mzk2OTMsMTY4NzU3Mjc3NiwtMTkyNTg1NDY3MSwxNDc5NTky
 NzM5LDM5NTk2MTUyOCwtMTI1MTkyNDE3OCw3NTY0NzYwNjUsLT
 E0MTQ4NDI5ODMsLTE1MDA4NzY0NzcsMTA2MTkwNDkxNywtMTY4
