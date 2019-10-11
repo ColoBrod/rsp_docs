@@ -298,15 +298,17 @@ where
 
 :memo: Includes orders with `date_completed` between yesterday midnight and today's midnight. `order_status_id = 3` ('Completed').  
   
-- installs: `orderd_type_id = '1'`
-- removals: `orderd_type_id = '3'`
-- serviceCalls: `orderd_type_id = '2'`
+
+
+
 
 #### CompletedOrders::$completedYesterday->installs
+- installs: `orderd_type_id = '1'`
 #### CompletedOrders::$completedYesterday->removals
+- removals: `orderd_type_id = '3'`
 #### CompletedOrders::$completedYesterday->serviceCalls
 #### CompletedOrders::$completedYesterday->total
-Sums installs, removals and 
+Sums Installs, Removals and Service Calls
 
 ### CompletedOrders::$completedToday
 
@@ -320,55 +322,7 @@ Sums installs, removals and
 #### CompletedOrders::$completedToday->removals
 #### CompletedOrders::$completedToday->serviceCalls
 #### CompletedOrders::$completedToday->total
-
-date_completed (table 'orders') is between the begining of yesterday and the begining of today (midnights)
-
->> Installs:
-
-  Counts all orders, where order_status_id = '3' and order_type_id = '1' (table 'orders')
-
-  select count(o.order_id) as count from orders o, addresses a , order_types ot, orders_statuses os, users u where o.order_type_id = ot.order_type_id and o.user_id = u.user_id and o.order_status_id = os.order_status_id and o.order_status_id = '3' and o.address_id = a.address_id and o.date_completed >= '1568926800' and o.date_completed < '1569013200' and o.order_type_id = '1'
-
->> Removals:
-
-  Counts all orders, where order_status_id = '3' and order_type_id = '3' (table 'orders')
-
-  select count(o.order_id) as count from orders o, addresses a , order_types ot, orders_statuses os, users u where o.order_type_id = ot.order_type_id and o.user_id = u.user_id and o.order_status_id = os.order_status_id and o.order_status_id = '3' and o.address_id = a.address_id and o.date_completed >= '1568926800' and o.date_completed < '1569013200' and o.order_type_id = '3'
-
->> Service Calls:
-
-  Counts all orders, where order_status_id = '3' and order_type_id = '2' (table 'orders')
-
-  select count(o.order_id) as count from orders o, addresses a , order_types ot, orders_statuses os, users u where o.order_type_id = ot.order_type_id and o.user_id = u.user_id and o.order_status_id = os.order_status_id and o.order_status_id = '3' and o.address_id = a.address_id and o.date_completed >= '1568926800' and o.date_completed < '1569013200' and o.order_type_id = '2'
-
->> Total:
-
-  Just sums Installs, Removals and Service Calls.
-
-> Completed Today:
-
-orders.date_completed from today's midnight and to this moment (now)
-
->> Installs:
-  
-  Counts all orders, where order_status_id = '3' (table 'orders') and order_type_id = '1' (table 'orders')
-
-  select count(o.order_id) as count from orders o, addresses a , order_types ot, orders_statuses os, users u where o.order_type_id = ot.order_type_id and o.user_id = u.user_id and o.order_status_id = os.order_status_id and o.order_status_id = '3' and o.address_id = a.address_id and o.date_completed >= '1569013200' and o.date_completed < '1569058954' and o.order_type_id = '1'
-
->> Removals:
-
-  Counts all orders, where order_status_id = '3' and order_type_id = '3' (table 'orders' both)
-
-  select count(o.order_id) as count from orders o, addresses a , order_types ot, orders_statuses os, users u where o.order_type_id = ot.order_type_id and o.user_id = u.user_id and o.order_status_id = os.order_status_id and o.order_status_id = '3' and o.address_id = a.address_id and o.date_completed >= '1569013200' and o.date_completed < '1569058954' and o.order_type_id = '3'
-
->> Service Calls:
-
-  Counts all orders, where order_status_id = '3' and order_type_id = '2' (table 'orders' both)
-
-  select count(o.order_id) as count from orders o, addresses a , order_types ot, orders_statuses os, users u where o.order_type_id = ot.order_type_id and o.user_id = u.user_id and o.order_status_id = os.order_status_id and o.order_status_id = '3' and o.address_id = a.address_id and o.date_completed >= '1569013200' and o.date_completed < '1569058954' and o.order_type_id = '2'
-
->> Total:
-  Just sums Installs, Removals and Service Calls
+Sums Installs, Removals and Service Calls
 
 # Future Orders:
 
@@ -653,10 +607,10 @@ Installer Information:
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNDc2Nzk3NTA5LC0xOTI1ODU0NjcxLDE0Nz
-k1OTI3MzksMzk1OTYxNTI4LC0xMjUxOTI0MTc4LDc1NjQ3NjA2
-NSwtMTQxNDg0Mjk4MywtMTUwMDg3NjQ3NywxMDYxOTA0OTE3LC
-0xNjg3NTg4OTQzLC0yMDQyNTQyNjcsLTIwNDI1NDI2NywtMTE4
-Mzg1MzM1MSwtNzczMDE0MDMxLC0xNzA3NDU0Nzk3LC0xMjUwMz
-MwODg2XX0=
+eyJoaXN0b3J5IjpbMTg2ODUwNDk4MiwtMTkyNTg1NDY3MSwxND
+c5NTkyNzM5LDM5NTk2MTUyOCwtMTI1MTkyNDE3OCw3NTY0NzYw
+NjUsLTE0MTQ4NDI5ODMsLTE1MDA4NzY0NzcsMTA2MTkwNDkxNy
+wtMTY4NzU4ODk0MywtMjA0MjU0MjY3LC0yMDQyNTQyNjcsLTEx
+ODM4NTMzNTEsLTc3MzAxNDAzMSwtMTcwNzQ1NDc5NywtMTI1MD
+MzMDg4Nl19
 -->
