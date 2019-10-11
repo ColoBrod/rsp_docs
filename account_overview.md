@@ -25,7 +25,7 @@ WHERE
 	o.order_status_id != '3' AND
 	o.order_status_id != '4'
 ~~~
-After previous SQL-query we have a table wit
+After previous SQL-query we have a table (list of orders). We iterate over each row in a table 
 ~~~sql
 SELECT installer_id from ".TABLE_INSTALLERS_TO_ORDERS."
 WHERE order_id = '$order_id' LIMIT 1
@@ -581,6 +581,6 @@ Installer Information:
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE2ODAzNTI4NjksLTExODM4NTMzNTEsLT
-c3MzAxNDAzMSwtMTcwNzQ1NDc5NywtMTI1MDMzMDg4Nl19
+eyJoaXN0b3J5IjpbLTIwNDI1NDI2NywtMTE4Mzg1MzM1MSwtNz
+czMDE0MDMxLC0xNzA3NDU0Nzk3LC0xMjUwMzMwODg2XX0=
 -->
