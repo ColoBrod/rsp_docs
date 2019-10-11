@@ -43,8 +43,10 @@ Set `$live` variable to true at following files:
 6. `cron_emails_monthly_stat.php`
 7.  `cron_emails.php`
 8. 
-### .htaccess file
-### .htpasswd file
+### .htaccess
+1. Remove this line:
+`SetEnv SERVER_MODE TEST`
+### .htpasswd
 
 :question: I think, it would be better to add a variable to `configure.php` - `CFG::$productionMode` or something of this sort. Which can be either `true` of `false`. Banners, emails, displaying errors, etc will be enabled/disabled automatically, depending on it's state. This way we can simplify updating process and prevent some errors.
 
@@ -665,11 +667,11 @@ Installer Information:
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNTU0NTIxMTkwLC03NjUzMzgyMzQsOTUyMD
-MxNzc2LDIwNDkxNjU1MjAsLTEwNzE2NTAyMjgsLTUxODUzOTY5
-MywxNjg3NTcyNzc2LC0xOTI1ODU0NjcxLDE0Nzk1OTI3MzksMz
-k1OTYxNTI4LC0xMjUxOTI0MTc4LDc1NjQ3NjA2NSwtMTQxNDg0
-Mjk4MywtMTUwMDg3NjQ3NywxMDYxOTA0OTE3LC0xNjg3NTg4OT
-QzLC0yMDQyNTQyNjcsLTIwNDI1NDI2NywtMTE4Mzg1MzM1MSwt
-NzczMDE0MDMxXX0=
+eyJoaXN0b3J5IjpbMTA4NzEzMjU5NSwtNzY1MzM4MjM0LDk1Mj
+AzMTc3NiwyMDQ5MTY1NTIwLC0xMDcxNjUwMjI4LC01MTg1Mzk2
+OTMsMTY4NzU3Mjc3NiwtMTkyNTg1NDY3MSwxNDc5NTkyNzM5LD
+M5NTk2MTUyOCwtMTI1MTkyNDE3OCw3NTY0NzYwNjUsLTE0MTQ4
+NDI5ODMsLTE1MDA4NzY0NzcsMTA2MTkwNDkxNywtMTY4NzU4OD
+k0MywtMjA0MjU0MjY3LC0yMDQyNTQyNjcsLTExODM4NTMzNTEs
+LTc3MzAxNDAzMV19
 -->
