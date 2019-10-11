@@ -105,10 +105,10 @@ SELECT count(order_id) AS count FROM ".TABLE_ORDERS." WHERE order_id > 109892
 ~~~
 :question: What does **bgdn** stand for? I saved original variable names (converted to camel case), but I don't understand this abbreviation.
 
-# ORDERED TODAY:
+# class OrderedToday:
 
 #### Installs
-
+:memo: Counts all orders, which were added starting from the beginning of today
 ~~~ sql
 SELECT count(o.order_id) AS count FROM ".TABLE_ORDERS." o
 WHERE o.order_type_id = '1' AND o.date_added >= '".self::$today."'
@@ -579,7 +579,7 @@ Installer Information:
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTYwMjY5NjE3MiwtMTY4NzU4ODk0MywtMj
-A0MjU0MjY3LC0yMDQyNTQyNjcsLTExODM4NTMzNTEsLTc3MzAx
-NDAzMSwtMTcwNzQ1NDc5NywtMTI1MDMzMDg4Nl19
+eyJoaXN0b3J5IjpbLTE3NzkzOTI0MjgsLTE2ODc1ODg5NDMsLT
+IwNDI1NDI2NywtMjA0MjU0MjY3LC0xMTgzODUzMzUxLC03NzMw
+MTQwMzEsLTE3MDc0NTQ3OTcsLTEyNTAzMzA4ODZdfQ==
 -->
