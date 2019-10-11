@@ -253,8 +253,7 @@ where
 :memo: Just sums together 3 previous values (Installs, Removals, Service Calls).
 
 ### CurrentActiveOrders::$schedule
-:memo: Includes orders with `orders_status_id = '2'` (Which is 'Scheduled') between 1 Jan 2012 and the current mo.
-:exclamation: The time is before now! Not like written???
+:memo: Includes orders with `orders_status_id = '2'` (Which is 'Scheduled') between 1 Jan 2012 and the current moment.
 
 #### CurrentActiveOrders::$schedule->installs
 :memo: Counts all orders before now where orders.order_status_id = '2' and orders.order_type_id = '1'
@@ -293,11 +292,11 @@ where
 
 :memo: Just sums Install, Removals and Service Calls
 
-# Completed Orders:
+# CompletedOrders:
 
 In account_overview.php the order is opposite. Today is at the and Yesterday is under Today.
 
-> Completed Yesterday:
+CompletedYesterday:
 
 date_completed (table 'orders') is between the begining of yesterday and the begining of today (midnights)
 
@@ -631,7 +630,7 @@ Installer Information:
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTI0MzM2NTQ0MSwtMTkyNTg1NDY3MSwxND
+eyJoaXN0b3J5IjpbMTY0NDUwMjUxOCwtMTkyNTg1NDY3MSwxND
 c5NTkyNzM5LDM5NTk2MTUyOCwtMTI1MTkyNDE3OCw3NTY0NzYw
 NjUsLTE0MTQ4NDI5ODMsLTE1MDA4NzY0NzcsMTA2MTkwNDkxNy
 wtMTY4NzU4ODk0MywtMjA0MjU0MjY3LC0yMDQyNTQyNjcsLTEx
