@@ -296,7 +296,9 @@ where
 
 ### CompletedOrders::$completedYesterday
 
-:memo: Includes orders with `date_completed` between yesterday midnight and today's midnight.
+:memo: Includes orders with `date_completed` between yesterday midnight and today's midnight. `order_status_id `
+
+ - installs 
 
 #### CompletedOrders::$completedYesterday->installs
 #### CompletedOrders::$completedYesterday->removals
@@ -305,7 +307,7 @@ where
 
 ### CompletedOrders::$completedToday
 
-:memo: Includes orders with `date_completed` between yesterday midnight and today's midnight.
+:memo: Includes orders with `date_completed` between today's midnight and now.
 
 #### CompletedOrders::$completedToday->installs
 #### CompletedOrders::$completedToday->removals
@@ -644,10 +646,10 @@ Installer Information:
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTkzMDA4NzA3OSwtMTkyNTg1NDY3MSwxND
-c5NTkyNzM5LDM5NTk2MTUyOCwtMTI1MTkyNDE3OCw3NTY0NzYw
-NjUsLTE0MTQ4NDI5ODMsLTE1MDA4NzY0NzcsMTA2MTkwNDkxNy
-wtMTY4NzU4ODk0MywtMjA0MjU0MjY3LC0yMDQyNTQyNjcsLTEx
-ODM4NTMzNTEsLTc3MzAxNDAzMSwtMTcwNzQ1NDc5NywtMTI1MD
-MzMDg4Nl19
+eyJoaXN0b3J5IjpbMjAwMjM2MzczLC0xOTI1ODU0NjcxLDE0Nz
+k1OTI3MzksMzk1OTYxNTI4LC0xMjUxOTI0MTc4LDc1NjQ3NjA2
+NSwtMTQxNDg0Mjk4MywtMTUwMDg3NjQ3NywxMDYxOTA0OTE3LC
+0xNjg3NTg4OTQzLC0yMDQyNTQyNjcsLTIwNDI1NDI2NywtMTE4
+Mzg1MzM1MSwtNzczMDE0MDMxLC0xNzA3NDU0Nzk3LC0xMjUwMz
+MwODg2XX0=
 -->
