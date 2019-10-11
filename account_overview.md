@@ -128,7 +128,7 @@ WHERE o.order_type_id = '3' AND o.date_added >= '".self::$today."'
 ~~~
 
 #### OrderedToday::$serviceCalls
-:memo: Counts all orders, which were added starting from the beginning of today with `order_type_id = '2'` (table 'orders')
+:memo: `order_type_id = '2'` (table 'orders')
 ~~~ sql
 SELECT count(o.order_id) AS count FROM ".TABLE_ORDERS." o
 WHERE o.order_type_id = '2' AND o.date_added >= '".self::$today."'
@@ -585,7 +585,7 @@ Installer Information:
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTgxMDg2ODAwMCwxMDYxOTA0OTE3LC0xNj
+eyJoaXN0b3J5IjpbLTg5OTgyMzYxOCwxMDYxOTA0OTE3LC0xNj
 g3NTg4OTQzLC0yMDQyNTQyNjcsLTIwNDI1NDI2NywtMTE4Mzg1
 MzM1MSwtNzczMDE0MDMxLC0xNzA3NDU0Nzk3LC0xMjUwMzMwOD
 g2XX0=
