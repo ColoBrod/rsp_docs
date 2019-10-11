@@ -179,14 +179,20 @@ AND o.order_type_id = '3'
 AND o.date_completed >= '".self::$startYesterday."'
 AND o.date_completed < '".self::$endYesterday."'
 ~~~
+And finally 
+
 
 ### PostTotalChange::forLastWeek
-:heavy_exclamation_mark: IMPORTANT: It counts orders for last 7 days, not for last week,
-:memo: The algorithm is absolutely same as in example above.
+:heavy_exclamation_mark: IMPORTANT: It counts orders for last 7 days, not for last week.
+~~~php
+self::$startLastWeek = strtotime('midnight - 6days 00:00:01');
+self::$endLastWeek = strtotime('today 23:59:59');
+~~~
+:memo: The algorithm is absolutely the same as in example above.
 
-# Overdue Orders: 
+# class OverdueOrders: 
 
-##### Pending:
+#### Pending:
 
 SQL-query takes the time, that was exactly 2 days ago.
 
@@ -194,7 +200,7 @@ SQL-query takes the time, that was exactly 2 days ago.
 select count(o.order_id) as count from orders o, addresses a , order_types ot, orders_statuses os, users u where o.order_type_id = ot.order_type_id and o.user_id = u.user_id and o.order_status_id = os.order_status_id and o.order_status_id = '1' and o.address_id = a.address_id and o.date_schedualed > 0 and o.date_schedualed < 1569045051
 ~~~
 
-##### Scheduled:  
+#### Scheduled:  
 
 This SQL-query is absolutely the same as previous one, except orders.order_status_id = 2
 
@@ -607,8 +613,8 @@ Installer Information:
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEwOTY5Mzg4NTQsLTE1MDA4NzY0NzcsMT
-A2MTkwNDkxNywtMTY4NzU4ODk0MywtMjA0MjU0MjY3LC0yMDQy
-NTQyNjcsLTExODM4NTMzNTEsLTc3MzAxNDAzMSwtMTcwNzQ1ND
-c5NywtMTI1MDMzMDg4Nl19
+eyJoaXN0b3J5IjpbMjkyNjAyNzczLC0xNTAwODc2NDc3LDEwNj
+E5MDQ5MTcsLTE2ODc1ODg5NDMsLTIwNDI1NDI2NywtMjA0MjU0
+MjY3LC0xMTgzODUzMzUxLC03NzMwMTQwMzEsLTE3MDc0NTQ3OT
+csLTEyNTAzMzA4ODZdfQ==
 -->
