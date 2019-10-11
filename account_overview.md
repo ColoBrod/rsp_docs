@@ -50,10 +50,11 @@ select count(o.order_id) as count from orders o left join orders_miss_utility om
 ~~~
 
 #### MissUtility::$percentage
-:memo: This property is counted in private method 
+:memo: This property is counted in private method MissUtility::calcPercentage()
 ~~~ sql
 select count(order_miss_utility_id) as count from orders_miss_utility
 ~~~
+In following SQL-query statement order_id > 109892 is used just in order to avoid all 
 ~~~ sql
 select count(order_id) as count from orders WHERE order_id > 109892
 ~~~
@@ -539,5 +540,5 @@ Installer Information:
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTAyMzU4MzEzNiwtMTI1MDMzMDg4Nl19
+eyJoaXN0b3J5IjpbLTY4MjIxMTE5MiwtMTI1MDMzMDg4Nl19
 -->
