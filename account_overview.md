@@ -194,7 +194,7 @@ self::$endLastWeek = strtotime('today 23:59:59');
 
 #### OverdueOrders::$pending
 
-SQL-query takes the time between the `Stats::$relevantDate` (i.e. January 1 2012) and `Stats::$datePendingOverdue` (i.e. 2 days ago at 12:00).
+SQL-query takes the time between the `Stats::$relevantDate` (i.e. January 1 2012) and `Stats::$datePendingOverdue` (i.e. 2 days ago at 12:00). 
 
 ~~~ sql
 SELECT count(o.order_id) AS count FROM ".TABLE_ORDERS." o
@@ -203,8 +203,7 @@ WHERE
 	o.date_schedualed > '".self::$relevantDate."' AND
 	o.date_schedualed < '".self::$datePendingOverdue."'
 ~~~
-:exclamation: I think there previously was an Issue. because of a typo (coder used function `time(...)` instead of `mktime()`), This SQL was counting all orders until this moment, not until the moment 2 days ago
-
+:exclamation: I think there previously was an Issue. because of a typo (coder used function `time(...)` instead of `mktime()`), This SQL was counting all orders until this moment, not until the moment 2 days ago.
 
 #### OverdueOrders::$scheduled
 
@@ -376,7 +375,7 @@ New/Active Agencies:
 MONEY STATISTICS:
 =================
 
-Current Year:
+class Current:
 =============
 
 ### Today (placed):
@@ -619,7 +618,7 @@ Installer Information:
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTc0MzE2NzU5MiwxNDc5NTkyNzM5LDM5NT
+eyJoaXN0b3J5IjpbLTQ2NDc3MzY4NywxNDc5NTkyNzM5LDM5NT
 k2MTUyOCwtMTI1MTkyNDE3OCw3NTY0NzYwNjUsLTE0MTQ4NDI5
 ODMsLTE1MDA4NzY0NzcsMTA2MTkwNDkxNywtMTY4NzU4ODk0My
 wtMjA0MjU0MjY3LC0yMDQyNTQyNjcsLTExODM4NTMzNTEsLTc3
