@@ -179,7 +179,7 @@ AND o.order_type_id = '3'
 AND o.date_completed >= '".self::$startYesterday."'
 AND o.date_completed < '".self::$endYesterday."'
 ~~~
-And finally 
+And finally, the result is the subtraction: `$completeInstall - $completeRemove`
 
 
 ### PostTotalChange::forLastWeek
@@ -188,7 +188,7 @@ And finally
 self::$startLastWeek = strtotime('midnight - 6days 00:00:01');
 self::$endLastWeek = strtotime('today 23:59:59');
 ~~~
-:memo: The algorithm is absolutely the same as in example above.
+:memo: The algorithm is absolutely the same as in an example above.
 
 # class OverdueOrders: 
 
@@ -613,8 +613,8 @@ Installer Information:
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjkyNjAyNzczLC0xNTAwODc2NDc3LDEwNj
-E5MDQ5MTcsLTE2ODc1ODg5NDMsLTIwNDI1NDI2NywtMjA0MjU0
-MjY3LC0xMTgzODUzMzUxLC03NzMwMTQwMzEsLTE3MDc0NTQ3OT
-csLTEyNTAzMzA4ODZdfQ==
+eyJoaXN0b3J5IjpbLTc3NjA0MTQxMywtMTUwMDg3NjQ3NywxMD
+YxOTA0OTE3LC0xNjg3NTg4OTQzLC0yMDQyNTQyNjcsLTIwNDI1
+NDI2NywtMTE4Mzg1MzM1MSwtNzczMDE0MDMxLC0xNzA3NDU0Nz
+k3LC0xMjUwMzMwODg2XX0=
 -->
