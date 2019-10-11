@@ -1,7 +1,7 @@
 #  class Issues
 
 #### Issues::$unassigned
-:memo: Selects all orders, where order_status_id more than 0 (table 'orders') and order_status_id is not 3
+:memo: Selects all orders from tables 'orders' and 'installers_to_orders', where order_status_id more than 0 and is not 3 or 4 (table 'orders'). 
 There is no 'count' in SQL-query. After executing SQL, counts number of result row inside of a function.
 ~~~ sql
 SELECT o.order_id FROM orders o
@@ -569,7 +569,7 @@ Installer Information:
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE1MDY2Njg3NjgsLTIwNDI1NDI2NywtMj
+eyJoaXN0b3J5IjpbLTEyNzAxMDYwMzYsLTIwNDI1NDI2NywtMj
 A0MjU0MjY3LC0xMTgzODUzMzUxLC03NzMwMTQwMzEsLTE3MDc0
 NTQ3OTcsLTEyNTAzMzA4ODZdfQ==
 -->
