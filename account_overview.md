@@ -192,10 +192,12 @@ self::$endLastWeek = strtotime('today 23:59:59');
 
 # class OverdueOrders: 
 :exclamation: I think there previously was an Issue in both `$pending` and `$scheduled`. because of a typo (coder used function `time(...)` instead of `mktime()`), This SQL was counting all orders until this moment, not until the moment that was 2 days ago at 12:00.
+:memo: SQL-query takes the time between the `Stats::$relevantDate` (i.e. January 1 2012) and `Stats::$datePendingOverdue` (i.e. 2 days ago at 12:00).   
+The only difference between 
 
 #### OverdueOrders::$pending
 
-SQL-query takes the time between the `Stats::$relevantDate` (i.e. January 1 2012) and `Stats::$datePendingOverdue` (i.e. 2 days ago at 12:00). 
+
 
 ~~~ sql
 SELECT count(o.order_id) AS count FROM ".TABLE_ORDERS." o
@@ -621,7 +623,7 @@ Installer Information:
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNDI1ODE0NjI1LDE0Nzk1OTI3MzksMzk1OT
+eyJoaXN0b3J5IjpbNTEyMTg5NzEzLDE0Nzk1OTI3MzksMzk1OT
 YxNTI4LC0xMjUxOTI0MTc4LDc1NjQ3NjA2NSwtMTQxNDg0Mjk4
 MywtMTUwMDg3NjQ3NywxMDYxOTA0OTE3LC0xNjg3NTg4OTQzLC
 0yMDQyNTQyNjcsLTIwNDI1NDI2NywtMTE4Mzg1MzM1MSwtNzcz
