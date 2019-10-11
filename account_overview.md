@@ -2,7 +2,7 @@
 
 #### Issues::$unassigned
 :memo: Selects all orders from tables 'orders' and 'installers_to_orders', where order_status_id is 1,2 or 5 (i.e. Pending, Scheduled, On Hold)
-There is no 'count' in SQL-query. After executing SQL, counts number of result row inside of a function.
+There is no 'count' in SQL-query. After executing SQL, filters throug function `Issues::fetchAssignedOrderInstaller($order_id)`. 
 ~~~ sql
 SELECT o.order_id FROM orders o
 LEFT JOIN ".TABLE_INSTALLERS_TO_ORDERS." ito ON (ito.order_id = o.order_id)
@@ -569,7 +569,7 @@ Installer Information:
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTQxMDQ4MzcxOCwtMjA0MjU0MjY3LC0yMD
-QyNTQyNjcsLTExODM4NTMzNTEsLTc3MzAxNDAzMSwtMTcwNzQ1
-NDc5NywtMTI1MDMzMDg4Nl19
+eyJoaXN0b3J5IjpbOTY2NTU0ODYyLC0yMDQyNTQyNjcsLTIwND
+I1NDI2NywtMTE4Mzg1MzM1MSwtNzczMDE0MDMxLC0xNzA3NDU0
+Nzk3LC0xMjUwMzMwODg2XX0=
 -->
