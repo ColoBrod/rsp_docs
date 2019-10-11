@@ -216,9 +216,9 @@ WHERE
 # class CurrentActiveOrders:
 
 ### CurrentActiveOrders::$pending
-Includes orders with `orders_status_id = '1'` (Which is 'Pending') between 1 Jan 2012 and tomorrow midnight.
-#### CurrentActiveOrders::$pending->inst
-Counts orders where orders.order_type_id = '1'.
+:memo: Includes orders with `orders_status_id = '1'` (Which is 'Pending') between 1 Jan 2012 and tomorrow midnight.
+#### CurrentActiveOrders::$pending->installs
+:memo: Counts orders where orders.order_type_id = '1'.
 Only orders until tomorrow midnight
 ~~~ sql
 select count(o.order_id) as count from ".TABLE_ORDERS." o
@@ -229,13 +229,16 @@ where
 	o.order_type_id = '1'
 ~~~
 
-#### Removals
-
-Counts orders where orders.order_status_id = '1' and orders.order_type_id = '3'
-Only orders until tomorrow midnight
-
+#### CurrentActiveOrders::$pending->removals
+:memo: Counts orders where orders.order_type_id = '3'
 ~~~ sql
-select count(o.order_id) as count from orders o, addresses a , order_types ot, orders_statuses os, users u where o.order_type_id = ot.order_type_id and o.user_id = u.user_id and o.order_status_id = os.order_status_id and o.order_status_id = '1' and o.address_id = a.address_id and o.date_schedualed < '1569099600' and o.order_type_id = '3'
+where
+o.order_status_id = '1' and
+o.date_schedualed > '".self::$relevantDate."' and
+
+o.date_schedualed < '".self::$datePendingCurrentActivePending."' and
+
+o.order_type_id = '3'
 ~~~
 
 ###### Service Calls
@@ -621,7 +624,7 @@ Installer Information:
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIzNzk0NzI2MSwtMTkyNTg1NDY3MSwxND
+eyJoaXN0b3J5IjpbMjAzNjQxODA3OCwtMTkyNTg1NDY3MSwxND
 c5NTkyNzM5LDM5NTk2MTUyOCwtMTI1MTkyNDE3OCw3NTY0NzYw
 NjUsLTE0MTQ4NDI5ODMsLTE1MDA4NzY0NzcsMTA2MTkwNDkxNy
 wtMTY4NzU4ODk0MywtMjA0MjU0MjY3LC0yMDQyNTQyNjcsLTEx
