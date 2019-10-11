@@ -28,11 +28,13 @@ select count(o.order_id) as count from orders o, addresses a , order_types ot, o
 ~~~php
 // Following values received via pretty much the same SQL-query
 // The difference in variable $condition
-MissUtility::$open
-MissUtility::$called
-MissUtility::$completed
+
+// o.order_status_id < 3 AND omu.contacted = 0
+MissUtility::$open			
+MissUtility::$called		
+MissUtility::$completed		
 ~~~
-:memo: Counts orders from tables `orders` and `orders_miss_utility` where `agent_requested != 0` and either  `has_gas_lamp` or `has_lamp` is not 0 (table `orders_miss_utility`)
+:memo: Counts orders from tables `orders` and `orders_miss_utility` where `agent_requested` is not 0 and both  `has_gas_lamp` or `has_lamp` are not 0 (table `orders_miss_utility`)
 ~~~sql
 SELECT count(o.order_id) AS count
 FROM "  . TABLE_ORDERS .  " o
@@ -557,6 +559,6 @@ Installer Information:
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTExOTYxNDQ2MCwtMTcwNzQ1NDc5NywtMT
-I1MDMzMDg4Nl19
+eyJoaXN0b3J5IjpbODUxMTUzMTI0LC0xNzA3NDU0Nzk3LC0xMj
+UwMzMwODg2XX0=
 -->
