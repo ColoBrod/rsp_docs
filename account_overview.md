@@ -2,7 +2,7 @@
 
 #### Issues::$unassigned
 :memo: Selects all orders from tables 'orders' and 'installers_to_orders', where order_status_id is 1,2 or 5 (i.e. Pending, Scheduled, On Hold)
-There is no 'count' in SQL-query. After executing SQL, filters throug function `Issues::fetchAssignedOrderInstaller($order_id)`. 
+There is no 'count' in SQL-query. 
 ~~~ sql
 SELECT o.order_id FROM orders o
 LEFT JOIN ".TABLE_INSTALLERS_TO_ORDERS." ito ON (ito.order_id = o.order_id)
@@ -13,11 +13,8 @@ o.order_status_id != '3' AND
 o.order_status_id != '4' AND
 ito.installer_id IS NULL
 ~~~
-After previous SQL-query we have a table (list of orders). We iterate over each row in a table 
-~~~sql
-SELECT installer_id from ".TABLE_INSTALLERS_TO_ORDERS."
-WHERE order_id = '$order_id' LIMIT 1
-~~~
+After previous SQL-query we have a table (list of orders). We iterate over each row in a table and filter through function `Issues::fetchAssignedOrderInstaller($order_id)`. The algorithm of 
+
 
 :exclamation: function tep_count_unassigned_orders() in general.php
 #### Issues::$redFlag
@@ -569,7 +566,7 @@ Installer Information:
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbOTY2NTU0ODYyLC0yMDQyNTQyNjcsLTIwND
-I1NDI2NywtMTE4Mzg1MzM1MSwtNzczMDE0MDMxLC0xNzA3NDU0
-Nzk3LC0xMjUwMzMwODg2XX0=
+eyJoaXN0b3J5IjpbLTc1MzcyMjQ0NSwtMjA0MjU0MjY3LC0yMD
+QyNTQyNjcsLTExODM4NTMzNTEsLTc3MzAxNDAzMSwtMTcwNzQ1
+NDc5NywtMTI1MDMzMDg4Nl19
 -->
