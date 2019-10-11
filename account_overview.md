@@ -17,8 +17,9 @@ else {
 :question: `ini_set('display_errors', false);`  
 This line of code makes all errors on site invisible. So it makes a better look for clients, but we also can't see any problems, debug and fix them.
 ### Removing banner "TEST SITE" from the top
-1. `includes/twig_templates/layout.html.twig`. Comment **\<span** tag at the top
+1. `includes/twig_templates/layout.html.twig`. Comment **\<span\>** tag at the top.
 2. 
+:question: I think, it woul be better to add 
 
 #  class Issues
 :exclamation: Original functions of `Issues::$onHold` and `Issues::$redFlag` were located in `account_overview.php` or in `admin_service_stats` (were 2 pretty much same pieces of code).
@@ -637,11 +638,11 @@ Installer Information:
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNjAzNzM2NTUyLC0xMDcxNjUwMjI4LC01MT
-g1Mzk2OTMsMTY4NzU3Mjc3NiwtMTkyNTg1NDY3MSwxNDc5NTky
-NzM5LDM5NTk2MTUyOCwtMTI1MTkyNDE3OCw3NTY0NzYwNjUsLT
-E0MTQ4NDI5ODMsLTE1MDA4NzY0NzcsMTA2MTkwNDkxNywtMTY4
-NzU4ODk0MywtMjA0MjU0MjY3LC0yMDQyNTQyNjcsLTExODM4NT
-MzNTEsLTc3MzAxNDAzMSwtMTcwNzQ1NDc5NywtMTI1MDMzMDg4
-Nl19
+eyJoaXN0b3J5IjpbLTYwOTc2MjgyOCwtMTA3MTY1MDIyOCwtNT
+E4NTM5NjkzLDE2ODc1NzI3NzYsLTE5MjU4NTQ2NzEsMTQ3OTU5
+MjczOSwzOTU5NjE1MjgsLTEyNTE5MjQxNzgsNzU2NDc2MDY1LC
+0xNDE0ODQyOTgzLC0xNTAwODc2NDc3LDEwNjE5MDQ5MTcsLTE2
+ODc1ODg5NDMsLTIwNDI1NDI2NywtMjA0MjU0MjY3LC0xMTgzOD
+UzMzUxLC03NzMwMTQwMzEsLTE3MDc0NTQ3OTcsLTEyNTAzMzA4
+ODZdfQ==
 -->
