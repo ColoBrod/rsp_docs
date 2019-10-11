@@ -549,7 +549,7 @@ __$ value / # of installs:__
 __% of CC Orders:__
 __% of Invoice Orders:__
 
-# Previous Year (Completed):
+# class PreviousYear
 
 ### Month:	
 __# of Installs:__
@@ -615,7 +615,7 @@ Installer Information:
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTgxNjM4MjMxMCwtMTkyNTg1NDY3MSwxND
+eyJoaXN0b3J5IjpbMTY4NzU3Mjc3NiwtMTkyNTg1NDY3MSwxND
 c5NTkyNzM5LDM5NTk2MTUyOCwtMTI1MTkyNDE3OCw3NTY0NzYw
 NjUsLTE0MTQ4NDI5ODMsLTE1MDA4NzY0NzcsMTA2MTkwNDkxNy
 wtMTY4NzU4ODk0MywtMjA0MjU0MjY3LC0yMDQyNTQyNjcsLTEx
