@@ -203,7 +203,7 @@ WHERE
 	o.date_schedualed > '".self::$relevantDate."' AND
 	o.date_schedualed < '".self::$datePendingOverdue."'
 ~~~
-:exclamation: I think there previously was an Issue. because of a typo (function `time(...)` instead of `mktime()`)
+:exclamation: I think there previously was an Issue. because of a typo (coder used function `time(...)` instead of `mktime()`), This SQL was counting all orders until this moment, not until the moment 2 days ago
 
 
 #### OverdueOrders::$scheduled
@@ -619,7 +619,7 @@ Installer Information:
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIzNDA1OTkzNCwxNDc5NTkyNzM5LDM5NT
+eyJoaXN0b3J5IjpbMTc0MzE2NzU5MiwxNDc5NTkyNzM5LDM5NT
 k2MTUyOCwtMTI1MTkyNDE3OCw3NTY0NzYwNjUsLTE0MTQ4NDI5
 ODMsLTE1MDA4NzY0NzcsMTA2MTkwNDkxNywtMTY4NzU4ODk0My
 wtMjA0MjU0MjY3LC0yMDQyNTQyNjcsLTExODM4NTMzNTEsLTc3
