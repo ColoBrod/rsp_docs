@@ -1,6 +1,7 @@
 # Instructions for updating production site
 
-
+### `public_html/includes/configure.php`
+:question: `ini_set('display_errors', false);` - I don't th
 
 #  class Issues
 :exclamation: Original functions of `Issues::$onHold` and `Issues::$redFlag` were located in `account_overview.php` or in `admin_service_stats` (were 2 pretty much same pieces of code).
@@ -619,10 +620,10 @@ Installer Information:
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTUxODUzOTY5MywxNjg3NTcyNzc2LC0xOT
-I1ODU0NjcxLDE0Nzk1OTI3MzksMzk1OTYxNTI4LC0xMjUxOTI0
-MTc4LDc1NjQ3NjA2NSwtMTQxNDg0Mjk4MywtMTUwMDg3NjQ3Ny
-wxMDYxOTA0OTE3LC0xNjg3NTg4OTQzLC0yMDQyNTQyNjcsLTIw
-NDI1NDI2NywtMTE4Mzg1MzM1MSwtNzczMDE0MDMxLC0xNzA3ND
-U0Nzk3LC0xMjUwMzMwODg2XX0=
+eyJoaXN0b3J5IjpbLTgzMTU3NTYzOCwtNTE4NTM5NjkzLDE2OD
+c1NzI3NzYsLTE5MjU4NTQ2NzEsMTQ3OTU5MjczOSwzOTU5NjE1
+MjgsLTEyNTE5MjQxNzgsNzU2NDc2MDY1LC0xNDE0ODQyOTgzLC
+0xNTAwODc2NDc3LDEwNjE5MDQ5MTcsLTE2ODc1ODg5NDMsLTIw
+NDI1NDI2NywtMjA0MjU0MjY3LC0xMTgzODUzMzUxLC03NzMwMT
+QwMzEsLTE3MDc0NTQ3OTcsLTEyNTAzMzA4ODZdfQ==
 -->
