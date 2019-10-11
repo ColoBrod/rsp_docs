@@ -377,7 +377,7 @@ MONEY STATISTICS:
 
 class CurrentYear
 =============
-:exclamation: There was an error because of a typo (coder used function `time` instead of function `mktime`). Previously it took in account orders with 
+:exclamation: There was an error because of a typo (coder used function `time` instead of function `mktime`). Previously it took in account orders with `order_added` or `order_completed` less than current moment (not less than tomorrow).
 
 
 ### Today (placed):
@@ -620,7 +620,7 @@ Installer Information:
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE0MzU1NjAwMiwxNDc5NTkyNzM5LDM5NT
+eyJoaXN0b3J5IjpbLTUyMzk0NjY5MCwxNDc5NTkyNzM5LDM5NT
 k2MTUyOCwtMTI1MTkyNDE3OCw3NTY0NzYwNjUsLTE0MTQ4NDI5
 ODMsLTE1MDA4NzY0NzcsMTA2MTkwNDkxNywtMTY4NzU4ODk0My
 wtMjA0MjU0MjY3LC0yMDQyNTQyNjcsLTExODM4NTMzNTEsLTc3
