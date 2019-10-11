@@ -108,24 +108,24 @@ SELECT count(order_id) AS count FROM ".TABLE_ORDERS." WHERE order_id > 109892
 # class OrderedToday:
 
 #### Installs
-:memo: Counts all orders, which were added starting from the beginning of today
+:memo: Counts all orders, which were added starting from the beginning of today with `order_type_id = '1'` (table 'orders')
 ~~~ sql
 SELECT count(o.order_id) AS count FROM ".TABLE_ORDERS." o
 WHERE o.order_type_id = '1' AND o.date_added >= '".self::$today."'
 ~~~
 
 #### Removals
-
+:memo: Counts all orders, which were added starting from the beginning of today with `order_type_id = '3'` (table 'orders')
 ~~~ sql
 SELECT count(o.order_id) AS count FROM ".TABLE_ORDERS." o
 WHERE o.order_type_id = '3' AND o.date_added >= '".self::$today."'
 ~~~
 
 #### Service Calls
-
+:memo: Counts all orders, which were added starting from the beginning of today with `order_type_id = '2'` (table 'orders')
 ~~~ sql
 SELECT count(o.order_id) AS count FROM ".TABLE_ORDERS." o
-WHERE o.order_type_id = '2' AND o.date_added > 0 AND o.date_added >= '".self::$today."'
+WHERE o.order_type_id = '2' AND o.date_added >= '".self::$today."'
 ~~~
 
 # RESCHEDULED TODAY:
@@ -579,7 +579,7 @@ Installer Information:
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE3NzkzOTI0MjgsLTE2ODc1ODg5NDMsLT
-IwNDI1NDI2NywtMjA0MjU0MjY3LC0xMTgzODUzMzUxLC03NzMw
-MTQwMzEsLTE3MDc0NTQ3OTcsLTEyNTAzMzA4ODZdfQ==
+eyJoaXN0b3J5IjpbMTA2MTkwNDkxNywtMTY4NzU4ODk0MywtMj
+A0MjU0MjY3LC0yMDQyNTQyNjcsLTExODM4NTMzNTEsLTc3MzAx
+NDAzMSwtMTcwNzQ1NDc5NywtMTI1MDMzMDg4Nl19
 -->
