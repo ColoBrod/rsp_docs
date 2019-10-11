@@ -159,12 +159,23 @@ Counts results where `old_scheduled_date < new_scheduled_date`
 Counts results where `old_scheduled_date > new_scheduled_date`
 
 # class PostTotalChange:
-:memo: Algorithm is same for both values except the time period.
+:memo: Algorithm is same for both values except the time period. I am describing only for Yesterday:
 
 ### PostTotalChange::forYesterday
 :memo: It takes the time for Yesterday between 00:00:01 and 23:59:59
 ~~~ sql
-select count(o.order_id) as count from orders o, addresses a , order_types ot, orders_statuses os, users u where o.order_type_id = ot.order_type_id and o.user_id = u.user_id and o.order_status_id = os.order_status_id and o.order_status_id = '3' and o.address_id = a.address_id and o.date_completed >= 1568926801 and o.date_completed < 1569013199 and o.order_type_id = '1'
+SELECT count(o.order_id) AS count FROM ".TABLE_ORDERS." o
+WHERE o.order_status_id = '3'
+AND o.order_type_id = '1'
+AND o.date_completed >= '".self::$startYesterday."'
+AND o.date_completed < '".self::$endYesterday."'
+~~~
+~~~sql
+SELECT count(o.order_id) AS count FROM ".TABLE_ORDERS." o
+WHERE o.order_status_id = '3'
+AND o.order_type_id = '3'
+AND o.date_completed >= '".self::$startYesterday."'
+AND o.date_completed < '".self::$endYesterday."'
 ~~~
 
 ### PostTotalChange::forLastWeek
@@ -598,7 +609,7 @@ Installer Information:
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjA2NjU1NTE3NiwtMTUwMDg3NjQ3NywxMD
+eyJoaXN0b3J5IjpbMTQzOTU0ODg4OSwtMTUwMDg3NjQ3NywxMD
 YxOTA0OTE3LC0xNjg3NTg4OTQzLC0yMDQyNTQyNjcsLTIwNDI1
 NDI2NywtMTE4Mzg1MzM1MSwtNzczMDE0MDMxLC0xNzA3NDU0Nz
 k3LC0xMjUwMzMwODg2XX0=
