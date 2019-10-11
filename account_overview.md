@@ -203,7 +203,7 @@ WHERE
 	o.date_schedualed > '".self::$relevantDate."' AND
 	o.date_schedualed < '".self::$datePendingOverdue."'
 ~~~
-:exclamation: I think there was previously an Issue.
+:exclamation: I think there previously was an Issue. because of a typo (function `time(...)` instead of `mktime()`)
 
 
 #### OverdueOrders::$scheduled
@@ -619,9 +619,9 @@ Installer Information:
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbOTU2MzkzOTQ2LDE0Nzk1OTI3MzksMzk1OT
-YxNTI4LC0xMjUxOTI0MTc4LDc1NjQ3NjA2NSwtMTQxNDg0Mjk4
-MywtMTUwMDg3NjQ3NywxMDYxOTA0OTE3LC0xNjg3NTg4OTQzLC
-0yMDQyNTQyNjcsLTIwNDI1NDI2NywtMTE4Mzg1MzM1MSwtNzcz
-MDE0MDMxLC0xNzA3NDU0Nzk3LC0xMjUwMzMwODg2XX0=
+eyJoaXN0b3J5IjpbLTIzNDA1OTkzNCwxNDc5NTkyNzM5LDM5NT
+k2MTUyOCwtMTI1MTkyNDE3OCw3NTY0NzYwNjUsLTE0MTQ4NDI5
+ODMsLTE1MDA4NzY0NzcsMTA2MTkwNDkxNywtMTY4NzU4ODk0My
+wtMjA0MjU0MjY3LC0yMDQyNTQyNjcsLTExODM4NTMzNTEsLTc3
+MzAxNDAzMSwtMTcwNzQ1NDc5NywtMTI1MDMzMDg4Nl19
 -->
