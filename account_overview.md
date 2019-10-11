@@ -150,7 +150,7 @@ ORDER BY
 	o.order_id,
 	rh.rescheduled_date
 ~~~
-We select from 2 tables: `reschedule_history` and `orders` 
+We select from 2 tables: `reschedule_history` and `orders`, only **completed orders** with `rescheduled_date` starting from the midnight.
 
 #### RescheduledToday::$removalsRescheduled
 #### RescheduledToday::$pushedBack
@@ -594,7 +594,7 @@ Installer Information:
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEwNDUzNzk1NTUsMTA2MTkwNDkxNywtMT
+eyJoaXN0b3J5IjpbLTE1MDA4NzY0NzcsMTA2MTkwNDkxNywtMT
 Y4NzU4ODk0MywtMjA0MjU0MjY3LC0yMDQyNTQyNjcsLTExODM4
 NTMzNTEsLTc3MzAxNDAzMSwtMTcwNzQ1NDc5NywtMTI1MDMzMD
 g4Nl19
