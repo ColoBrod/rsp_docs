@@ -296,7 +296,7 @@ where
 
 ### CompletedOrders::$completedYesterday
 
-:memo: Includes orders with `date_completed` between 
+:memo: Includes orders with `date_completed` between yesterday midnight and today's midnight.
 
 #### CompletedOrders::$completedYesterday->installs
 #### CompletedOrders::$completedYesterday->removals
@@ -304,6 +304,8 @@ where
 #### CompletedOrders::$completedYesterday->total
 
 ### CompletedOrders::$completedToday
+
+:memo: Includes orders with `date_completed` between yesterday midnight and today's midnight.
 
 #### CompletedOrders::$completedToday->installs
 #### CompletedOrders::$completedToday->removals
@@ -642,7 +644,7 @@ Installer Information:
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTYyNjY3MDcwMywtMTkyNTg1NDY3MSwxND
+eyJoaXN0b3J5IjpbMTkzMDA4NzA3OSwtMTkyNTg1NDY3MSwxND
 c5NTkyNzM5LDM5NTk2MTUyOCwtMTI1MTkyNDE3OCw3NTY0NzYw
 NjUsLTE0MTQ4NDI5ODMsLTE1MDA4NzY0NzcsMTA2MTkwNDkxNy
 wtMTY4NzU4ODk0MywtMjA0MjU0MjY3LC0yMDQyNTQyNjcsLTEx
