@@ -25,6 +25,15 @@ select count(o.order_id) as count from orders o, addresses a , order_types ot, o
 ~~~
 
 # class MissUtility
+~~~php
+/*
+ * All
+ */
+MissUtility::$open
+MissUtility::$called
+MissUtility::$completed
+~~~
+
 
 #### MissUtility::$open
 :memo: Selects all orders, where orders_status_id < 3 and orders_miss_utility.contacted = 0 and not (orders_miss_utility.agent_requested = 0 (orders_miss_utility.has_gas_lamp = 0 or orders_miss_utility.has_lamp = 0))
@@ -539,6 +548,6 @@ Installer Information:
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE3MDc0NTQ3OTcsLTEyNTAzMzA4ODZdfQ
-==
+eyJoaXN0b3J5IjpbMTQ0NzU0OTI0NiwtMTcwNzQ1NDc5NywtMT
+I1MDMzMDg4Nl19
 -->
