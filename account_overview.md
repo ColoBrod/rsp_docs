@@ -1,5 +1,5 @@
 #  class Issues
-:exclamation: Original functions of `Issues::$onHold` and `Issues::$redFlag` were located in `account_overview.php` or in `admin_service_stats` (also exists pretty much the same code).
+:exclamation: Original functions of `Issues::$onHold` and `Issues::$redFlag` were located in `account_overview.php` or in `admin_service_stats` (were duplicates).
 
 #### Issues::$unassigned
 :memo: Selects all orders from tables 'orders' and 'installers_to_orders', where order_status_id is 1,2 or 5 (i.e. Pending, Scheduled, On Hold)
@@ -613,8 +613,9 @@ Installer Information:
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNzU2NDc2MDY1LC0xNDE0ODQyOTgzLC0xNT
-AwODc2NDc3LDEwNjE5MDQ5MTcsLTE2ODc1ODg5NDMsLTIwNDI1
-NDI2NywtMjA0MjU0MjY3LC0xMTgzODUzMzUxLC03NzMwMTQwMz
-EsLTE3MDc0NTQ3OTcsLTEyNTAzMzA4ODZdfQ==
+eyJoaXN0b3J5IjpbMTA5MzQzMDgyMCw3NTY0NzYwNjUsLTE0MT
+Q4NDI5ODMsLTE1MDA4NzY0NzcsMTA2MTkwNDkxNywtMTY4NzU4
+ODk0MywtMjA0MjU0MjY3LC0yMDQyNTQyNjcsLTExODM4NTMzNT
+EsLTc3MzAxNDAzMSwtMTcwNzQ1NDc5NywtMTI1MDMzMDg4Nl19
+
 -->
