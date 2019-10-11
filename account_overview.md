@@ -298,38 +298,49 @@ where
 
 :memo: Includes orders with `date_completed` between yesterday midnight and today's midnight. `order_status_id = 3` ('Completed').  
   
-
-
-
+~~~sql 
+select count(o.order_id) as count from ".TABLE_ORDERS." o
+where
+	o.order_status_id = '3' and
+	o.date_completed >= '".$start."' and
+	o.date_completed < '".$end."' and
+	o.order_type_id = '$order_type_id'
+~~~
 
 #### CompletedOrders::$completedYesterday->installs
 - installs: `orderd_type_id = '1'`
 #### CompletedOrders::$completedYesterday->removals
 - removals: `orderd_type_id = '3'`
 #### CompletedOrders::$completedYesterday->serviceCalls
+- serviceCalls: `orderd_type_id = '2'`
 #### CompletedOrders::$completedYesterday->total
 Sums Installs, Removals and Service Calls
 
 ### CompletedOrders::$completedToday
 
 :memo: Includes orders with `date_completed` between today's midnight and now. `order_status_id = 3` ('Completed').  
-  
-- installs: `orderd_type_id = '1'`
-- removals: `orderd_type_id = '3'`
-- serviceCalls: `orderd_type_id = '2'`
 
+~~~sql 
+select count(o.order_id) as count from ".TABLE_ORDERS." o
+where
+	o.order_status_id = '3' and
+	o.date_completed >= '".$start."' and
+	o.date_completed < '".$end."' and
+	o.order_type_id = '$order_type_id'
+~~~
 #### CompletedOrders::$completedToday->installs
+- installs: `orderd_type_id = '1'`
 #### CompletedOrders::$completedToday->removals
+- removals: `orderd_type_id = '3'`
 #### CompletedOrders::$completedToday->serviceCalls
+- serviceCalls: `orderd_type_id = '2'`
 #### CompletedOrders::$completedToday->total
 Sums Installs, Removals and Service Calls
 
 # Future Orders:
 
 
-
-
-Agents to be made Inactive:
+# Agents to be made Inactive:
 =============================
 
 Agencies to be made Inactive:
@@ -607,7 +618,7 @@ Installer Information:
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTg2ODUwNDk4MiwtMTkyNTg1NDY3MSwxND
+eyJoaXN0b3J5IjpbMTkyNjA3OTI1MiwtMTkyNTg1NDY3MSwxND
 c5NTkyNzM5LDM5NTk2MTUyOCwtMTI1MTkyNDE3OCw3NTY0NzYw
 NjUsLTE0MTQ4NDI5ODMsLTE1MDA4NzY0NzcsMTA2MTkwNDkxNy
 wtMTY4NzU4ODk0MywtMjA0MjU0MjY3LC0yMDQyNTQyNjcsLTEx
