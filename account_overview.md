@@ -163,8 +163,8 @@ Counts results where `old_scheduled_date > new_scheduled_date`
 
 ### PostTotalChange::forYesterday
 :memo: It takes in account orders from Yesterday between 00:00:01 and 23:59:59.  
-First we count `$completeInstall`:
-~~~ sql
+First we count `$completeInstall`, `order_status_id = 3` (i.e. 'Completed') and `order_type_id = 1`:
+~~~sql
 SELECT count(o.order_id) AS count FROM ".TABLE_ORDERS." o
 WHERE o.order_status_id = '3'
 AND o.order_type_id = '1'
@@ -611,8 +611,8 @@ Installer Information:
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTMwOTE5NTAyOSwtMTUwMDg3NjQ3NywxMD
-YxOTA0OTE3LC0xNjg3NTg4OTQzLC0yMDQyNTQyNjcsLTIwNDI1
-NDI2NywtMTE4Mzg1MzM1MSwtNzczMDE0MDMxLC0xNzA3NDU0Nz
-k3LC0xMjUwMzMwODg2XX0=
+eyJoaXN0b3J5IjpbLTE4NDI1NzgxMDQsLTE1MDA4NzY0NzcsMT
+A2MTkwNDkxNywtMTY4NzU4ODk0MywtMjA0MjU0MjY3LC0yMDQy
+NTQyNjcsLTExODM4NTMzNTEsLTc3MzAxNDAzMSwtMTcwNzQ1ND
+c5NywtMTI1MDMzMDg4Nl19
 -->
