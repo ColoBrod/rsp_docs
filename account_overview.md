@@ -88,17 +88,16 @@ WHERE o.order_status_id = 3 AND omu.contacted = 1
 ~~~
 
 #### MissUtility::$percentage
-:memo: This property is counted in the private method: `MissUtility::calcPercentage()`
+:memo: This property is counted in the private method: `MissUtility::calcPercentage()`.   
+Counts orders from table `orders_miss_utililty`
 
 ~~~php
 private  static  function  calcPercentage() {
-$result = self::query("SELECT  count(order_miss_utility_id) AS  count  FROM  ".TABLE_ORDERS_MISS_UTILITY);
-$allBgdn = ($result['count'] > 0) ? $result['count'] : 0;
-$result = self::query("SELECT  count(order_id) AS  count  FROM  ". TABLE_ORDERS ." WHERE order_id > 109892");
-$ordersAllBgdn = ($result['count'] > 0) ? $result['count'] : 0;
-
-return ($allBgdn*100)/$ordersAllBgdn;
-
+	$result = self::query("SELECT  count(order_miss_utility_id) AS  count  FROM  ".TABLE_ORDERS_MISS_UTILITY);
+	$allBgdn = ($result['count'] > 0) ? $result['count'] : 0;
+	$result = self::query("SELECT  count(order_id) AS  count  FROM  ". TABLE_ORDERS ." WHERE order_id > 109892");
+	$ordersAllBgdn = ($result['count'] > 0) ? $result['count'] : 0;
+	return ($allBgdn*100)/$ordersAllBgdn;
 }
 ~~~
 In following SQL-query statement order_id > 109892 is used just in order to avoid all old orders - that were added before 2012 approximately. I used pretty much same statement (o.date_added > '".Stats::\$relevantDate."' where Stats::\$relevantDate is a timestamep, that represents January 1 2012)
@@ -585,7 +584,7 @@ Installer Information:
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE4Njk3Mzc5NTQsLTIwNDI1NDI2NywtMj
+eyJoaXN0b3J5IjpbLTE4NDIyNTAyMDYsLTIwNDI1NDI2NywtMj
 A0MjU0MjY3LC0xMTgzODUzMzUxLC03NzMwMTQwMzEsLTE3MDc0
 NTQ3OTcsLTEyNTAzMzA4ODZdfQ==
 -->
