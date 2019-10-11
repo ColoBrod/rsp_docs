@@ -26,12 +26,17 @@ select count(o.order_id) as count from orders o, addresses a , order_types ot, o
 
 # class MissUtility
 ~~~php
-/*
- * All
- */
+// Following values received via pretty much the same SQL-query
 MissUtility::$open
 MissUtility::$called
 MissUtility::$completed
+~~~
+~~~sql
+SELECT count(o.order_id) AS count
+FROM "  . TABLE_ORDERS .  " o
+LEFT JOIN "  . TABLE_ORDERS_MISS_UTILITY .  " omu ON (o.order_id = omu.order_id)
+WHERE $condition
+	AND NOT (omu.agent_requested = 0 AND (omu.has_gas_lamp = 0 OR omu.has_lamp = 0))
 ~~~
 
 
@@ -548,6 +553,6 @@ Installer Information:
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTQ0NzU0OTI0NiwtMTcwNzQ1NDc5NywtMT
-I1MDMzMDg4Nl19
+eyJoaXN0b3J5IjpbNzcyNTEyODkyLC0xNzA3NDU0Nzk3LC0xMj
+UwMzMwODg2XX0=
 -->
