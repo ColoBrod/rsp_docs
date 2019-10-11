@@ -135,7 +135,7 @@ WHERE o.order_type_id = '2' AND o.date_added >= '".self::$today."'
 ~~~
 
 # class  RescheduledToday
-:memo: First of all, we receive list of `$rescheduled_orders` via following query:
+:memo: First of all, we receive list of orders via following query:
 ~~~ sql
 SELECT
 	o.order_id,
@@ -151,6 +151,7 @@ ORDER BY
 	rh.rescheduled_date
 ~~~
 #### RescheduledToday::$removalsRescheduled
+
 #### RescheduledToday::$pushedBack
 #### RescheduledToday::$movedUp
 
@@ -592,8 +593,8 @@ Installer Information:
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNDMyMjE2ODQsMTA2MTkwNDkxNywtMTY4Nz
-U4ODk0MywtMjA0MjU0MjY3LC0yMDQyNTQyNjcsLTExODM4NTMz
-NTEsLTc3MzAxNDAzMSwtMTcwNzQ1NDc5NywtMTI1MDMzMDg4Nl
-19
+eyJoaXN0b3J5IjpbLTEzMzMwMjM1MTMsMTA2MTkwNDkxNywtMT
+Y4NzU4ODk0MywtMjA0MjU0MjY3LC0yMDQyNTQyNjcsLTExODM4
+NTMzNTEsLTc3MzAxNDAzMSwtMTcwNzQ1NDc5NywtMTI1MDMzMD
+g4Nl19
 -->
