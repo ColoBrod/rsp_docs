@@ -25,9 +25,10 @@ WHERE
 	o.order_status_id != '3' AND
 	o.order_status_id != '4'
 ~~~
-
+After previous SQL-query we have a table wit
 ~~~sql
-
+SELECT installer_id from ".TABLE_INSTALLERS_TO_ORDERS."
+WHERE order_id = '$order_id' LIMIT 1
 ~~~
 
 :exclamation: function tep_count_unassigned_orders() in general.php
@@ -580,6 +581,6 @@ Installer Information:
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTExMjEzODY4ODgsLTExODM4NTMzNTEsLT
+eyJoaXN0b3J5IjpbLTE2ODAzNTI4NjksLTExODM4NTMzNTEsLT
 c3MzAxNDAzMSwtMTcwNzQ1NDc5NywtMTI1MDMzMDg4Nl19
 -->
