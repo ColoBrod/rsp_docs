@@ -16,6 +16,8 @@ else {
 3. 
 :question: `ini_set('display_errors', false);`  
 This line of code makes all errors on site invisible. So it makes a better look for clients, but we also can't see any problems, debug and fix them.
+### Removing banner "TEST SITE" from the top
+
 
 #  class Issues
 :exclamation: Original functions of `Issues::$onHold` and `Issues::$redFlag` were located in `account_overview.php` or in `admin_service_stats` (were 2 pretty much same pieces of code).
@@ -634,10 +636,11 @@ Installer Information:
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEwNzE2NTAyMjgsLTUxODUzOTY5MywxNj
-g3NTcyNzc2LC0xOTI1ODU0NjcxLDE0Nzk1OTI3MzksMzk1OTYx
-NTI4LC0xMjUxOTI0MTc4LDc1NjQ3NjA2NSwtMTQxNDg0Mjk4My
-wtMTUwMDg3NjQ3NywxMDYxOTA0OTE3LC0xNjg3NTg4OTQzLC0y
-MDQyNTQyNjcsLTIwNDI1NDI2NywtMTE4Mzg1MzM1MSwtNzczMD
-E0MDMxLC0xNzA3NDU0Nzk3LC0xMjUwMzMwODg2XX0=
+eyJoaXN0b3J5IjpbLTE5MjUzMjk1NDEsLTEwNzE2NTAyMjgsLT
+UxODUzOTY5MywxNjg3NTcyNzc2LC0xOTI1ODU0NjcxLDE0Nzk1
+OTI3MzksMzk1OTYxNTI4LC0xMjUxOTI0MTc4LDc1NjQ3NjA2NS
+wtMTQxNDg0Mjk4MywtMTUwMDg3NjQ3NywxMDYxOTA0OTE3LC0x
+Njg3NTg4OTQzLC0yMDQyNTQyNjcsLTIwNDI1NDI2NywtMTE4Mz
+g1MzM1MSwtNzczMDE0MDMxLC0xNzA3NDU0Nzk3LC0xMjUwMzMw
+ODg2XX0=
 -->
