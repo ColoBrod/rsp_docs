@@ -13,7 +13,7 @@ o.order_status_id != '3' AND
 o.order_status_id != '4' AND
 ito.installer_id IS NULL
 ~~~
-After previous SQL-query we have a table (list of orders). We iterate over each row in a table and filter through function `Issues::fetchAssignedOrderInstaller($order_id)`. The algorithm of this function is a little bit complex, in a nutshell it checks if the order (with `$order_id`) has an 
+After previous SQL-query we have a table (list of orders). We iterate over each row in a table and filter through function `Issues::fetchAssignedOrderInstaller($order_id)`. The algorithm of this function is a little bit complex, in a nutshell it checks if the order (with `$order_id`) has an `assigned_installer` or `default_installer`. If it hasn't, returns false and we increase `Issues::$unassigned` by 1.
 
 
 :exclamation: function tep_count_unassigned_orders() in general.php
@@ -566,7 +566,7 @@ Installer Information:
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNDkwOTMzNTkwLC0yMDQyNTQyNjcsLTIwND
-I1NDI2NywtMTE4Mzg1MzM1MSwtNzczMDE0MDMxLC0xNzA3NDU0
-Nzk3LC0xMjUwMzMwODg2XX0=
+eyJoaXN0b3J5IjpbLTIwMzEyNjA5MDksLTIwNDI1NDI2NywtMj
+A0MjU0MjY3LC0xMTgzODUzMzUxLC03NzMwMTQwMzEsLTE3MDc0
+NTQ3OTcsLTEyNTAzMzA4ODZdfQ==
 -->
