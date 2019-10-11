@@ -194,7 +194,7 @@ self::$endLastWeek = strtotime('today 23:59:59');
 
 #### OverdueOrders::$pending
 
-SQL-query takes the time between the `Stats::$relevantDate` (i.e. January 1 2012) and `Stats::$datePendingOverdue` (i.e. ).
+SQL-query takes the time between the `Stats::$relevantDate` (i.e. January 1 2012) and `Stats::$datePendingOverdue` (i.e. the current moment).
 
 ~~~ sql
 SELECT count(o.order_id) AS count FROM ".TABLE_ORDERS." o
@@ -617,7 +617,7 @@ Installer Information:
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTIzOTM2OTEwMSwzOTU5NjE1MjgsLTEyNT
+eyJoaXN0b3J5IjpbMTQ3OTU5MjczOSwzOTU5NjE1MjgsLTEyNT
 E5MjQxNzgsNzU2NDc2MDY1LC0xNDE0ODQyOTgzLC0xNTAwODc2
 NDc3LDEwNjE5MDQ5MTcsLTE2ODc1ODg5NDMsLTIwNDI1NDI2Ny
 wtMjA0MjU0MjY3LC0xMTgzODUzMzUxLC03NzMwMTQwMzEsLTE3
