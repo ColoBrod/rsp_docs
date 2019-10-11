@@ -59,9 +59,7 @@ In following SQL-query statement order_id > 109892 is used just in order to avoi
 ~~~ sql
 select count(order_id) as count from orders WHERE order_id > 109892
 ~~~
-:question: What is bgdn? I save original 
-
-
+:question: What does bgdn stands for? I saved original variable names (converted to camel case), but I don't understand this abbreviation.
 
 $orders_all_bgdn = 78393
 
@@ -541,5 +539,5 @@ Installer Information:
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNzQxNDU5NDQ0LC0xMjUwMzMwODg2XX0=
+eyJoaXN0b3J5IjpbMzg1NTA0NDUxLC0xMjUwMzMwODg2XX0=
 -->
