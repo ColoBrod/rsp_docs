@@ -136,11 +136,23 @@ WHERE o.order_type_id = '2' AND o.date_added >= '".self::$today."'
 
 # class  RescheduledToday
 
+~~~ sql
+SELECT
+	o.order_id,
+	rh.new_scheduled_date,
+	rh.old_scheduled_date
+	FROM ".TABLE_RESCHEDULE_HISTORY." rh
+	JOIN ".TABLE_ORDERS." o ON (o.order_id = rh.order_id)
+WHERE
+	rh.rescheduled_date >= ".self::$midnight." AND
+	o.order_type_id =  3
+ORDER BY
+	o.order_id,
+	rh.rescheduled_date
+~~~
 #### RescheduledToday::$removalsRescheduled
 
-~~~ sql
-SELECT o.order_id, rh.new_scheduled_date, rh.old_scheduled_date FROM reschedule_history rh JOIN orders o ON (o.order_id = rh.order_id) WHERE rh.rescheduled_date >= 1569013200 AND o.order_type_id = 3 ORDER BY o.order_id, rh.rescheduled_date
-~~~
+
 
 Instead of 1569013200 we use 'midnight' built-in - strtotime("midnight")
 
@@ -585,8 +597,8 @@ Installer Information:
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNDAxNTU5NDYzLDEwNjE5MDQ5MTcsLTE2OD
-c1ODg5NDMsLTIwNDI1NDI2NywtMjA0MjU0MjY3LC0xMTgzODUz
-MzUxLC03NzMwMTQwMzEsLTE3MDc0NTQ3OTcsLTEyNTAzMzA4OD
-ZdfQ==
+eyJoaXN0b3J5IjpbMTg2Mjg5MDM5OCwxMDYxOTA0OTE3LC0xNj
+g3NTg4OTQzLC0yMDQyNTQyNjcsLTIwNDI1NDI2NywtMTE4Mzg1
+MzM1MSwtNzczMDE0MDMxLC0xNzA3NDU0Nzk3LC0xMjUwMzMwOD
+g2XX0=
 -->
