@@ -99,9 +99,9 @@ private  static  function  calcPercentage() {
 	return ($allBgdn*100)/$ordersAllBgdn;
 }
 ~~~
-In following SQL-query statement order_id > 109892 is used just in order to avoid all old orders - that were added before 2012 approximately. I used pretty much same statement (o.date_added > '".Stats::\$relevantDate."' where Stats::\$relevantDate is a timestamep, that represents January 1 2012)
+In following SQL-query the condition `order_id > 109892` is used just in order to avoid all old orders - that were added before 2012 approximately. I used pretty much same statement (o.date_added > '".Stats::\$relevantDate."' where Stats::\$relevantDate is a timestamep, that represents January 1 2012)
 ~~~ sql
-select count(order_id) as count from orders WHERE order_id > 109892
+SELECT count(order_id) AS count FROM ".TABLE_ORDERS." WHERE order_id > 109892
 ~~~
 :question: What does bgdn stand for? I saved original variable names (converted to camel case), but I don't understand this abbreviation.
 $allBgdn
@@ -583,7 +583,7 @@ Installer Information:
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTUxNDU5MjEzOCwtMjA0MjU0MjY3LC0yMD
-QyNTQyNjcsLTExODM4NTMzNTEsLTc3MzAxNDAzMSwtMTcwNzQ1
-NDc5NywtMTI1MDMzMDg4Nl19
+eyJoaXN0b3J5IjpbMjkxMjYwNTEwLC0yMDQyNTQyNjcsLTIwND
+I1NDI2NywtMTE4Mzg1MzM1MSwtNzczMDE0MDMxLC0xNzA3NDU0
+Nzk3LC0xMjUwMzMwODg2XX0=
 -->
