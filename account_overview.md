@@ -261,7 +261,12 @@ where
 Counts all orders before now where orders.order_status_id = '2' and orders.order_type_id = '1'
 
 ~~~ sql
-select count(o.order_id) as count from orders o, addresses a , order_types ot, orders_statuses os, users u where o.order_type_id = ot.order_type_id and o.user_id = u.user_id and o.order_status_id = os.order_status_id and o.order_status_id = '2' and o.address_id = a.address_id and o.date_schedualed < '1569058378' and o.order_type_id = '1'
+select count(o.order_id) as count from ".TABLE_ORDERS." o
+where
+	o.order_status_id = '2' and
+	o.date_schedualed > '".self::$relevantDate."' and
+	o.date_schedualed < '".self::$now."' and
+	o.order_type_id = '1'
 ~~~
 
 #### CurrentActiveOrders::$schedule->removals
@@ -269,15 +274,24 @@ select count(o.order_id) as count from orders o, addresses a , order_types ot, o
 Counts all orders before now where orders.order_status_id = '2' and orders.order_type_id = '3'
 
 ~~~ sql
-select count(o.order_id) as count from orders o, addresses a , order_types ot, orders_statuses os, users u where o.order_type_id = ot.order_type_id and o.user_id = u.user_id and o.order_status_id = os.order_status_id and o.order_status_id = '2' and o.address_id = a.address_id and o.date_schedualed < '1569058378' and o.order_type_id = '3'
+select count(o.order_id) as count from "  . TABLE_ORDERS .  " o
+where
+	o.order_status_id = '2' and
+	o.date_schedualed > '".self::$relevantDate."' and
+	o.date_schedualed < '".self::$now."' and
+	o.order_type_id = '3'
 ~~~
 
 #### CurrentActiveOrders::$schedule->serviceCalls
 
 Counts all orders before now where orders.order_status_id = '2' and orders.order_type_id = '2'
-
 ~~~ sql
-select count(o.order_id) as count from orders o, addresses a , order_types ot, orders_statuses os, users u where o.order_type_id = ot.order_type_id and o.user_id = u.user_id and o.order_status_id = os.order_status_id and o.order_status_id = '2' and o.address_id = a.address_id and o.date_schedualed < '1569058378' and o.order_type_id = '2'
+select count(o.order_id) as count from ".TABLE_ORDERS." o
+where
+	o.order_status_id = '2' and
+	o.date_schedualed > '".self::$relevantDate."' and
+	o.date_schedualed < '".self::$now."' and
+	o.order_type_id = '2'
 ~~~
 
 #### CurrentActiveOrders::$schedule->total
@@ -622,10 +636,10 @@ Installer Information:
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbOTIyNDczMTM4LC0xOTI1ODU0NjcxLDE0Nz
-k1OTI3MzksMzk1OTYxNTI4LC0xMjUxOTI0MTc4LDc1NjQ3NjA2
-NSwtMTQxNDg0Mjk4MywtMTUwMDg3NjQ3NywxMDYxOTA0OTE3LC
-0xNjg3NTg4OTQzLC0yMDQyNTQyNjcsLTIwNDI1NDI2NywtMTE4
-Mzg1MzM1MSwtNzczMDE0MDMxLC0xNzA3NDU0Nzk3LC0xMjUwMz
-MwODg2XX0=
+eyJoaXN0b3J5IjpbLTExODczOTE0MTUsLTE5MjU4NTQ2NzEsMT
+Q3OTU5MjczOSwzOTU5NjE1MjgsLTEyNTE5MjQxNzgsNzU2NDc2
+MDY1LC0xNDE0ODQyOTgzLC0xNTAwODc2NDc3LDEwNjE5MDQ5MT
+csLTE2ODc1ODg5NDMsLTIwNDI1NDI2NywtMjA0MjU0MjY3LC0x
+MTgzODUzMzUxLC03NzMwMTQwMzEsLTE3MDc0NTQ3OTcsLTEyNT
+AzMzA4ODZdfQ==
 -->
