@@ -1,11 +1,18 @@
 # Instructions for updating production site
 
 ### `public_html/includes/configure.php`
-Change the path to folder `public_html`:
+ 1. Change the path to folder `public_html`:
 `define('DIW_FS', '/home/realtysp/web/realtysignpost.com/public_html/');`
-Change the `BASE_URL`:
+2. Change the `BASE_URL`:
+~~~php
+if (isset($_SERVER['HTTP_HOST'])) {
+	define('BASE_URL', "https://"  . (substr_count($_SERVER['HTTP_HOST'], 'www.') ? 'www.' : '') .  "realtysignpost.com");
+} 
+else {
+	// There is no HTTP_HOST on CLI
+	define('BASE_URL', 'https://www.realtysignpost.com');
+}
 ~~~
-
 
 :question: `ini_set('display_errors', false);`  
 This line of code makes all errors on site invisible. So it makes a better look for clients, but we also can't see any problems, debug and fix them.
@@ -627,7 +634,7 @@ Installer Information:
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTUwODIwNTMxMCwtNTE4NTM5NjkzLDE2OD
+eyJoaXN0b3J5IjpbLTgxMTIwMDMyNSwtNTE4NTM5NjkzLDE2OD
 c1NzI3NzYsLTE5MjU4NTQ2NzEsMTQ3OTU5MjczOSwzOTU5NjE1
 MjgsLTEyNTE5MjQxNzgsNzU2NDc2MDY1LC0xNDE0ODQyOTgzLC
 0xNTAwODc2NDc3LDEwNjE5MDQ5MTcsLTE2ODc1ODg5NDMsLTIw
