@@ -134,9 +134,9 @@ SELECT count(o.order_id) AS count FROM ".TABLE_ORDERS." o
 WHERE o.order_type_id = '2' AND o.date_added >= '".self::$today."'
 ~~~
 
-# RESCHEDULED TODAY:
+# class  RescheduledToday
 
-#### Removals Rescheduled
+#### RescheduledToday::$removalsRescheduled
 
 ~~~ sql
 SELECT o.order_id, rh.new_scheduled_date, rh.old_scheduled_date FROM reschedule_history rh JOIN orders o ON (o.order_id = rh.order_id) WHERE rh.rescheduled_date >= 1569013200 AND o.order_type_id = 3 ORDER BY o.order_id, rh.rescheduled_date
@@ -585,8 +585,8 @@ Installer Information:
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTg5OTgyMzYxOCwxMDYxOTA0OTE3LC0xNj
-g3NTg4OTQzLC0yMDQyNTQyNjcsLTIwNDI1NDI2NywtMTE4Mzg1
-MzM1MSwtNzczMDE0MDMxLC0xNzA3NDU0Nzk3LC0xMjUwMzMwOD
-g2XX0=
+eyJoaXN0b3J5IjpbNDAxNTU5NDYzLDEwNjE5MDQ5MTcsLTE2OD
+c1ODg5NDMsLTIwNDI1NDI2NywtMjA0MjU0MjY3LC0xMTgzODUz
+MzUxLC03NzMwMTQwMzEsLTE3MDc0NTQ3OTcsLTEyNTAzMzA4OD
+ZdfQ==
 -->
