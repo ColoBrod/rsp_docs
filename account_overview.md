@@ -18,7 +18,8 @@ else {
 This line of code makes all errors on site invisible. So it makes a better look for clients, but we also can't see any problems, debug and fix them.
 ### Removing banner "TEST SITE" from the top
 1. `includes/twig_templates/layout.html.twig`. Comment **\<span\>** tag at the top.
-2. 
+2. `includes/template/template.tpl`
+3. `includes/template/index.tpl``
 :question: I think, it would be better to add a variable to `configure.php` - `CFG::$productionMode` or something of this sort. Which can be either `true` of `false`. Banners, emails, displaying errors, etc will be enabled/disabled automatically, depending on it's state. This way we can simplify updating process and prevent some errors.
 
 #  class Issues
@@ -638,7 +639,7 @@ Installer Information:
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE4MzE0Njc3NTcsLTEwNzE2NTAyMjgsLT
+eyJoaXN0b3J5IjpbLTE0OTcwNTU2NDAsLTEwNzE2NTAyMjgsLT
 UxODUzOTY5MywxNjg3NTcyNzc2LC0xOTI1ODU0NjcxLDE0Nzk1
 OTI3MzksMzk1OTYxNTI4LC0xMjUxOTI0MTc4LDc1NjQ3NjA2NS
 wtMTQxNDg0Mjk4MywtMTUwMDg3NjQ3NywxMDYxOTA0OTE3LC0x
