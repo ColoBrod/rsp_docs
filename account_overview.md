@@ -13,7 +13,7 @@ else {
 	define('BASE_URL', 'https://www.realtysignpost.com');
 }
 ~~~
-
+3. 
 :question: `ini_set('display_errors', false);`  
 This line of code makes all errors on site invisible. So it makes a better look for clients, but we also can't see any problems, debug and fix them.
 
@@ -634,10 +634,10 @@ Installer Information:
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTgxMTIwMDMyNSwtNTE4NTM5NjkzLDE2OD
-c1NzI3NzYsLTE5MjU4NTQ2NzEsMTQ3OTU5MjczOSwzOTU5NjE1
-MjgsLTEyNTE5MjQxNzgsNzU2NDc2MDY1LC0xNDE0ODQyOTgzLC
-0xNTAwODc2NDc3LDEwNjE5MDQ5MTcsLTE2ODc1ODg5NDMsLTIw
-NDI1NDI2NywtMjA0MjU0MjY3LC0xMTgzODUzMzUxLC03NzMwMT
-QwMzEsLTE3MDc0NTQ3OTcsLTEyNTAzMzA4ODZdfQ==
+eyJoaXN0b3J5IjpbLTEwNzE2NTAyMjgsLTUxODUzOTY5MywxNj
+g3NTcyNzc2LC0xOTI1ODU0NjcxLDE0Nzk1OTI3MzksMzk1OTYx
+NTI4LC0xMjUxOTI0MTc4LDc1NjQ3NjA2NSwtMTQxNDg0Mjk4My
+wtMTUwMDg3NjQ3NywxMDYxOTA0OTE3LC0xNjg3NTg4OTQzLC0y
+MDQyNTQyNjcsLTIwNDI1NDI2NywtMTE4Mzg1MzM1MSwtNzczMD
+E0MDMxLC0xNzA3NDU0Nzk3LC0xMjUwMzMwODg2XX0=
 -->
