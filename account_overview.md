@@ -106,9 +106,12 @@ SELECT count(order_id) AS count FROM ".TABLE_ORDERS." WHERE order_id > 109892
 :question: What does **bgdn** stand for? I saved original variable names (converted to camel case), but I don't understand this abbreviation.
 
 # class OrderedToday:
-~~~php
-// All
+All these values - `OrderedToday::$installs`,  `OrderedToday::$removals`, `OrderedToday::$serviceCalls` - are derived from pretty much the same SQL-query:
+~~~sql
+SELECT count(o.order_id) AS count FROM ".TABLE_ORDERS." o
+WHERE o.order_type_id = '$ordered_type_id' AND o.date_added >= '".self::$today."'
 ~~~
+
 
 #### OrderedToday::$installs
 :memo: Counts all orders, which were added starting from the beginning of today with `order_type_id = '1'` (table 'orders')
@@ -582,7 +585,7 @@ Installer Information:
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTc1NDQ0OTM2NCwxMDYxOTA0OTE3LC0xNj
+eyJoaXN0b3J5IjpbMTU1NDI4NjU0NiwxMDYxOTA0OTE3LC0xNj
 g3NTg4OTQzLC0yMDQyNTQyNjcsLTIwNDI1NDI2NywtMTE4Mzg1
 MzM1MSwtNzczMDE0MDMxLC0xNzA3NDU0Nzk3LC0xMjUwMzMwOD
 g2XX0=
