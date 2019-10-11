@@ -151,8 +151,8 @@ ORDER BY
 	rh.rescheduled_date
 ~~~
 We select from 2 tables: `reschedule_history` and `orders`, only **completed orders** with `rescheduled_date` starting from the midnight.
-
 #### RescheduledToday::$removalsRescheduled
+Groups all rows in Counts number
 #### RescheduledToday::$pushedBack
 #### RescheduledToday::$movedUp
 
@@ -594,8 +594,8 @@ Installer Information:
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE1MDA4NzY0NzcsMTA2MTkwNDkxNywtMT
-Y4NzU4ODk0MywtMjA0MjU0MjY3LC0yMDQyNTQyNjcsLTExODM4
-NTMzNTEsLTc3MzAxNDAzMSwtMTcwNzQ1NDc5NywtMTI1MDMzMD
-g4Nl19
+eyJoaXN0b3J5IjpbMTQ2NTczNjE3MywtMTUwMDg3NjQ3NywxMD
+YxOTA0OTE3LC0xNjg3NTg4OTQzLC0yMDQyNTQyNjcsLTIwNDI1
+NDI2NywtMTE4Mzg1MzM1MSwtNzczMDE0MDMxLC0xNzA3NDU0Nz
+k3LC0xMjUwMzMwODg2XX0=
 -->
