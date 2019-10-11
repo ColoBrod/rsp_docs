@@ -1,7 +1,8 @@
 # Instructions for updating production site
 
 ### `public_html/includes/configure.php`
-:question: `ini_set('display_errors', false);` - I don't th
+:question: `ini_set('display_errors', false);`  
+This line of code makes all errors on site invisible. So 
 
 #  class Issues
 :exclamation: Original functions of `Issues::$onHold` and `Issues::$redFlag` were located in `account_overview.php` or in `admin_service_stats` (were 2 pretty much same pieces of code).
@@ -620,7 +621,7 @@ Installer Information:
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTgzMTU3NTYzOCwtNTE4NTM5NjkzLDE2OD
+eyJoaXN0b3J5IjpbLTg0NTMyODYzNCwtNTE4NTM5NjkzLDE2OD
 c1NzI3NzYsLTE5MjU4NTQ2NzEsMTQ3OTU5MjczOSwzOTU5NjE1
 MjgsLTEyNTE5MjQxNzgsNzU2NDc2MDY1LC0xNDE0ODQyOTgzLC
 0xNTAwODc2NDc3LDEwNjE5MDQ5MTcsLTE2ODc1ODg5NDMsLTIw
