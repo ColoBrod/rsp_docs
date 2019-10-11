@@ -110,19 +110,22 @@ SELECT count(order_id) AS count FROM ".TABLE_ORDERS." WHERE order_id > 109892
 #### Installs
 
 ~~~ sql
-select count(o.order_id) as count from orders o, addresses a , order_types ot, orders_statuses os, users u where o.order_type_id = ot.order_type_id and o.user_id = u.user_id and o.order_status_id = os.order_status_id and o.address_id = a.address_id and o.order_type_id = '1' and o.date_added > 0 and o.date_added >= NOW()
+SELECT count(o.order_id) AS count FROM ".TABLE_ORDERS." o
+WHERE o.order_type_id = '1' AND o.date_added >= '".self::$today."'
 ~~~
 
 #### Removals
 
 ~~~ sql
-select count(o.order_id) as count from orders o, addresses a , order_types ot, orders_statuses os, users u where o.order_type_id = ot.order_type_id and o.user_id = u.user_id and o.order_status_id = os.order_status_id and o.address_id = a.address_id and o.order_type_id = '3' and o.date_added > 0 and o.date_added >= NOW()
+SELECT count(o.order_id) AS count FROM ".TABLE_ORDERS." o
+WHERE o.order_type_id = '3' AND o.date_added >= '".self::$today."'
 ~~~
 
 #### Service Calls
 
 ~~~ sql
-select count(o.order_id) as count from orders o, addresses a , order_types ot, orders_statuses os, users u where o.order_type_id = ot.order_type_id and o.user_id = u.user_id and o.order_status_id = os.order_status_id and o.address_id = a.address_id and o.order_type_id = '2' and o.date_added > 0 and o.date_added >= NOW()
+SELECT count(o.order_id) AS count FROM ".TABLE_ORDERS." o
+WHERE o.order_type_id = '2' AND o.date_added > 0 AND o.date_added >= '".self::$today."'
 ~~~
 
 # RESCHEDULED TODAY:
@@ -576,7 +579,7 @@ Installer Information:
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE2ODc1ODg5NDMsLTIwNDI1NDI2NywtMj
-A0MjU0MjY3LC0xMTgzODUzMzUxLC03NzMwMTQwMzEsLTE3MDc0
-NTQ3OTcsLTEyNTAzMzA4ODZdfQ==
+eyJoaXN0b3J5IjpbLTYwMjY5NjE3MiwtMTY4NzU4ODk0MywtMj
+A0MjU0MjY3LC0yMDQyNTQyNjcsLTExODM4NTMzNTEsLTc3MzAx
+NDAzMSwtMTcwNzQ1NDc5NywtMTI1MDMzMDg4Nl19
 -->
