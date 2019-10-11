@@ -99,7 +99,7 @@ private  static  function  calcPercentage() {
 	return ($allBgdn*100)/$ordersAllBgdn;
 }
 ~~~
-In following SQL-query the condition `order_id > 109892` is used just in order to avoid all old orders - that were added before 2012 approximately. I used pretty much same statement (o.date_added > '".Stats::\$relevantDate."' where Stats::\$relevantDate is a timestamep, that represents January 1 2012)
+In following SQL-query the condition `order_id > 109892` is used just in order to avoid all old orders - that were added before 2012 approximately. (I use pretty the much same condition in many cases: `o.date_added > '".Stats::\$relevantDate."'` where `Stats::$relevantDate` is a timestamp, that represents January 1 2012)
 ~~~ sql
 SELECT count(order_id) AS count FROM ".TABLE_ORDERS." WHERE order_id > 109892
 ~~~
@@ -583,7 +583,7 @@ Installer Information:
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjkxMjYwNTEwLC0yMDQyNTQyNjcsLTIwND
+eyJoaXN0b3J5IjpbNTIyOTExNzY3LC0yMDQyNTQyNjcsLTIwND
 I1NDI2NywtMTE4Mzg1MzM1MSwtNzczMDE0MDMxLC0xNzA3NDU0
 Nzk3LC0xMjUwMzMwODg2XX0=
 -->
