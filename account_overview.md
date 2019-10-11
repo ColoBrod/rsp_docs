@@ -37,7 +37,8 @@ Set `$live` variable to true at following files:
 1. `cron_email_removal_stat.php`
 2. `cron_email_removal_stat.php5` 
 :question: Seems these 2 files above do pretty much the same job and .php5 is obsolete. Can we remove it?
-3. 
+3. `cron_email_removal_stat`
+4. `cron_email
 
 :question: I think, it would be better to add a variable to `configure.php` - `CFG::$productionMode` or something of this sort. Which can be either `true` of `false`. Banners, emails, displaying errors, etc will be enabled/disabled automatically, depending on it's state. This way we can simplify updating process and prevent some errors.
 
@@ -658,11 +659,11 @@ Installer Information:
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbOTUyMDMxNzc2LDIwNDkxNjU1MjAsLTEwNz
-E2NTAyMjgsLTUxODUzOTY5MywxNjg3NTcyNzc2LC0xOTI1ODU0
-NjcxLDE0Nzk1OTI3MzksMzk1OTYxNTI4LC0xMjUxOTI0MTc4LD
-c1NjQ3NjA2NSwtMTQxNDg0Mjk4MywtMTUwMDg3NjQ3NywxMDYx
-OTA0OTE3LC0xNjg3NTg4OTQzLC0yMDQyNTQyNjcsLTIwNDI1ND
-I2NywtMTE4Mzg1MzM1MSwtNzczMDE0MDMxLC0xNzA3NDU0Nzk3
-LC0xMjUwMzMwODg2XX0=
+eyJoaXN0b3J5IjpbLTE4NjIxMjYwNTAsOTUyMDMxNzc2LDIwND
+kxNjU1MjAsLTEwNzE2NTAyMjgsLTUxODUzOTY5MywxNjg3NTcy
+Nzc2LC0xOTI1ODU0NjcxLDE0Nzk1OTI3MzksMzk1OTYxNTI4LC
+0xMjUxOTI0MTc4LDc1NjQ3NjA2NSwtMTQxNDg0Mjk4MywtMTUw
+MDg3NjQ3NywxMDYxOTA0OTE3LC0xNjg3NTg4OTQzLC0yMDQyNT
+QyNjcsLTIwNDI1NDI2NywtMTE4Mzg1MzM1MSwtNzczMDE0MDMx
+LC0xNzA3NDU0Nzk3XX0=
 -->
