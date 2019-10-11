@@ -216,16 +216,18 @@ WHERE
 # class CurrentActiveOrders:
 
 ### CurrentActiveOrders::$pending
-Includes orders with `orders_status_id = '1'` (Which is 'Pending') between 1 Jan 2012 and tomorrow midnight
-#### Installs
-Counts orders where orders.order_status_id = '1' and orders.order_type_id = '1'.
+Includes orders with `orders_status_id = '1'` (Which is 'Pending') between 1 Jan 2012 and tomorrow midnight.
+#### CurrentActiveOrders::$pending->inst
+Counts orders where orders.order_type_id = '1'.
 Only orders until tomorrow midnight
-
 ~~~ sql
-select count(o.order_id) as count from orders o, addresses a , order_types ot, orders_statuses os, users u where o.order_type_id = ot.order_type_id and o.user_id = u.user_id and o.order_status_id = os.order_status_id and o.order_status_id = '1' and o.address_id = a.address_id and o.date_schedualed < '1569099600' and o.order_type_id = '1'
+select count(o.order_id) as count from ".TABLE_ORDERS." o
+where
+	o.order_status_id = '1' and
+	o.date_schedualed > '".self::$relevantDate."' and
+	o.date_schedualed < '".self::$datePendingCurrentActivePending."' and
+	o.order_type_id = '1'
 ~~~
-
-Replace 1569099600 with strtotime('midnight +1 days')
 
 #### Removals
 
@@ -619,10 +621,10 @@ Installer Information:
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNjU4NzgwMTEsLTE5MjU4NTQ2NzEsMTQ3OT
-U5MjczOSwzOTU5NjE1MjgsLTEyNTE5MjQxNzgsNzU2NDc2MDY1
-LC0xNDE0ODQyOTgzLC0xNTAwODc2NDc3LDEwNjE5MDQ5MTcsLT
-E2ODc1ODg5NDMsLTIwNDI1NDI2NywtMjA0MjU0MjY3LC0xMTgz
-ODUzMzUxLC03NzMwMTQwMzEsLTE3MDc0NTQ3OTcsLTEyNTAzMz
-A4ODZdfQ==
+eyJoaXN0b3J5IjpbLTIzNzk0NzI2MSwtMTkyNTg1NDY3MSwxND
+c5NTkyNzM5LDM5NTk2MTUyOCwtMTI1MTkyNDE3OCw3NTY0NzYw
+NjUsLTE0MTQ4NDI5ODMsLTE1MDA4NzY0NzcsMTA2MTkwNDkxNy
+wtMTY4NzU4ODk0MywtMjA0MjU0MjY3LC0yMDQyNTQyNjcsLTEx
+ODM4NTMzNTEsLTc3MzAxNDAzMSwtMTcwNzQ1NDc5NywtMTI1MD
+MzMDg4Nl19
 -->
