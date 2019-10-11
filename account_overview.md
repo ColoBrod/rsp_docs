@@ -35,7 +35,7 @@ WHERE o.order_status_id = '5'
 # class MissUtility
 ~~~php
 // Following values received via pretty much the same SQL-query
-// The difference in variable $condition
+// The difference is in variable $condition
 
 // o.order_status_id < 3 AND omu.contacted = 0
 MissUtility::$open			
@@ -569,7 +569,7 @@ Installer Information:
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTY3Mzg2MjU5LC0yMDQyNTQyNjcsLTIwND
-I1NDI2NywtMTE4Mzg1MzM1MSwtNzczMDE0MDMxLC0xNzA3NDU0
-Nzk3LC0xMjUwMzMwODg2XX0=
+eyJoaXN0b3J5IjpbMTg5MTQ0NDIyNSwtMjA0MjU0MjY3LC0yMD
+QyNTQyNjcsLTExODM4NTMzNTEsLTc3MzAxNDAzMSwtMTcwNzQ1
+NDc5NywtMTI1MDMzMDg4Nl19
 -->
