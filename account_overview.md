@@ -32,7 +32,7 @@ MissUtility::$open
 MissUtility::$called
 MissUtility::$completed
 ~~~
-:memo: Counts orders from tables `orders` and `orders_miss_utility` where `agent_requested != 0` and either  (table `orders_miss_utility`)
+:memo: Counts orders from tables `orders` and `orders_miss_utility` where `agent_requested != 0` and either  `has_gas_lamp` or `has_lamp` is not 0 (table `orders_miss_utility`)
 ~~~sql
 SELECT count(o.order_id) AS count
 FROM "  . TABLE_ORDERS .  " o
@@ -557,6 +557,6 @@ Installer Information:
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTQ5MTQ0NTMyNCwtMTcwNzQ1NDc5NywtMT
+eyJoaXN0b3J5IjpbLTExOTYxNDQ2MCwtMTcwNzQ1NDc5NywtMT
 I1MDMzMDg4Nl19
 -->
