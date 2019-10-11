@@ -191,6 +191,7 @@ self::$endLastWeek = strtotime('today 23:59:59');
 :memo: The algorithm is absolutely the same as in an example above.
 
 # class OverdueOrders: 
+:exclamation: I think there previously was an Issue in both `$pending` and `$scheduled`. because of a typo (coder used function `time(...)` instead of `mktime()`), This SQL was counting all orders until this moment, not until the moment that was 2 days ago at 12:00.
 
 #### OverdueOrders::$pending
 
@@ -203,7 +204,7 @@ WHERE
 	o.date_schedualed > '".self::$relevantDate."' AND
 	o.date_schedualed < '".self::$datePendingOverdue."'
 ~~~
-:exclamation: I think there previously was an Issue. because of a typo (coder used function `time(...)` instead of `mktime()`), This SQL was counting all orders until this moment, not until the moment 2 days ago.
+
 
 #### OverdueOrders::$scheduled
 
@@ -620,9 +621,9 @@ Installer Information:
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTUyMzk0NjY5MCwxNDc5NTkyNzM5LDM5NT
-k2MTUyOCwtMTI1MTkyNDE3OCw3NTY0NzYwNjUsLTE0MTQ4NDI5
-ODMsLTE1MDA4NzY0NzcsMTA2MTkwNDkxNywtMTY4NzU4ODk0My
-wtMjA0MjU0MjY3LC0yMDQyNTQyNjcsLTExODM4NTMzNTEsLTc3
-MzAxNDAzMSwtMTcwNzQ1NDc5NywtMTI1MDMzMDg4Nl19
+eyJoaXN0b3J5IjpbNDI1ODE0NjI1LDE0Nzk1OTI3MzksMzk1OT
+YxNTI4LC0xMjUxOTI0MTc4LDc1NjQ3NjA2NSwtMTQxNDg0Mjk4
+MywtMTUwMDg3NjQ3NywxMDYxOTA0OTE3LC0xNjg3NTg4OTQzLC
+0yMDQyNTQyNjcsLTIwNDI1NDI2NywtMTE4Mzg1MzM1MSwtNzcz
+MDE0MDMxLC0xNzA3NDU0Nzk3LC0xMjUwMzMwODg2XX0=
 -->
