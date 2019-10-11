@@ -253,14 +253,12 @@ where
 :memo: Just sums together 3 previous values (Installs, Removals, Service Calls).
 
 ### CurrentActiveOrders::$schedule
-:memo: Includes orders with `orders_status_id = '1'` (Which is 'Pending') between 1 Jan 2012 and tomorrow midnight.
+:memo: Includes orders with `orders_status_id = '2'` (Which is 'Scheduled') between 1 Jan 2012 and the current mo.
 :exclamation: The time is before now! Not like written???
 
 #### CurrentActiveOrders::$schedule->installs
-
-Counts all orders before now where orders.order_status_id = '2' and orders.order_type_id = '1'
-
-~~~ sql
+:memo: Counts all orders before now where orders.order_status_id = '2' and orders.order_type_id = '1'
+~~~sql
 select count(o.order_id) as count from ".TABLE_ORDERS." o
 where
 	o.order_status_id = '2' and
@@ -270,10 +268,8 @@ where
 ~~~
 
 #### CurrentActiveOrders::$schedule->removals
-
-Counts all orders before now where orders.order_status_id = '2' and orders.order_type_id = '3'
-
-~~~ sql
+:memo: Counts all orders before now where orders.order_status_id = '2' and orders.order_type_id = '3'
+~~~sql
 select count(o.order_id) as count from "  . TABLE_ORDERS .  " o
 where
 	o.order_status_id = '2' and
@@ -283,9 +279,8 @@ where
 ~~~
 
 #### CurrentActiveOrders::$schedule->serviceCalls
-
-Counts all orders before now where orders.order_status_id = '2' and orders.order_type_id = '2'
-~~~ sql
+:memo: Counts all orders before now where orders.order_status_id = '2' and orders.order_type_id = '2'
+~~~sql
 select count(o.order_id) as count from ".TABLE_ORDERS." o
 where
 	o.order_status_id = '2' and
@@ -296,7 +291,7 @@ where
 
 #### CurrentActiveOrders::$schedule->total
 
-Just sums Install, Removals and Service Calls
+:memo: Just sums Install, Removals and Service Calls
 
 # Completed Orders:
 
@@ -636,10 +631,10 @@ Installer Information:
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTExODczOTE0MTUsLTE5MjU4NTQ2NzEsMT
-Q3OTU5MjczOSwzOTU5NjE1MjgsLTEyNTE5MjQxNzgsNzU2NDc2
-MDY1LC0xNDE0ODQyOTgzLC0xNTAwODc2NDc3LDEwNjE5MDQ5MT
-csLTE2ODc1ODg5NDMsLTIwNDI1NDI2NywtMjA0MjU0MjY3LC0x
-MTgzODUzMzUxLC03NzMwMTQwMzEsLTE3MDc0NTQ3OTcsLTEyNT
-AzMzA4ODZdfQ==
+eyJoaXN0b3J5IjpbLTI0MzM2NTQ0MSwtMTkyNTg1NDY3MSwxND
+c5NTkyNzM5LDM5NTk2MTUyOCwtMTI1MTkyNDE3OCw3NTY0NzYw
+NjUsLTE0MTQ4NDI5ODMsLTE1MDA4NzY0NzcsMTA2MTkwNDkxNy
+wtMTY4NzU4ODk0MywtMjA0MjU0MjY3LC0yMDQyNTQyNjcsLTEx
+ODM4NTMzNTEsLTc3MzAxNDAzMSwtMTcwNzQ1NDc5NywtMTI1MD
+MzMDg4Nl19
 -->
