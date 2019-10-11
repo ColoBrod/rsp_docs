@@ -216,7 +216,7 @@ WHERE
 # class CurrentActiveOrders:
 
 ### CurrentActiveOrders::$pending
-Includes orders with `orders_status_id = '1'`
+Includes orders with `orders_status_id = '1'` (Which is 'Pending') between 1 Jan 2012 and tomorrow midnight
 #### Installs
 Counts orders where orders.order_status_id = '1' and orders.order_type_id = '1'.
 Only orders until tomorrow midnight
@@ -619,10 +619,10 @@ Installer Information:
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTkzMDcxODM2MSwtMTkyNTg1NDY3MSwxND
-c5NTkyNzM5LDM5NTk2MTUyOCwtMTI1MTkyNDE3OCw3NTY0NzYw
-NjUsLTE0MTQ4NDI5ODMsLTE1MDA4NzY0NzcsMTA2MTkwNDkxNy
-wtMTY4NzU4ODk0MywtMjA0MjU0MjY3LC0yMDQyNTQyNjcsLTEx
-ODM4NTMzNTEsLTc3MzAxNDAzMSwtMTcwNzQ1NDc5NywtMTI1MD
-MzMDg4Nl19
+eyJoaXN0b3J5IjpbNjU4NzgwMTEsLTE5MjU4NTQ2NzEsMTQ3OT
+U5MjczOSwzOTU5NjE1MjgsLTEyNTE5MjQxNzgsNzU2NDc2MDY1
+LC0xNDE0ODQyOTgzLC0xNTAwODc2NDc3LDEwNjE5MDQ5MTcsLT
+E2ODc1ODg5NDMsLTIwNDI1NDI2NywtMjA0MjU0MjY3LC0xMTgz
+ODUzMzUxLC03NzMwMTQwMzEsLTE3MDc0NTQ3OTcsLTEyNTAzMz
+A4ODZdfQ==
 -->
