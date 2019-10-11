@@ -1,8 +1,9 @@
 # Instructions for updating production site
 
 ### `public_html/includes/configure.php`
+`define('DIW_FS', '/home/realtysp/web/realtysignpost.com/public_html/');`
 :question: `ini_set('display_errors', false);`  
-This line of code makes all errors on site invisible. So 
+This line of code makes all errors on site invisible. So it makes a better look for clients, but we also can't see any problems, debug and fix them.
 
 #  class Issues
 :exclamation: Original functions of `Issues::$onHold` and `Issues::$redFlag` were located in `account_overview.php` or in `admin_service_stats` (were 2 pretty much same pieces of code).
@@ -621,7 +622,7 @@ Installer Information:
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTg0NTMyODYzNCwtNTE4NTM5NjkzLDE2OD
+eyJoaXN0b3J5IjpbLTIzMDI5MjQ2MiwtNTE4NTM5NjkzLDE2OD
 c1NzI3NzYsLTE5MjU4NTQ2NzEsMTQ3OTU5MjczOSwzOTU5NjE1
 MjgsLTEyNTE5MjQxNzgsNzU2NDc2MDY1LC0xNDE0ODQyOTgzLC
 0xNTAwODc2NDc3LDEwNjE5MDQ5MTcsLTE2ODc1ODg5NDMsLTIw
