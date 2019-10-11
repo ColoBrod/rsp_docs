@@ -193,27 +193,24 @@ self::$endLastWeek = strtotime('today 23:59:59');
 # class OverdueOrders: 
 :exclamation: I think there previously was an Issue in both `$pending` and `$scheduled`. because of a typo (coder used function `time(...)` instead of `mktime()`), This SQL was counting all orders until this moment, not until the moment that was 2 days ago at 12:00.
 :memo: SQL-query takes the time between the `Stats::$relevantDate` (i.e. January 1 2012) and `Stats::$datePendingOverdue` (i.e. 2 days ago at 12:00).   
-The only difference between 2 SQL-queries is in `order_status_id`. For `$pending` it is `order_status_id = '1'` and for ``
+The only difference between 2 SQL-queries is in `order_status_id`. For `$pending` it is `order_status_id = '1'` and for `$scheduled` it is `order_status_id = '2'`.
 
 #### OverdueOrders::$pending
-
-
-
-~~~ sql
+~~~sql
 SELECT count(o.order_id) AS count FROM ".TABLE_ORDERS." o
 WHERE
 	o.order_status_id = '1' AND
 	o.date_schedualed > '".self::$relevantDate."' AND
 	o.date_schedualed < '".self::$datePendingOverdue."'
 ~~~
-
-
 #### OverdueOrders::$scheduled
-
-This SQL-query is absolutely the same as previous one, except orders.order_status_id = 2
-
+This SQL-query is absolutely the same as previous one, except `orders.order_status_id = 2`
 ~~~ sql
-select count(o.order_id) as count from orders o, addresses a , order_types ot, orders_statuses os, users u where o.order_type_id = ot.order_type_id and o.user_id = u.user_id and o.order_status_id = os.order_status_id and o.order_status_id = '2' and o.address_id = a.address_id and o.date_schedualed > 0 and o.date_schedualed < 1569045051
+SELECT count(o.order_id) AS count FROM ".TABLE_ORDERS." o
+WHERE
+	o.order_status_id = '2' and
+	o.date_schedualed > '".self::$relevantDate."' and
+	o.date_schedualed < '".self::$datePendingOverdue."'
 ~~~
 
 # Current Active Orders:
@@ -623,9 +620,9 @@ Installer Information:
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTYzNjI4MTU1NCwxNDc5NTkyNzM5LDM5NT
-k2MTUyOCwtMTI1MTkyNDE3OCw3NTY0NzYwNjUsLTE0MTQ4NDI5
-ODMsLTE1MDA4NzY0NzcsMTA2MTkwNDkxNywtMTY4NzU4ODk0My
-wtMjA0MjU0MjY3LC0yMDQyNTQyNjcsLTExODM4NTMzNTEsLTc3
-MzAxNDAzMSwtMTcwNzQ1NDc5NywtMTI1MDMzMDg4Nl19
+eyJoaXN0b3J5IjpbLTEyMjU1MjQ2ODUsMTQ3OTU5MjczOSwzOT
+U5NjE1MjgsLTEyNTE5MjQxNzgsNzU2NDc2MDY1LC0xNDE0ODQy
+OTgzLC0xNTAwODc2NDc3LDEwNjE5MDQ5MTcsLTE2ODc1ODg5ND
+MsLTIwNDI1NDI2NywtMjA0MjU0MjY3LC0xMTgzODUzMzUxLC03
+NzMwMTQwMzEsLTE3MDc0NTQ3OTcsLTEyNTAzMzA4ODZdfQ==
 -->
