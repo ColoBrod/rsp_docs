@@ -44,14 +44,12 @@ and not (omu.agent_requested = 0 and (omu.has_gas_lamp = 0 or omu.has_lamp = 0))
 ~~~
 
 #### MissUtility::$completed
-
+:memo: Selects orders, where orders.order_status_id = 3 and orders_miss_utility = 1 and not (orders_miss_utility.agent_requested = 0 and (orders_miss_utility.has_gas_lamp = 0  or orders_miss_utility.has_lamp = 0) )
 ~~~ sql
 select count(o.order_id) as count from orders o left join orders_miss_utility omu on (o.order_id = omu.order_id) where o.order_status_id = 3 and omu.contacted = 1 and not (omu.agent_requested = 0 and (omu.has_gas_lamp = 0 or omu.has_lamp = 0))
 ~~~
 
-Selects orders, where orders.order_status_id = 3 and orders_miss_utility = 1 and not (orders_miss_utility.agent_requested = 0 and (orders_miss_utility.has_gas_lamp = 0  or orders_miss_utility.has_lamp = 0) )
-
-##### Percentage: 
+#### Percentage: 
 
 What is bgdn???
 
@@ -543,5 +541,6 @@ Installer Information:
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTI5NDc5Mzg5NCwtMTI1MDMzMDg4Nl19
+eyJoaXN0b3J5IjpbLTIxMjM2OTU5MDUsLTEyNTAzMzA4ODZdfQ
+==
 -->
