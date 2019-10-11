@@ -150,8 +150,9 @@ ORDER BY
 	o.order_id,
 	rh.rescheduled_date
 ~~~
-#### RescheduledToday::$removalsRescheduled
+We select from 2 tables: `reschedule_history` and `orders` 
 
+#### RescheduledToday::$removalsRescheduled
 #### RescheduledToday::$pushedBack
 #### RescheduledToday::$movedUp
 
@@ -593,7 +594,7 @@ Installer Information:
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEzMzMwMjM1MTMsMTA2MTkwNDkxNywtMT
+eyJoaXN0b3J5IjpbLTEwNDUzNzk1NTUsMTA2MTkwNDkxNywtMT
 Y4NzU4ODk0MywtMjA0MjU0MjY3LC0yMDQyNTQyNjcsLTExODM4
 NTMzNTEsLTc3MzAxNDAzMSwtMTcwNzQ1NDc5NywtMTI1MDMzMD
 g4Nl19
