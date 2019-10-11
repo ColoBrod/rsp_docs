@@ -111,17 +111,17 @@ All these values - `OrderedToday::$installs`,  `OrderedToday::$removals`, `Order
 SELECT count(o.order_id) AS count FROM ".TABLE_ORDERS." o
 WHERE o.order_type_id = '$ordered_type_id' AND o.date_added >= '".self::$today."'
 ~~~
-
+The difference is only in `$order_type_id`. The SQL above counts all orders from table `orders`
 
 #### OrderedToday::$installs
-:memo: Counts all orders, which were added starting from the beginning of today with `order_type_id = '1'` (table 'orders')
+:memo: `order_type_id = '1'` (table 'orders')
 ~~~ sql
 SELECT count(o.order_id) AS count FROM ".TABLE_ORDERS." o
 WHERE o.order_type_id = '1' AND o.date_added >= '".self::$today."'
 ~~~
 
 #### OrderedToday::$removals
-:memo: Counts all orders, which were added starting from the beginning of today with `order_type_id = '3'` (table 'orders')
+:memo: `order_type_id = '3'` (table 'orders')
 ~~~ sql
 SELECT count(o.order_id) AS count FROM ".TABLE_ORDERS." o
 WHERE o.order_type_id = '3' AND o.date_added >= '".self::$today."'
@@ -585,8 +585,8 @@ Installer Information:
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTU1NDI4NjU0NiwxMDYxOTA0OTE3LC0xNj
-g3NTg4OTQzLC0yMDQyNTQyNjcsLTIwNDI1NDI2NywtMTE4Mzg1
-MzM1MSwtNzczMDE0MDMxLC0xNzA3NDU0Nzk3LC0xMjUwMzMwOD
-g2XX0=
+eyJoaXN0b3J5IjpbLTEzNzM1MjI2MzcsMTA2MTkwNDkxNywtMT
+Y4NzU4ODk0MywtMjA0MjU0MjY3LC0yMDQyNTQyNjcsLTExODM4
+NTMzNTEsLTc3MzAxNDAzMSwtMTcwNzQ1NDc5NywtMTI1MDMzMD
+g4Nl19
 -->
