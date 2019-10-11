@@ -25,6 +25,11 @@ WHERE
 	o.order_status_id != '3' AND
 	o.order_status_id != '4'
 ~~~
+
+~~~sql
+
+~~~
+
 :exclamation: function tep_count_unassigned_orders() in general.php
 #### Issues::$redFlag
 :memo: 
@@ -575,6 +580,6 @@ Installer Information:
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIwODc3MzY2ODAsLTExODM4NTMzNTEsLT
+eyJoaXN0b3J5IjpbLTExMjEzODY4ODgsLTExODM4NTMzNTEsLT
 c3MzAxNDAzMSwtMTcwNzQ1NDc5NywtMTI1MDMzMDg4Nl19
 -->
