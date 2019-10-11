@@ -298,18 +298,23 @@ where
 
 :memo: Includes orders with `date_completed` between yesterday midnight and today's midnight. `order_status_id = 3` ('Completed').  
   
-->installs: `orderd_type_id = '1'`
-->removals: `orderd_type_id = '3'`
-->serviceCalls: `orderd_type_id = '2'`
+- installs: `orderd_type_id = '1'`
+- removals: `orderd_type_id = '3'`
+- serviceCalls: `orderd_type_id = '2'`
 
 #### CompletedOrders::$completedYesterday->installs
 #### CompletedOrders::$completedYesterday->removals
 #### CompletedOrders::$completedYesterday->serviceCalls
 #### CompletedOrders::$completedYesterday->total
+Sums installs, removals and 
 
 ### CompletedOrders::$completedToday
 
-:memo: Includes orders with `date_completed` between today's midnight and now. `order_status_id = 3` ('Completed').
+:memo: Includes orders with `date_completed` between today's midnight and now. `order_status_id = 3` ('Completed').  
+  
+- installs: `orderd_type_id = '1'`
+- removals: `orderd_type_id = '3'`
+- serviceCalls: `orderd_type_id = '2'`
 
 #### CompletedOrders::$completedToday->installs
 #### CompletedOrders::$completedToday->removals
@@ -648,7 +653,7 @@ Installer Information:
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNjY3ODE3MTE3LC0xOTI1ODU0NjcxLDE0Nz
+eyJoaXN0b3J5IjpbNDc2Nzk3NTA5LC0xOTI1ODU0NjcxLDE0Nz
 k1OTI3MzksMzk1OTYxNTI4LC0xMjUxOTI0MTc4LDc1NjQ3NjA2
 NSwtMTQxNDg0Mjk4MywtMTUwMDg3NjQ3NywxMDYxOTA0OTE3LC
 0xNjg3NTg4OTQzLC0yMDQyNTQyNjcsLTIwNDI1NDI2NywtMTE4
