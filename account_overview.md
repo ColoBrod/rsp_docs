@@ -32,6 +32,10 @@ This line of code makes all errors on site invisible. So it makes a better look 
 2. `includes/template/template.tpl`
 3. `includes/template/index.tpl`  
 
+### Disabling cron-emails
+1. `cron_email_removal_stat.php`
+2. `cron_email_removal_stat.php`
+
 :question: I think, it would be better to add a variable to `configure.php` - `CFG::$productionMode` or something of this sort. Which can be either `true` of `false`. Banners, emails, displaying errors, etc will be enabled/disabled automatically, depending on it's state. This way we can simplify updating process and prevent some errors.
 
 #  class Issues
@@ -651,11 +655,11 @@ Installer Information:
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjA0OTE2NTUyMCwtMTA3MTY1MDIyOCwtNT
-E4NTM5NjkzLDE2ODc1NzI3NzYsLTE5MjU4NTQ2NzEsMTQ3OTU5
-MjczOSwzOTU5NjE1MjgsLTEyNTE5MjQxNzgsNzU2NDc2MDY1LC
-0xNDE0ODQyOTgzLC0xNTAwODc2NDc3LDEwNjE5MDQ5MTcsLTE2
-ODc1ODg5NDMsLTIwNDI1NDI2NywtMjA0MjU0MjY3LC0xMTgzOD
-UzMzUxLC03NzMwMTQwMzEsLTE3MDc0NTQ3OTcsLTEyNTAzMzA4
-ODZdfQ==
+eyJoaXN0b3J5IjpbLTE4MTAzMDczOTUsMjA0OTE2NTUyMCwtMT
+A3MTY1MDIyOCwtNTE4NTM5NjkzLDE2ODc1NzI3NzYsLTE5MjU4
+NTQ2NzEsMTQ3OTU5MjczOSwzOTU5NjE1MjgsLTEyNTE5MjQxNz
+gsNzU2NDc2MDY1LC0xNDE0ODQyOTgzLC0xNTAwODc2NDc3LDEw
+NjE5MDQ5MTcsLTE2ODc1ODg5NDMsLTIwNDI1NDI2NywtMjA0Mj
+U0MjY3LC0xMTgzODUzMzUxLC03NzMwMTQwMzEsLTE3MDc0NTQ3
+OTcsLTEyNTAzMzA4ODZdfQ==
 -->
