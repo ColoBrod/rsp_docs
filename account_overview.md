@@ -89,7 +89,7 @@ WHERE o.order_status_id = 3 AND omu.contacted = 1
 
 #### MissUtility::$percentage
 :memo: This property is counted in the private method: `MissUtility::calcPercentage()`.   
-First, counts all orders from the table `orders_miss_utility` and stores to $allBgdn. Than, 
+First, counts all orders from the table `orders_miss_utility` and stores to `$allBgdn`. Than, counts all orders from table `orders` and stores to `$ordersAllBgdn`. The percentage is 
 
 ~~~php
 private  static  function  calcPercentage() {
@@ -584,7 +584,7 @@ Installer Information:
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTkxOTQ1ODc0MywtMjA0MjU0MjY3LC0yMD
-QyNTQyNjcsLTExODM4NTMzNTEsLTc3MzAxNDAzMSwtMTcwNzQ1
-NDc5NywtMTI1MDMzMDg4Nl19
+eyJoaXN0b3J5IjpbLTE3NTMyNDQzMjYsLTIwNDI1NDI2NywtMj
+A0MjU0MjY3LC0xMTgzODUzMzUxLC03NzMwMTQwMzEsLTE3MDc0
+NTQ3OTcsLTEyNTAzMzA4ODZdfQ==
 -->
