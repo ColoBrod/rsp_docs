@@ -103,30 +103,23 @@ In following SQL-query the condition `order_id > 109892` is used just in order t
 ~~~ sql
 SELECT count(order_id) AS count FROM ".TABLE_ORDERS." WHERE order_id > 109892
 ~~~
-:question: What does bgdn stand for? I saved original variable names (converted to camel case), but I don't understand this abbreviation.
-$allBgdn
-$ordersAllBgdn = 78393  
-
-Percentage is received via this formula:
-(13884 * 100) / 78393 = 17.71%
-
-some useless code, that doesn't do anything useful?! (I have to review code one more time from line 706)
+:question: What does **bgdn** stand for? I saved original variable names (converted to camel case), but I don't understand this abbreviation.
 
 # ORDERED TODAY:
 
-##### Installs
+#### Installs
 
 ~~~ sql
 select count(o.order_id) as count from orders o, addresses a , order_types ot, orders_statuses os, users u where o.order_type_id = ot.order_type_id and o.user_id = u.user_id and o.order_status_id = os.order_status_id and o.address_id = a.address_id and o.order_type_id = '1' and o.date_added > 0 and o.date_added >= NOW()
 ~~~
 
-##### Removals
+#### Removals
 
 ~~~ sql
 select count(o.order_id) as count from orders o, addresses a , order_types ot, orders_statuses os, users u where o.order_type_id = ot.order_type_id and o.user_id = u.user_id and o.order_status_id = os.order_status_id and o.address_id = a.address_id and o.order_type_id = '3' and o.date_added > 0 and o.date_added >= NOW()
 ~~~
 
-##### Service Calls
+#### Service Calls
 
 ~~~ sql
 select count(o.order_id) as count from orders o, addresses a , order_types ot, orders_statuses os, users u where o.order_type_id = ot.order_type_id and o.user_id = u.user_id and o.order_status_id = os.order_status_id and o.address_id = a.address_id and o.order_type_id = '2' and o.date_added > 0 and o.date_added >= NOW()
@@ -134,7 +127,7 @@ select count(o.order_id) as count from orders o, addresses a , order_types ot, o
 
 # RESCHEDULED TODAY:
 
-##### Removals Rescheduled
+#### Removals Rescheduled
 
 ~~~ sql
 SELECT o.order_id, rh.new_scheduled_date, rh.old_scheduled_date FROM reschedule_history rh JOIN orders o ON (o.order_id = rh.order_id) WHERE rh.rescheduled_date >= 1569013200 AND o.order_type_id = 3 ORDER BY o.order_id, rh.rescheduled_date
@@ -142,8 +135,8 @@ SELECT o.order_id, rh.new_scheduled_date, rh.old_scheduled_date FROM reschedule_
 
 Instead of 1569013200 we use 'midnight' built-in - strtotime("midnight")
 
-##### Pushed Back: TODO (798 - 807 in account_overview.php)
-##### Moved Up:    TODO
+#### Pushed Back: TODO (798 - 807 in account_overview.php)
+#### Moved Up:    TODO
 
 # Post Total Change for Yesterday:
 
@@ -583,7 +576,7 @@ Installer Information:
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNTIyOTExNzY3LC0yMDQyNTQyNjcsLTIwND
-I1NDI2NywtMTE4Mzg1MzM1MSwtNzczMDE0MDMxLC0xNzA3NDU0
-Nzk3LC0xMjUwMzMwODg2XX0=
+eyJoaXN0b3J5IjpbLTE2ODc1ODg5NDMsLTIwNDI1NDI2NywtMj
+A0MjU0MjY3LC0xMTgzODUzMzUxLC03NzMwMTQwMzEsLTE3MDc0
+NTQ3OTcsLTEyNTAzMzA4ODZdfQ==
 -->
