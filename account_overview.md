@@ -341,40 +341,38 @@ Sums Installs, Removals and Service Calls
 
 
 # Agents to be made Inactive:
-=============================
-
-Agencies to be made Inactive:
-=============================
 
 
+# Agencies to be made Inactive:
 
-Posts in the Field:
-===================
+
+
+
+# Posts in the Field:
+
 
 __FFX:__
 __MD:__
 __PA:__
 __Total:__
 
-Total Operational Posts:
-========================
+# Total Operational Posts:
 
 __Installed:__
 __Pending:__
 __Scheduled:__
 __Available:__
 
-Pending/Scheduled Removals:
-===========================
+# Pending/Scheduled Removals:
 
-New/Active Agencies:
-====================
 
-MONEY STATISTICS:
-=================
+# New/Active Agencies:
 
-class CurrentYear
-=============
+# MONEY STATISTICS:
+
+
+# class CurrentYear
+
 :exclamation: There was an error because of a typo (coder used function `time` instead of function `mktime`). Previously it took in account orders with `order_added` or `order_completed` less than current moment (not less than tomorrow).
 
 
@@ -551,8 +549,7 @@ __$ value / # of installs:__
 __% of CC Orders:__
 __% of Invoice Orders:__
 
-Previous Year (Completed):
-==========================
+# Previous Year (Completed):
 
 ### Month:	
 __# of Installs:__
@@ -618,7 +615,7 @@ Installer Information:
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTkyNjA3OTI1MiwtMTkyNTg1NDY3MSwxND
+eyJoaXN0b3J5IjpbLTgxNjM4MjMxMCwtMTkyNTg1NDY3MSwxND
 c5NTkyNzM5LDM5NTk2MTUyOCwtMTI1MTkyNDE3OCw3NTY0NzYw
 NjUsLTE0MTQ4NDI5ODMsLTE1MDA4NzY0NzcsMTA2MTkwNDkxNy
 wtMTY4NzU4ODk0MywtMjA0MjU0MjY3LC0yMDQyNTQyNjcsLTEx
