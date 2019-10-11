@@ -4,26 +4,14 @@
 :memo: Selects all orders, where order_status_id more than 0 (table 'orders') and order_status_id is not 3
 There is no 'count' in SQL-query. After executing SQL, counts number of result row inside of a function.
 ~~~ sql
-SELECT
-	o.order_id,
-	o.date_schedualed,
-	o.order_total,
-	ot.name as order_type_name,
-	o.order_status_id,
-	os.order_status_name,
-	a.house_number,
-	a.street_name,
-	a.city,
-	o.order_issue
-FROM ".TABLE_ORDERS." o, ".TABLE_ORDER_TYPES." ot, ".TABLE_ORDERS_STATUSES." os, ".TABLE_ADDRESSES." a, ".TABLE_USERS." u
+SELECT o.order_id FROM orders o
+LEFT JOIN ".TABLE_INSTALLERS_TO_ORDERS." ito ON (ito.order_id = o.order_id)
 WHERE
-	o.order_type_id = ot.order_type_id AND
-	o.user_id = u.user_id AND
-	o.address_id = a.address_id AND
-	o.order_status_id = os.order_status_id AND
-	o.order_status_id > 0 AND
-	o.order_status_id != '3' AND
-	o.order_status_id != '4'
+o.date_schedualed > ".Stats::$relevantDate." and
+o.order_status_id > 0 AND
+o.order_status_id != '3' AND
+o.order_status_id != '4' AND
+ito.installer_id IS NULL
 ~~~
 After previous SQL-query we have a table (list of orders). We iterate over each row in a table 
 ~~~sql
@@ -581,7 +569,7 @@ Installer Information:
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIwNDI1NDI2NywtMjA0MjU0MjY3LC0xMT
-gzODUzMzUxLC03NzMwMTQwMzEsLTE3MDc0NTQ3OTcsLTEyNTAz
-MzA4ODZdfQ==
+eyJoaXN0b3J5IjpbLTE1MDY2Njg3NjgsLTIwNDI1NDI2NywtMj
+A0MjU0MjY3LC0xMTgzODUzMzUxLC03NzMwMTQwMzEsLTE3MDc0
+NTQ3OTcsLTEyNTAzMzA4ODZdfQ==
 -->
