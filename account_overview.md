@@ -162,7 +162,8 @@ Counts results where `old_scheduled_date > new_scheduled_date`
 :memo: Algorithm is same for both values except the time period. I am describing only for Yesterday:
 
 ### PostTotalChange::forYesterday
-:memo: It takes the time for Yesterday between 00:00:01 and 23:59:59
+:memo: It takes the time for Yesterday between 00:00:01 and 23:59:59.  
+First we count `$completeInstall`
 ~~~ sql
 SELECT count(o.order_id) AS count FROM ".TABLE_ORDERS." o
 WHERE o.order_status_id = '3'
@@ -170,6 +171,7 @@ AND o.order_type_id = '1'
 AND o.date_completed >= '".self::$startYesterday."'
 AND o.date_completed < '".self::$endYesterday."'
 ~~~
+Second `$completeInstall``
 ~~~sql
 SELECT count(o.order_id) AS count FROM ".TABLE_ORDERS." o
 WHERE o.order_status_id = '3'
@@ -609,7 +611,7 @@ Installer Information:
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTQzOTU0ODg4OSwtMTUwMDg3NjQ3NywxMD
+eyJoaXN0b3J5IjpbLTk1MzA2MTUzNiwtMTUwMDg3NjQ3NywxMD
 YxOTA0OTE3LC0xNjg3NTg4OTQzLC0yMDQyNTQyNjcsLTIwNDI1
 NDI2NywtMTE4Mzg1MzM1MSwtNzczMDE0MDMxLC0xNzA3NDU0Nz
 k3LC0xMjUwMzMwODg2XX0=
