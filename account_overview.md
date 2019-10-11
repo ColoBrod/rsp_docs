@@ -16,17 +16,15 @@ ito.installer_id IS NULL
 After previous SQL-query we have a table (list of orders). We iterate over each row in a table and filter through function `Issues::fetchAssignedOrderInstaller($order_id)`. The algorithm of this function is a little bit complex, in a nutshell it checks if the order (with `$order_id`) has an `assigned_installer` or `default_installer`. If it hasn't, returns false and we increase `Issues::$unassigned` by 1.  
 :exclamation: the original `function tep_count_unassigned_orders()` is located in `general.php`
 #### Issues::$redFlag
-:memo: 
+:memo: Counts orders, which have `order_issue = '1'` (table 'orders').
 :exclamation: Original functions are located in `account_overview.php` or in `admin_service_stats` (also exists pretty much the same code).
 ~~~sql
 SELECT count(o.order_id) as count FROM ".TABLE_ORDERS." o
 WHERE o.order_issue = '1'
 ~~~
 
-
 #### Issues::$onHold
-:memo: Selects all orders from these 5 tables:
-orders, addresses, order_types, orders_statuses, users
+:memo: 
 where order_status_id = 5 (table 'orders')
 ~~~ sql
 select count(o.order_id) as count from orders o, addresses a , order_types ot, orders_statuses os, users u where o.order_type_id = ot.order_type_id and o.user_id = u.user_id and o.order_status_id = os.order_status_id and o.order_status_id = '5' and o.address_id = a.address_id
@@ -569,7 +567,7 @@ Installer Information:
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNjE2NTA0OTI1LC0yMDQyNTQyNjcsLTIwND
-I1NDI2NywtMTE4Mzg1MzM1MSwtNzczMDE0MDMxLC0xNzA3NDU0
-Nzk3LC0xMjUwMzMwODg2XX0=
+eyJoaXN0b3J5IjpbMTgxODM0ODg5OCwtMjA0MjU0MjY3LC0yMD
+QyNTQyNjcsLTExODM4NTMzNTEsLTc3MzAxNDAzMSwtMTcwNzQ1
+NDc5NywtMTI1MDMzMDg4Nl19
 -->
