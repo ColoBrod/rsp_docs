@@ -26,10 +26,6 @@ WHERE
 	o.order_status_id != '4'
 ~~~
 After previous SQL-query we have a table (list of orders). We iterate over each row in a table 
-~~~sql
-SELECT installer_id from ".TABLE_INSTALLERS_TO_ORDERS."
-WHERE order_id = '$order_id' LIMIT 1
-~~~
 
 :exclamation: function tep_count_unassigned_orders() in general.php
 #### Issues::$redFlag
@@ -581,6 +577,7 @@ Installer Information:
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIwNDI1NDI2NywtMTE4Mzg1MzM1MSwtNz
-czMDE0MDMxLC0xNzA3NDU0Nzk3LC0xMjUwMzMwODg2XX0=
+eyJoaXN0b3J5IjpbLTE2MjgxMTk2NTksLTIwNDI1NDI2NywtMT
+E4Mzg1MzM1MSwtNzczMDE0MDMxLC0xNzA3NDU0Nzk3LC0xMjUw
+MzMwODg2XX0=
 -->
