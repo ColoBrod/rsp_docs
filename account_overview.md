@@ -69,18 +69,22 @@ WHERE o.order_status_id < 3 AND omu.contacted = 1
 #### MissUtility::$called
 :memo: Selects orders, where order_status_id < 3 and orders_miss_utility.contacted = 1
 and not (orders_miss_utility.agent_requested = 0 and (orders_miss_utility.has_gas_lamp = 0 or orders_miss_utility.has_lamp = 0) )
-~~~ sql 
-select count(o.order_id) as count 
-from orders o 
-left join orders_miss_utility omu on (o.order_id = omu.order_id) 
-where o.order_status_id < 3 and omu.contacted = 1 
-and not (omu.agent_requested = 0 and (omu.has_gas_lamp = 0 or omu.has_lamp = 0))
+~~~ sql
+SELECT count(o.order_id) AS count
+FROM ".TABLE_ORDERS." o
+LEFT JOIN ".TABLE_ORDERS_MISS_UTILITY." omu ON (o.order_id = omu.order_id)
+WHERE o.order_status_id < 3 AND omu.contacted = 1
+	AND NOT (omu.agent_requested = 0 AND (omu.has_gas_lamp = 0 OR omu.has_lamp = 0))
 ~~~
 
 #### MissUtility::$completed
 :memo: Selects orders, where orders.order_status_id = 3 and orders_miss_utility = 1 and not (orders_miss_utility.agent_requested = 0 and (orders_miss_utility.has_gas_lamp = 0  or orders_miss_utility.has_lamp = 0) )
 ~~~ sql
-select count(o.order_id) as count from orders o left join orders_miss_utility omu on (o.order_id = omu.order_id) where o.order_status_id = 3 and omu.contacted = 1 and not (omu.agent_requested = 0 and (omu.has_gas_lamp = 0 or omu.has_lamp = 0))
+SELECT count(o.order_id) AS count
+FROM ".TABLE_ORDERS." o
+LEFT JOIN ".TABLE_ORDERS_MISS_UTILITY." omu ON (o.order_id = omu.order_id)
+WHERE o.order_status_id = 3 AND omu.contacted = 1
+	AND NOT (omu.agent_requested = 0 AND (omu.has_gas_lamp = 0 OR omu.has_lamp = 0))
 ~~~
 
 #### MissUtility::$percentage
@@ -573,7 +577,7 @@ Installer Information:
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTUwMzY2NDY5OCwtMjA0MjU0MjY3LC0yMD
+eyJoaXN0b3J5IjpbLTg3MDQwOTg1MCwtMjA0MjU0MjY3LC0yMD
 QyNTQyNjcsLTExODM4NTMzNTEsLTc3MzAxNDAzMSwtMTcwNzQ1
 NDc5NywtMTI1MDMzMDg4Nl19
 -->
