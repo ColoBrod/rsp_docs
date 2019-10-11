@@ -159,7 +159,7 @@ Counts results where `old_scheduled_date < new_scheduled_date`
 Counts results where `old_scheduled_date > new_scheduled_date`
 
 # class PostTotalChange:
-Algro
+:memo: Algorithm is same for both values except the time period.
 
 ### PostTotalChange::forYesterday
 :memo: It takes the time for Yesterday between 00:00:01 and 23:59:59
@@ -168,7 +168,7 @@ select count(o.order_id) as count from orders o, addresses a , order_types ot, o
 ~~~
 
 ### PostTotalChange::forLastWeek
-
+:memo: It takes the time for Yesterday between 00:00:01 and 23:59:59
 Pretty much the same as previous, but for DateStartLastWeek:
 strtotime('midnight - 6days 00:00:01')
 And for the DateEndLastWeek:
@@ -597,8 +597,8 @@ Installer Information:
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTc3MDA3OTEwMywtMTUwMDg3NjQ3NywxMD
-YxOTA0OTE3LC0xNjg3NTg4OTQzLC0yMDQyNTQyNjcsLTIwNDI1
-NDI2NywtMTE4Mzg1MzM1MSwtNzczMDE0MDMxLC0xNzA3NDU0Nz
-k3LC0xMjUwMzMwODg2XX0=
+eyJoaXN0b3J5IjpbMTkwNTcwNTI2LC0xNTAwODc2NDc3LDEwNj
+E5MDQ5MTcsLTE2ODc1ODg5NDMsLTIwNDI1NDI2NywtMjA0MjU0
+MjY3LC0xMTgzODUzMzUxLC03NzMwMTQwMzEsLTE3MDc0NTQ3OT
+csLTEyNTAzMzA4ODZdfQ==
 -->
