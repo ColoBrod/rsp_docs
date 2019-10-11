@@ -194,7 +194,7 @@ self::$endLastWeek = strtotime('today 23:59:59');
 
 #### OverdueOrders::$pending
 
-SQL-query takes the time, that was exactly 2 days ago.
+SQL-query takes the time between the `Stats::$rele`.
 
 ~~~ sql
 select count(o.order_id) as count from orders o, addresses a , order_types ot, orders_statuses os, users u where o.order_type_id = ot.order_type_id and o.user_id = u.user_id and o.order_status_id = os.order_status_id and o.order_status_id = '1' and o.address_id = a.address_id and o.date_schedualed > 0 and o.date_schedualed < 1569045051
@@ -613,8 +613,8 @@ Installer Information:
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE0MTQ4NDI5ODMsLTE1MDA4NzY0NzcsMT
-A2MTkwNDkxNywtMTY4NzU4ODk0MywtMjA0MjU0MjY3LC0yMDQy
-NTQyNjcsLTExODM4NTMzNTEsLTc3MzAxNDAzMSwtMTcwNzQ1ND
-c5NywtMTI1MDMzMDg4Nl19
+eyJoaXN0b3J5IjpbMTU3MTM2NjE3NywtMTQxNDg0Mjk4MywtMT
+UwMDg3NjQ3NywxMDYxOTA0OTE3LC0xNjg3NTg4OTQzLC0yMDQy
+NTQyNjcsLTIwNDI1NDI2NywtMTE4Mzg1MzM1MSwtNzczMDE0MD
+MxLC0xNzA3NDU0Nzk3LC0xMjUwMzMwODg2XX0=
 -->
