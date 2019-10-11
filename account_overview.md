@@ -41,7 +41,7 @@ Set `$live` variable to true at following files:
 4. `cron_emails_debug.php`
 5. `cron_emails_resend.php`
 6. `cron_emails_monthly_stat.php`
-7.  `cron_emails.php`
+7.  `cron_emails.php`  
 8. 
 ### .htaccess
 1. Remove this line:
@@ -669,11 +669,11 @@ Installer Information:
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjAzNDMyNjAyOSwtNzY1MzM4MjM0LDk1Mj
-AzMTc3NiwyMDQ5MTY1NTIwLC0xMDcxNjUwMjI4LC01MTg1Mzk2
-OTMsMTY4NzU3Mjc3NiwtMTkyNTg1NDY3MSwxNDc5NTkyNzM5LD
-M5NTk2MTUyOCwtMTI1MTkyNDE3OCw3NTY0NzYwNjUsLTE0MTQ4
-NDI5ODMsLTE1MDA4NzY0NzcsMTA2MTkwNDkxNywtMTY4NzU4OD
-k0MywtMjA0MjU0MjY3LC0yMDQyNTQyNjcsLTExODM4NTMzNTEs
-LTc3MzAxNDAzMV19
+eyJoaXN0b3J5IjpbLTczMDI1NTc5NSwyMDM0MzI2MDI5LC03Nj
+UzMzgyMzQsOTUyMDMxNzc2LDIwNDkxNjU1MjAsLTEwNzE2NTAy
+MjgsLTUxODUzOTY5MywxNjg3NTcyNzc2LC0xOTI1ODU0NjcxLD
+E0Nzk1OTI3MzksMzk1OTYxNTI4LC0xMjUxOTI0MTc4LDc1NjQ3
+NjA2NSwtMTQxNDg0Mjk4MywtMTUwMDg3NjQ3NywxMDYxOTA0OT
+E3LC0xNjg3NTg4OTQzLC0yMDQyNTQyNjcsLTIwNDI1NDI2Nywt
+MTE4Mzg1MzM1MV19
 -->
