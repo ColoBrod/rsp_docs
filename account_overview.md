@@ -249,13 +249,13 @@ where
 	o.date_schedualed < '".self::$datePendingCurrentActivePending."' and
 	o.order_type_id = '2'
 ~~~
-###### Total
+#### CurrentActiveOrders::$pending->total
+:memo: Just sums together 3 previous values (Installs, Removals, Service Calls).
 
-Just sums Installs, Removals, Service Calls
+### CurrentActiveOrders::$pending
+:memo: Includes orders with `orders_status_id = '1'` (Which is 'Pending') between 1 Jan 2012 and tomorrow midnight.
 
-##### Schedule (before today + 1):
-
-The time is before now! Not like written???
+:exclamation: The time is before now! Not like written???
 
 ###### Installs
 
@@ -623,7 +623,7 @@ Installer Information:
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTczMTk3MjAxMywtMTkyNTg1NDY3MSwxND
+eyJoaXN0b3J5IjpbMTg2NTQ2MjQ5NiwtMTkyNTg1NDY3MSwxND
 c5NTkyNzM5LDM5NTk2MTUyOCwtMTI1MTkyNDE3OCw3NTY0NzYw
 NjUsLTE0MTQ4NDI5ODMsLTE1MDA4NzY0NzcsMTA2MTkwNDkxNy
 wtMTY4NzU4ODk0MywtMjA0MjU0MjY3LC0yMDQyNTQyNjcsLTEx
