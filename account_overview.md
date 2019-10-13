@@ -445,7 +445,7 @@ GROUP BY
 	e.equipment_id, 
 	e.equipment_type_id, e.name
 ~~~
-Than, this SQL-query counts available equipment items. 
+:memo: Than, this SQL-query counts available equipment items. 
 ~~~sql
 SELECT 
 	e.equipment_id, count( ei.equipment_item_id ) AS  count  
@@ -456,6 +456,8 @@ WHERE
 	e.equipment_type_id = 1 
 GROUP BY 
 	e.equipment_id
+~~~
+:memo: Latest activity date:
 ~~~
 
 ### InventorySummary::$postsInTheField->md
@@ -715,7 +717,7 @@ Installer Information:
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE3MzYxMTg1NDIsLTk0MjczNDc5LC05MD
+eyJoaXN0b3J5IjpbLTE3MzkxMDYwNzIsLTk0MjczNDc5LC05MD
 c1OTAxNTYsMjAxMDc5NzA3MCwtNzMwMjU1Nzk1LDIwMzQzMjYw
 MjksLTc2NTMzODIzNCw5NTIwMzE3NzYsMjA0OTE2NTUyMCwtMT
 A3MTY1MDIyOCwtNTE4NTM5NjkzLDE2ODc1NzI3NzYsLTE5MjU4
