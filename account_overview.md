@@ -496,10 +496,11 @@ GROUP BY
 :memo: Finally we iterate over each row (looks like: `['equipment_id', 'equipment_type_id', 'equipment_status_name', 'name']` and if `'name'` is `"Fairfax Warehouse"`, we sort followig way:
 ~~~php
 // 'equipment_status_name' == "Available"
-Increase by 1: ffx and avail
+Increase by 1: avail
 // 'equipment_status_name' == "Pending Install"
-Increase by 1: ffx
+Nothing
 // 'equipment_status_name' == "Installed"
+Increase by 1: ffx
 ~~~
 If `'name'` is `"MD Warehouse"`, we sort followig way:
 ~~~php
@@ -770,11 +771,11 @@ Installer Information:
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTc5Mzg3NDY4NSwtOTQyNzM0NzksLTkwNz
-U5MDE1NiwyMDEwNzk3MDcwLC03MzAyNTU3OTUsMjAzNDMyNjAy
-OSwtNzY1MzM4MjM0LDk1MjAzMTc3NiwyMDQ5MTY1NTIwLC0xMD
-cxNjUwMjI4LC01MTg1Mzk2OTMsMTY4NzU3Mjc3NiwtMTkyNTg1
-NDY3MSwxNDc5NTkyNzM5LDM5NTk2MTUyOCwtMTI1MTkyNDE3OC
-w3NTY0NzYwNjUsLTE0MTQ4NDI5ODMsLTE1MDA4NzY0NzcsMTA2
-MTkwNDkxN119
+eyJoaXN0b3J5IjpbNzIyMjc2NzEsLTk0MjczNDc5LC05MDc1OT
+AxNTYsMjAxMDc5NzA3MCwtNzMwMjU1Nzk1LDIwMzQzMjYwMjks
+LTc2NTMzODIzNCw5NTIwMzE3NzYsMjA0OTE2NTUyMCwtMTA3MT
+Y1MDIyOCwtNTE4NTM5NjkzLDE2ODc1NzI3NzYsLTE5MjU4NTQ2
+NzEsMTQ3OTU5MjczOSwzOTU5NjE1MjgsLTEyNTE5MjQxNzgsNz
+U2NDc2MDY1LC0xNDE0ODQyOTgzLC0xNTAwODc2NDc3LDEwNjE5
+MDQ5MTddfQ==
 -->
