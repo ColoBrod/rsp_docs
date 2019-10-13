@@ -458,7 +458,16 @@ GROUP BY
 	e.equipment_id
 ~~~
 :memo: Latest activity date:
+~~~sql
+SELECT 
+	ei.equipment_id,
+	DATE_FORMAT(DATE(FROM_UNIXTIME(MAX(eih.date_added) -  18000)),'%c/%e/%Y') AS last_activity_date 
+FROM  ".TABLE_EQUIPMENT_ITEMS_HISTORY." eih 
+JOIN ".TABLE_EQUIPMENT_ITEMS." ei ON ( ei.equipment_item_id = eih.equipment_item_id ) 
+JOIN ".TABLE_EQUIPMENT." e ON (e.equipment_id = ei.equipment_id) WHERE e.equipment_type_id = 1 
+GROUP BY e.equipment_id
 ~~~
+:
 
 ### InventorySummary::$postsInTheField->md
 ### InventorySummary::$postsInTheField->pa
@@ -717,11 +726,11 @@ Installer Information:
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE3MzkxMDYwNzIsLTk0MjczNDc5LC05MD
-c1OTAxNTYsMjAxMDc5NzA3MCwtNzMwMjU1Nzk1LDIwMzQzMjYw
-MjksLTc2NTMzODIzNCw5NTIwMzE3NzYsMjA0OTE2NTUyMCwtMT
-A3MTY1MDIyOCwtNTE4NTM5NjkzLDE2ODc1NzI3NzYsLTE5MjU4
-NTQ2NzEsMTQ3OTU5MjczOSwzOTU5NjE1MjgsLTEyNTE5MjQxNz
-gsNzU2NDc2MDY1LC0xNDE0ODQyOTgzLC0xNTAwODc2NDc3LDEw
-NjE5MDQ5MTddfQ==
+eyJoaXN0b3J5IjpbOTY5NjQ3MTQsLTk0MjczNDc5LC05MDc1OT
+AxNTYsMjAxMDc5NzA3MCwtNzMwMjU1Nzk1LDIwMzQzMjYwMjks
+LTc2NTMzODIzNCw5NTIwMzE3NzYsMjA0OTE2NTUyMCwtMTA3MT
+Y1MDIyOCwtNTE4NTM5NjkzLDE2ODc1NzI3NzYsLTE5MjU4NTQ2
+NzEsMTQ3OTU5MjczOSwzOTU5NjE1MjgsLTEyNTE5MjQxNzgsNz
+U2NDc2MDY1LC0xNDE0ODQyOTgzLC0xNTAwODc2NDc3LDEwNjE5
+MDQ5MTddfQ==
 -->
