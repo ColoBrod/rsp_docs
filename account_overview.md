@@ -467,6 +467,10 @@ JOIN ".TABLE_EQUIPMENT_ITEMS." ei ON ( ei.equipment_item_id = eih.equipment_item
 JOIN ".TABLE_EQUIPMENT." e ON (e.equipment_id = ei.equipment_id) WHERE e.equipment_type_id = 1 
 GROUP BY e.equipment_id
 ~~~
+:memo: All the staff above is stored into array:
+~~~php
+$agent_equip[$equipment_id][]
+~~~
 :memo: Than we find warehouse locations and status:
 ~~~sql
 SELECT 
@@ -745,11 +749,11 @@ Installer Information:
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE3NTUzMjQ5MDcsLTk0MjczNDc5LC05MD
-c1OTAxNTYsMjAxMDc5NzA3MCwtNzMwMjU1Nzk1LDIwMzQzMjYw
-MjksLTc2NTMzODIzNCw5NTIwMzE3NzYsMjA0OTE2NTUyMCwtMT
-A3MTY1MDIyOCwtNTE4NTM5NjkzLDE2ODc1NzI3NzYsLTE5MjU4
-NTQ2NzEsMTQ3OTU5MjczOSwzOTU5NjE1MjgsLTEyNTE5MjQxNz
-gsNzU2NDc2MDY1LC0xNDE0ODQyOTgzLC0xNTAwODc2NDc3LDEw
-NjE5MDQ5MTddfQ==
+eyJoaXN0b3J5IjpbLTM1MzE1ODUyMCwtOTQyNzM0NzksLTkwNz
+U5MDE1NiwyMDEwNzk3MDcwLC03MzAyNTU3OTUsMjAzNDMyNjAy
+OSwtNzY1MzM4MjM0LDk1MjAzMTc3NiwyMDQ5MTY1NTIwLC0xMD
+cxNjUwMjI4LC01MTg1Mzk2OTMsMTY4NzU3Mjc3NiwtMTkyNTg1
+NDY3MSwxNDc5NTkyNzM5LDM5NTk2MTUyOCwtMTI1MTkyNDE3OC
+w3NTY0NzYwNjUsLTE0MTQ4NDI5ODMsLTE1MDA4NzY0NzcsMTA2
+MTkwNDkxN119
 -->
