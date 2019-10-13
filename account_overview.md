@@ -429,6 +429,7 @@ FutureOrders::$schedule->serviceCalls;	// order_type_id = 2
 ->posts_avail 			=> $fairfax_posts_avail
 ->posts_total			=> $posts_total
 ~~~
+:exclamation: I didn't test these 5 values. Moreover,
 
 ### InventorySummary::$postsInTheField->md
 ### InventorySummary::$postsInTheField->pa
@@ -687,11 +688,11 @@ Installer Information:
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTkwNzU5MDE1NiwyMDEwNzk3MDcwLC03Mz
-AyNTU3OTUsMjAzNDMyNjAyOSwtNzY1MzM4MjM0LDk1MjAzMTc3
-NiwyMDQ5MTY1NTIwLC0xMDcxNjUwMjI4LC01MTg1Mzk2OTMsMT
-Y4NzU3Mjc3NiwtMTkyNTg1NDY3MSwxNDc5NTkyNzM5LDM5NTk2
-MTUyOCwtMTI1MTkyNDE3OCw3NTY0NzYwNjUsLTE0MTQ4NDI5OD
-MsLTE1MDA4NzY0NzcsMTA2MTkwNDkxNywtMTY4NzU4ODk0Mywt
-MjA0MjU0MjY3XX0=
+eyJoaXN0b3J5IjpbLTIwNDQ3MDkxMzcsLTkwNzU5MDE1NiwyMD
+EwNzk3MDcwLC03MzAyNTU3OTUsMjAzNDMyNjAyOSwtNzY1MzM4
+MjM0LDk1MjAzMTc3NiwyMDQ5MTY1NTIwLC0xMDcxNjUwMjI4LC
+01MTg1Mzk2OTMsMTY4NzU3Mjc3NiwtMTkyNTg1NDY3MSwxNDc5
+NTkyNzM5LDM5NTk2MTUyOCwtMTI1MTkyNDE3OCw3NTY0NzYwNj
+UsLTE0MTQ4NDI5ODMsLTE1MDA4NzY0NzcsMTA2MTkwNDkxNywt
+MTY4NzU4ODk0M119
 -->
