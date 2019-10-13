@@ -516,12 +516,14 @@ If `"PA Warehouse"`, we sort followig way:
 // 'equipment_status_name' == "Pending Install"
 Increase by 1: total
 // 'equipment_status_name' == "Installed"
-
+Increase by 1: total, pa
 ~~~
 ### InventorySummary::$postsInTheField->md
 ### InventorySummary::$postsInTheField->pa
 ### InventorySummary::$postsInTheField->total
 ### InventorySummary::$postsAvail
+:memo: 
+
 ### InventorySummary::$totalOperationalPosts
 ### InventorySummary::$removals->pending
 ### InventorySummary::$removals->scheduled
@@ -775,11 +777,11 @@ Installer Information:
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE5MzQyMzk0ODcsLTk0MjczNDc5LC05MD
-c1OTAxNTYsMjAxMDc5NzA3MCwtNzMwMjU1Nzk1LDIwMzQzMjYw
-MjksLTc2NTMzODIzNCw5NTIwMzE3NzYsMjA0OTE2NTUyMCwtMT
-A3MTY1MDIyOCwtNTE4NTM5NjkzLDE2ODc1NzI3NzYsLTE5MjU4
-NTQ2NzEsMTQ3OTU5MjczOSwzOTU5NjE1MjgsLTEyNTE5MjQxNz
-gsNzU2NDc2MDY1LC0xNDE0ODQyOTgzLC0xNTAwODc2NDc3LDEw
-NjE5MDQ5MTddfQ==
+eyJoaXN0b3J5IjpbNDU5NzY4NDU4LC05NDI3MzQ3OSwtOTA3NT
+kwMTU2LDIwMTA3OTcwNzAsLTczMDI1NTc5NSwyMDM0MzI2MDI5
+LC03NjUzMzgyMzQsOTUyMDMxNzc2LDIwNDkxNjU1MjAsLTEwNz
+E2NTAyMjgsLTUxODUzOTY5MywxNjg3NTcyNzc2LC0xOTI1ODU0
+NjcxLDE0Nzk1OTI3MzksMzk1OTYxNTI4LC0xMjUxOTI0MTc4LD
+c1NjQ3NjA2NSwtMTQxNDg0Mjk4MywtMTUwMDg3NjQ3NywxMDYx
+OTA0OTE3XX0=
 -->
