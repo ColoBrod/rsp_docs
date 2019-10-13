@@ -430,7 +430,7 @@ FutureOrders::$schedule->serviceCalls;	// order_type_id = 2
 ->posts_total			=> $posts_total
 ~~~
 :exclamation: I didn't test these 5 values. Moreover, I always had zeros. I'm just describing what the code seems to do.
-
+:memo: First of all, this SQL-query counts availa
 
 ### InventorySummary::$postsInTheField->md
 ### InventorySummary::$postsInTheField->pa
@@ -689,11 +689,11 @@ Installer Information:
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTY0NDc2NDkwOSwtOTA3NTkwMTU2LDIwMT
-A3OTcwNzAsLTczMDI1NTc5NSwyMDM0MzI2MDI5LC03NjUzMzgy
-MzQsOTUyMDMxNzc2LDIwNDkxNjU1MjAsLTEwNzE2NTAyMjgsLT
-UxODUzOTY5MywxNjg3NTcyNzc2LC0xOTI1ODU0NjcxLDE0Nzk1
-OTI3MzksMzk1OTYxNTI4LC0xMjUxOTI0MTc4LDc1NjQ3NjA2NS
-wtMTQxNDg0Mjk4MywtMTUwMDg3NjQ3NywxMDYxOTA0OTE3LC0x
-Njg3NTg4OTQzXX0=
+eyJoaXN0b3J5IjpbNjIyMjAwMTk4LC05MDc1OTAxNTYsMjAxMD
+c5NzA3MCwtNzMwMjU1Nzk1LDIwMzQzMjYwMjksLTc2NTMzODIz
+NCw5NTIwMzE3NzYsMjA0OTE2NTUyMCwtMTA3MTY1MDIyOCwtNT
+E4NTM5NjkzLDE2ODc1NzI3NzYsLTE5MjU4NTQ2NzEsMTQ3OTU5
+MjczOSwzOTU5NjE1MjgsLTEyNTE5MjQxNzgsNzU2NDc2MDY1LC
+0xNDE0ODQyOTgzLC0xNTAwODc2NDc3LDEwNjE5MDQ5MTcsLTE2
+ODc1ODg5NDNdfQ==
 -->
