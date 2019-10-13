@@ -391,7 +391,8 @@ where
 #### CompletedOrders::$completedToday->total
 Sums Installs, Removals and Service Calls
 
-# Future Orders:
+# class FutureOrders:
+### FutureOrders::$pend
 
 
 # Agents to be made Inactive:
@@ -669,11 +670,11 @@ Installer Information:
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTczMDI1NTc5NSwyMDM0MzI2MDI5LC03Nj
-UzMzgyMzQsOTUyMDMxNzc2LDIwNDkxNjU1MjAsLTEwNzE2NTAy
-MjgsLTUxODUzOTY5MywxNjg3NTcyNzc2LC0xOTI1ODU0NjcxLD
-E0Nzk1OTI3MzksMzk1OTYxNTI4LC0xMjUxOTI0MTc4LDc1NjQ3
-NjA2NSwtMTQxNDg0Mjk4MywtMTUwMDg3NjQ3NywxMDYxOTA0OT
-E3LC0xNjg3NTg4OTQzLC0yMDQyNTQyNjcsLTIwNDI1NDI2Nywt
-MTE4Mzg1MzM1MV19
+eyJoaXN0b3J5IjpbMjg3NjMxMzksLTczMDI1NTc5NSwyMDM0Mz
+I2MDI5LC03NjUzMzgyMzQsOTUyMDMxNzc2LDIwNDkxNjU1MjAs
+LTEwNzE2NTAyMjgsLTUxODUzOTY5MywxNjg3NTcyNzc2LC0xOT
+I1ODU0NjcxLDE0Nzk1OTI3MzksMzk1OTYxNTI4LC0xMjUxOTI0
+MTc4LDc1NjQ3NjA2NSwtMTQxNDg0Mjk4MywtMTUwMDg3NjQ3Ny
+wxMDYxOTA0OTE3LC0xNjg3NTg4OTQzLC0yMDQyNTQyNjcsLTIw
+NDI1NDI2N119
 -->
