@@ -396,7 +396,12 @@ Sums Installs, Removals and Service Calls
 ### FutureOrders::$pending->removals
 ### FutureOrders::$pending->serviceCalls
 ### FutureOrders::$pending->total
-:memo: Counts all orders where `order_status_id = 1` (i.e. 'Pending'), `date_scheduled` is more than the day after tomorrow midnight (current midnight +)
+:memo: Counts all orders where `order_status_id = 1` (i.e. 'Pending'), `date_scheduled` is more than the day after tomorrow midnight (current midnight + 2 days) and `order_type_id`:
+~~~php
+FutureOrders::$pending->installs		// order_type_id = 1
+FutureOrders::$pending->removals		
+FutureOrders::$pending->serviceCalls		
+~~~
 
 ### FutureOrders::$schedule->installs
 ### FutureOrders::$schedule->removals
@@ -679,11 +684,11 @@ Installer Information:
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTc3ODA1NzI0MCwtNzMwMjU1Nzk1LDIwMz
-QzMjYwMjksLTc2NTMzODIzNCw5NTIwMzE3NzYsMjA0OTE2NTUy
-MCwtMTA3MTY1MDIyOCwtNTE4NTM5NjkzLDE2ODc1NzI3NzYsLT
-E5MjU4NTQ2NzEsMTQ3OTU5MjczOSwzOTU5NjE1MjgsLTEyNTE5
-MjQxNzgsNzU2NDc2MDY1LC0xNDE0ODQyOTgzLC0xNTAwODc2ND
-c3LDEwNjE5MDQ5MTcsLTE2ODc1ODg5NDMsLTIwNDI1NDI2Nywt
-MjA0MjU0MjY3XX0=
+eyJoaXN0b3J5IjpbLTE5NTk1MzIwNzcsLTczMDI1NTc5NSwyMD
+M0MzI2MDI5LC03NjUzMzgyMzQsOTUyMDMxNzc2LDIwNDkxNjU1
+MjAsLTEwNzE2NTAyMjgsLTUxODUzOTY5MywxNjg3NTcyNzc2LC
+0xOTI1ODU0NjcxLDE0Nzk1OTI3MzksMzk1OTYxNTI4LC0xMjUx
+OTI0MTc4LDc1NjQ3NjA2NSwtMTQxNDg0Mjk4MywtMTUwMDg3Nj
+Q3NywxMDYxOTA0OTE3LC0xNjg3NTg4OTQzLC0yMDQyNTQyNjcs
+LTIwNDI1NDI2N119
 -->
