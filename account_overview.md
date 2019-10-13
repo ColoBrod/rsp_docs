@@ -430,7 +430,16 @@ FutureOrders::$schedule->serviceCalls;	// order_type_id = 2
 ->posts_total			=> $posts_total
 ~~~
 :exclamation: I didn't test these 5 values. Moreover, I always had zeros. I'm just describing what the code seems to do.
-:memo: First of all, this SQL-query counts availa
+:memo: First of all, this SQL-query counts available equipment items. 
+~~~sql
+SELECT 
+	e.equipment_id, count( ei.equipment_item_id ) AS  count  
+FROM  "  . TABLE_EQUIPMENT_ITEMS .  " ei 
+JOIN "  . TABLE_EQUIPMENT .  " e ON ( e.equipment_id = ei.equipment_id ) 
+WHERE 
+	ei.equipment_status_id = 0 AND 
+	{$where} GROUP BY e.equipment_id
+~~~
 
 ### InventorySummary::$postsInTheField->md
 ### InventorySummary::$postsInTheField->pa
@@ -689,7 +698,7 @@ Installer Information:
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNjIyMjAwMTk4LC05MDc1OTAxNTYsMjAxMD
+eyJoaXN0b3J5IjpbLTk0MjczNDc5LC05MDc1OTAxNTYsMjAxMD
 c5NzA3MCwtNzMwMjU1Nzk1LDIwMzQzMjYwMjksLTc2NTMzODIz
 NCw5NTIwMzE3NzYsMjA0OTE2NTUyMCwtMTA3MTY1MDIyOCwtNT
 E4NTM5NjkzLDE2ODc1NzI3NzYsLTE5MjU4NTQ2NzEsMTQ3OTU5
