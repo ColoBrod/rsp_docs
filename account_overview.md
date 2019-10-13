@@ -396,7 +396,7 @@ Sums Installs, Removals and Service Calls
 ### FutureOrders::$pending->removals
 ### FutureOrders::$pending->serviceCalls
 ### FutureOrders::$pending->total
-
+:memo: Counts all orders where `order_status_id = 1` (i.e. 'Pending') 
 
 ### FutureOrders::$schedule->installs
 ### FutureOrders::$schedule->removals
@@ -679,11 +679,11 @@ Installer Information:
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNTQzMDkzMDYzLC03MzAyNTU3OTUsMjAzND
-MyNjAyOSwtNzY1MzM4MjM0LDk1MjAzMTc3NiwyMDQ5MTY1NTIw
-LC0xMDcxNjUwMjI4LC01MTg1Mzk2OTMsMTY4NzU3Mjc3NiwtMT
-kyNTg1NDY3MSwxNDc5NTkyNzM5LDM5NTk2MTUyOCwtMTI1MTky
-NDE3OCw3NTY0NzYwNjUsLTE0MTQ4NDI5ODMsLTE1MDA4NzY0Nz
-csMTA2MTkwNDkxNywtMTY4NzU4ODk0MywtMjA0MjU0MjY3LC0y
-MDQyNTQyNjddfQ==
+eyJoaXN0b3J5IjpbLTE4NTQ4MDUyODUsLTczMDI1NTc5NSwyMD
+M0MzI2MDI5LC03NjUzMzgyMzQsOTUyMDMxNzc2LDIwNDkxNjU1
+MjAsLTEwNzE2NTAyMjgsLTUxODUzOTY5MywxNjg3NTcyNzc2LC
+0xOTI1ODU0NjcxLDE0Nzk1OTI3MzksMzk1OTYxNTI4LC0xMjUx
+OTI0MTc4LDc1NjQ3NjA2NSwtMTQxNDg0Mjk4MywtMTUwMDg3Nj
+Q3NywxMDYxOTA0OTE3LC0xNjg3NTg4OTQzLC0yMDQyNTQyNjcs
+LTIwNDI1NDI2N119
 -->
