@@ -493,7 +493,7 @@ GROUP BY
 	es.equipment_status_name, 
 	wd.name
 ~~~
-:memo: Finally we iterate over each row (looks like: `['equipment_id` equipment_type_id equipment_status_name name
+:memo: Finally we iterate over each row (looks like: `['equipment_id', 'equipment_type_id', 'equipment_status_name', 'name']` and if name 
 
 ### InventorySummary::$postsInTheField->md
 ### InventorySummary::$postsInTheField->pa
@@ -752,7 +752,7 @@ Installer Information:
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTY0MTAzODE3NywtOTQyNzM0NzksLTkwNz
+eyJoaXN0b3J5IjpbMTk5MjM4ODQ3MCwtOTQyNzM0NzksLTkwNz
 U5MDE1NiwyMDEwNzk3MDcwLC03MzAyNTU3OTUsMjAzNDMyNjAy
 OSwtNzY1MzM4MjM0LDk1MjAzMTc3NiwyMDQ5MTY1NTIwLC0xMD
 cxNjUwMjI4LC01MTg1Mzk2OTMsMTY4NzU3Mjc3NiwtMTkyNTg1
