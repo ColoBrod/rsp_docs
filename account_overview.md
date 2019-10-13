@@ -496,23 +496,27 @@ GROUP BY
 :memo: Finally we iterate over each row (looks like: `['equipment_id', 'equipment_type_id', 'equipment_status_name', 'name']` and if `'name'` is `"Fairfax Warehouse"`, we sort followig way:
 ~~~php
 // 'equipment_status_name' == "Available"
-Increase by 1: avail
+Increase by 1: avail, total
 // 'equipment_status_name' == "Pending Install"
-Nothing
+Increase by 1: total
 // 'equipment_status_name' == "Installed"
-Increase by 1: ffx
+Increase by 1: ffx, total
 ~~~
 If `'name'` is `"MD Warehouse"`, we sort followig way:
 ~~~php
 // 'equipment_status_name' == "Available"
 // 'equipment_status_name' == "Pending Install"
+Increase by 1: total
 // 'equipment_status_name' == "Installed"
+Increase by 1: total, md
 ~~~
 If `"PA Warehouse"`, we sort followig way:
 ~~~php
 // 'equipment_status_name' == "Available"
 // 'equipment_status_name' == "Pending Install"
+Increase by 1: total
 // 'equipment_status_name' == "Installed"
+
 ~~~
 ### InventorySummary::$postsInTheField->md
 ### InventorySummary::$postsInTheField->pa
@@ -771,11 +775,11 @@ Installer Information:
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNzIyMjc2NzEsLTk0MjczNDc5LC05MDc1OT
-AxNTYsMjAxMDc5NzA3MCwtNzMwMjU1Nzk1LDIwMzQzMjYwMjks
-LTc2NTMzODIzNCw5NTIwMzE3NzYsMjA0OTE2NTUyMCwtMTA3MT
-Y1MDIyOCwtNTE4NTM5NjkzLDE2ODc1NzI3NzYsLTE5MjU4NTQ2
-NzEsMTQ3OTU5MjczOSwzOTU5NjE1MjgsLTEyNTE5MjQxNzgsNz
-U2NDc2MDY1LC0xNDE0ODQyOTgzLC0xNTAwODc2NDc3LDEwNjE5
-MDQ5MTddfQ==
+eyJoaXN0b3J5IjpbLTE5MzQyMzk0ODcsLTk0MjczNDc5LC05MD
+c1OTAxNTYsMjAxMDc5NzA3MCwtNzMwMjU1Nzk1LDIwMzQzMjYw
+MjksLTc2NTMzODIzNCw5NTIwMzE3NzYsMjA0OTE2NTUyMCwtMT
+A3MTY1MDIyOCwtNTE4NTM5NjkzLDE2ODc1NzI3NzYsLTE5MjU4
+NTQ2NzEsMTQ3OTU5MjczOSwzOTU5NjE1MjgsLTEyNTE5MjQxNz
+gsNzU2NDc2MDY1LC0xNDE0ODQyOTgzLC0xNTAwODc2NDc3LDEw
+NjE5MDQ5MTddfQ==
 -->
