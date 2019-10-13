@@ -496,8 +496,9 @@ GROUP BY
 :memo: Finally we iterate over each row (looks like: `['equipment_id', 'equipment_type_id', 'equipment_status_name', 'name']` and if `'name'` is `"Fairfax Warehouse"`, we sort followig way:
 ~~~php
 // 'equipment_status_name' == "Available"
-Increase by 1: InventorySummary::$postsInTheField
+Increase by 1: ffx and avail
 // 'equipment_status_name' == "Pending Install"
+Increase by 1: ffx
 // 'equipment_status_name' == "Installed"
 ~~~
 If `'name'` is `"MD Warehouse"`, we sort followig way:
@@ -769,7 +770,7 @@ Installer Information:
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTk5NTI2NDAwOCwtOTQyNzM0NzksLTkwNz
+eyJoaXN0b3J5IjpbLTc5Mzg3NDY4NSwtOTQyNzM0NzksLTkwNz
 U5MDE1NiwyMDEwNzk3MDcwLC03MzAyNTU3OTUsMjAzNDMyNjAy
 OSwtNzY1MzM4MjM0LDk1MjAzMTc3NiwyMDQ5MTY1NTIwLC0xMD
 cxNjUwMjI4LC01MTg1Mzk2OTMsMTY4NzU3Mjc3NiwtMTkyNTg1
