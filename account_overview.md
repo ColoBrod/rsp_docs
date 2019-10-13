@@ -420,20 +420,10 @@ FutureOrders::$schedule->serviceCalls;	// order_type_id = 2
 ### InventorySummary::$postsInTheField->ffx
 ### InventorySummary::$postsInTheField->md
 ### InventorySummary::$postsInTheField->pa
+### InventorySummary::$postsInTheField->total
 ### InventorySummary::$postsAvail
-totalOperationalPosts
-
-__FFX:__
-__MD:__
-__PA:__
-__Total:__
-
-### Total Operational Posts:
-
-__Installed:__
-__Pending:__
-__Scheduled:__
-__Available:__
+### InventorySummary::$totalOperationalPosts
+### InventorySummary::$totalOperationalPosts
 
 # Pending/Scheduled Removals:
 
@@ -687,11 +677,11 @@ Installer Information:
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTQyNTQwNzEzMSwtNzMwMjU1Nzk1LDIwMz
-QzMjYwMjksLTc2NTMzODIzNCw5NTIwMzE3NzYsMjA0OTE2NTUy
-MCwtMTA3MTY1MDIyOCwtNTE4NTM5NjkzLDE2ODc1NzI3NzYsLT
-E5MjU4NTQ2NzEsMTQ3OTU5MjczOSwzOTU5NjE1MjgsLTEyNTE5
-MjQxNzgsNzU2NDc2MDY1LC0xNDE0ODQyOTgzLC0xNTAwODc2ND
-c3LDEwNjE5MDQ5MTcsLTE2ODc1ODg5NDMsLTIwNDI1NDI2Nywt
-MjA0MjU0MjY3XX0=
+eyJoaXN0b3J5IjpbNzMyOTQ2MzU2LC03MzAyNTU3OTUsMjAzND
+MyNjAyOSwtNzY1MzM4MjM0LDk1MjAzMTc3NiwyMDQ5MTY1NTIw
+LC0xMDcxNjUwMjI4LC01MTg1Mzk2OTMsMTY4NzU3Mjc3NiwtMT
+kyNTg1NDY3MSwxNDc5NTkyNzM5LDM5NTk2MTUyOCwtMTI1MTky
+NDE3OCw3NTY0NzYwNjUsLTE0MTQ4NDI5ODMsLTE1MDA4NzY0Nz
+csMTA2MTkwNDkxNywtMTY4NzU4ODk0MywtMjA0MjU0MjY3LC0y
+MDQyNTQyNjddfQ==
 -->
