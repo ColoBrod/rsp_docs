@@ -414,16 +414,14 @@ FutureOrders::$schedule->removals;		// order_type_id = 3
 FutureOrders::$schedule->serviceCalls;	// order_type_id = 2
 ~~~
 :memo: `total` just sums these 3 values
-# class 
-# Agents to be made Inactive:
-
-
-# Agencies to be made Inactive:
+# class InventorySummary
+### InventorySummary::$agentsToBeMadeInactive
+### InventorySummary::$agentsToBeMadeInactive
 
 
 
 
-# Posts in the Field:
+### Posts in the Field:
 
 
 __FFX:__
@@ -431,7 +429,7 @@ __MD:__
 __PA:__
 __Total:__
 
-# Total Operational Posts:
+### Total Operational Posts:
 
 __Installed:__
 __Pending:__
@@ -690,11 +688,11 @@ Installer Information:
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE1ODU0MzgxMDQsLTczMDI1NTc5NSwyMD
-M0MzI2MDI5LC03NjUzMzgyMzQsOTUyMDMxNzc2LDIwNDkxNjU1
-MjAsLTEwNzE2NTAyMjgsLTUxODUzOTY5MywxNjg3NTcyNzc2LC
-0xOTI1ODU0NjcxLDE0Nzk1OTI3MzksMzk1OTYxNTI4LC0xMjUx
-OTI0MTc4LDc1NjQ3NjA2NSwtMTQxNDg0Mjk4MywtMTUwMDg3Nj
-Q3NywxMDYxOTA0OTE3LC0xNjg3NTg4OTQzLC0yMDQyNTQyNjcs
-LTIwNDI1NDI2N119
+eyJoaXN0b3J5IjpbODQzMjAwOTcxLC03MzAyNTU3OTUsMjAzND
+MyNjAyOSwtNzY1MzM4MjM0LDk1MjAzMTc3NiwyMDQ5MTY1NTIw
+LC0xMDcxNjUwMjI4LC01MTg1Mzk2OTMsMTY4NzU3Mjc3NiwtMT
+kyNTg1NDY3MSwxNDc5NTkyNzM5LDM5NTk2MTUyOCwtMTI1MTky
+NDE3OCw3NTY0NzYwNjUsLTE0MTQ4NDI5ODMsLTE1MDA4NzY0Nz
+csMTA2MTkwNDkxNywtMTY4NzU4ODk0MywtMjA0MjU0MjY3LC0y
+MDQyNTQyNjddfQ==
 -->
