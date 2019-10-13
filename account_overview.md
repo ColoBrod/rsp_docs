@@ -429,7 +429,8 @@ FutureOrders::$schedule->serviceCalls;	// order_type_id = 2
 ->posts_avail 			=> $fairfax_posts_avail
 ->posts_total			=> $posts_total
 ~~~
-:exclamation: I didn't test these 5 values. Moreover,
+:exclamation: I didn't test these 5 values. Moreover, I always had zeros. I'm just describing what the code seems to do.
+
 
 ### InventorySummary::$postsInTheField->md
 ### InventorySummary::$postsInTheField->pa
@@ -688,11 +689,11 @@ Installer Information:
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIwNDQ3MDkxMzcsLTkwNzU5MDE1NiwyMD
-EwNzk3MDcwLC03MzAyNTU3OTUsMjAzNDMyNjAyOSwtNzY1MzM4
-MjM0LDk1MjAzMTc3NiwyMDQ5MTY1NTIwLC0xMDcxNjUwMjI4LC
-01MTg1Mzk2OTMsMTY4NzU3Mjc3NiwtMTkyNTg1NDY3MSwxNDc5
-NTkyNzM5LDM5NTk2MTUyOCwtMTI1MTkyNDE3OCw3NTY0NzYwNj
-UsLTE0MTQ4NDI5ODMsLTE1MDA4NzY0NzcsMTA2MTkwNDkxNywt
-MTY4NzU4ODk0M119
+eyJoaXN0b3J5IjpbMTY0NDc2NDkwOSwtOTA3NTkwMTU2LDIwMT
+A3OTcwNzAsLTczMDI1NTc5NSwyMDM0MzI2MDI5LC03NjUzMzgy
+MzQsOTUyMDMxNzc2LDIwNDkxNjU1MjAsLTEwNzE2NTAyMjgsLT
+UxODUzOTY5MywxNjg3NTcyNzc2LC0xOTI1ODU0NjcxLDE0Nzk1
+OTI3MzksMzk1OTYxNTI4LC0xMjUxOTI0MTc4LDc1NjQ3NjA2NS
+wtMTQxNDg0Mjk4MywtMTUwMDg3NjQ3NywxMDYxOTA0OTE3LC0x
+Njg3NTg4OTQzXX0=
 -->
