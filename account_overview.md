@@ -415,6 +415,12 @@ FutureOrders::$schedule->serviceCalls;	// order_type_id = 2
 ~~~
 :memo: `total` just sums these 3 values
 # class InventorySummary
+->ffx_posts_installed
+->md_posts_installed
+->pa_posts_installed
+->posts_avail
+->posts_total
+
 ### InventorySummary::$agentsToBeMadeInactive
 ### InventorySummary::$agenciesToBeMadeInactive
 ### InventorySummary::$postsInTheField->ffx
@@ -675,11 +681,11 @@ Installer Information:
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjAxMDc5NzA3MCwtNzMwMjU1Nzk1LDIwMz
-QzMjYwMjksLTc2NTMzODIzNCw5NTIwMzE3NzYsMjA0OTE2NTUy
-MCwtMTA3MTY1MDIyOCwtNTE4NTM5NjkzLDE2ODc1NzI3NzYsLT
-E5MjU4NTQ2NzEsMTQ3OTU5MjczOSwzOTU5NjE1MjgsLTEyNTE5
-MjQxNzgsNzU2NDc2MDY1LC0xNDE0ODQyOTgzLC0xNTAwODc2ND
-c3LDEwNjE5MDQ5MTcsLTE2ODc1ODg5NDMsLTIwNDI1NDI2Nywt
+eyJoaXN0b3J5IjpbLTYwNzc0MjQxMywyMDEwNzk3MDcwLC03Mz
+AyNTU3OTUsMjAzNDMyNjAyOSwtNzY1MzM4MjM0LDk1MjAzMTc3
+NiwyMDQ5MTY1NTIwLC0xMDcxNjUwMjI4LC01MTg1Mzk2OTMsMT
+Y4NzU3Mjc3NiwtMTkyNTg1NDY3MSwxNDc5NTkyNzM5LDM5NTk2
+MTUyOCwtMTI1MTkyNDE3OCw3NTY0NzYwNjUsLTE0MTQ4NDI5OD
+MsLTE1MDA4NzY0NzcsMTA2MTkwNDkxNywtMTY4NzU4ODk0Mywt
 MjA0MjU0MjY3XX0=
 -->
