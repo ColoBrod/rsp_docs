@@ -416,6 +416,7 @@ FutureOrders::$schedule->serviceCalls;	// order_type_id = 2
 :memo: `total` just sums these 3 values
 # class InventorySummary
 ### InventorySummary::$agentsToBeMadeInactive
+
 ### InventorySummary::$agenciesToBeMadeInactive
 ### InventorySummary::$postsInTheField->ffx
 ### InventorySummary::$postsInTheField->md
@@ -423,12 +424,10 @@ FutureOrders::$schedule->serviceCalls;	// order_type_id = 2
 ### InventorySummary::$postsInTheField->total
 ### InventorySummary::$postsAvail
 ### InventorySummary::$totalOperationalPosts
-### InventorySummary::$totalOperationalPosts
-
-# Pending/Scheduled Removals:
-
-
-# New/Active Agencies:
+### InventorySummary::$removals->pending
+### InventorySummary::$removals->scheduled
+### InventorySummary::$agencies->new
+### InventorySummary::$agencies->active
 
 # MONEY STATISTICS:
 
@@ -677,7 +676,7 @@ Installer Information:
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNzMyOTQ2MzU2LC03MzAyNTU3OTUsMjAzND
+eyJoaXN0b3J5IjpbNzIyNDg1ODIwLC03MzAyNTU3OTUsMjAzND
 MyNjAyOSwtNzY1MzM4MjM0LDk1MjAzMTc3NiwyMDQ5MTY1NTIw
 LC0xMDcxNjUwMjI4LC01MTg1Mzk2OTMsMTY4NzU3Mjc3NiwtMT
 kyNTg1NDY3MSwxNDc5NTkyNzM5LDM5NTk2MTUyOCwtMTI1MTky
