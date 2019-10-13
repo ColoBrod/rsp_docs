@@ -402,16 +402,19 @@ FutureOrders::$pending->installs;		// order_type_id = 1
 FutureOrders::$pending->removals;		// order_type_id = 3
 FutureOrders::$pending->serviceCalls;	// order_type_id = 2
 ~~~
+:memo: `total` just sums these 3 values
 ### FutureOrders::$schedule->installs
 ### FutureOrders::$schedule->removals
 ### FutureOrders::$schedule->serviceCalls
 ### FutureOrders::$schedule->total
-:memo: Counts all orders where `order_status_id = 2` (i.e. 'Scheduled'), `date_scheduled` is more than the day after tomorrow midnight (current midnight + 2 days) and `order_type_id`:
+:memo: Counts all orders where `order_status_id = 2` (i.e. 'Scheduled'), `date_scheduled` is more than tomorrow midnight (current midnight + 1 day) and `order_type_id`:
 ~~~php
-FutureOrders::$pending->installs;		// order_type_id = 1
-FutureOrders::$pending->removals;		// order_type_id = 3
-FutureOrders::$pending->serviceCalls;	// order_type_id = 2
+FutureOrders::$schedule->installs;		// order_type_id = 1
+FutureOrders::$schedule->removals;		// order_type_id = 3
+FutureOrders::$schedule->serviceCalls;	// order_type_id = 2
 ~~~
+:memo: `total` just sums these 3 values
+# class 
 # Agents to be made Inactive:
 
 
@@ -687,7 +690,7 @@ Installer Information:
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEyNjU1OTYyNDQsLTczMDI1NTc5NSwyMD
+eyJoaXN0b3J5IjpbLTE1ODU0MzgxMDQsLTczMDI1NTc5NSwyMD
 M0MzI2MDI5LC03NjUzMzgyMzQsOTUyMDMxNzc2LDIwNDkxNjU1
 MjAsLTEwNzE2NTAyMjgsLTUxODUzOTY5MywxNjg3NTcyNzc2LC
 0xOTI1ODU0NjcxLDE0Nzk1OTI3MzksMzk1OTYxNTI4LC0xMjUx
