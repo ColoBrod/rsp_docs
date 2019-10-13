@@ -430,7 +430,22 @@ FutureOrders::$schedule->serviceCalls;	// order_type_id = 2
 ->posts_total			=> $posts_total
 ~~~
 :exclamation: I didn't test these 5 values. Moreover, I always had zeros. I'm just describing what the code seems to do.
-:memo: First of all, this SQL-query counts available equipment items. 
+:memo: First of all, we count total number of equipment items:
+~~~sql
+SELECT 
+	e.equipment_id, 
+	e.equipment_type_id, 
+	e.name, 
+	e.inventory_ruleset_id, 
+	count( ei.equipment_item_id ) AS  count  
+FROM  ".TABLE_EQUIPMENT_ITEMS. " ei 
+JOIN "  . TABLE_EQUIPMENT .  " e ON ( e.equipment_id = ei.equipment_id ) 
+WHERE e.equipment_type_id = 1 
+GROUP BY 
+	e.equipment_id, 
+	e.equipment_type_id, e.name
+~~~
+Than, this SQL-query counts available equipment items. 
 ~~~sql
 SELECT 
 	e.equipment_id, count( ei.equipment_item_id ) AS  count  
@@ -700,11 +715,11 @@ Installer Information:
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTY3MTMxNDI5MCwtOTQyNzM0NzksLTkwNz
-U5MDE1NiwyMDEwNzk3MDcwLC03MzAyNTU3OTUsMjAzNDMyNjAy
-OSwtNzY1MzM4MjM0LDk1MjAzMTc3NiwyMDQ5MTY1NTIwLC0xMD
-cxNjUwMjI4LC01MTg1Mzk2OTMsMTY4NzU3Mjc3NiwtMTkyNTg1
-NDY3MSwxNDc5NTkyNzM5LDM5NTk2MTUyOCwtMTI1MTkyNDE3OC
-w3NTY0NzYwNjUsLTE0MTQ4NDI5ODMsLTE1MDA4NzY0NzcsMTA2
-MTkwNDkxN119
+eyJoaXN0b3J5IjpbLTE3MzYxMTg1NDIsLTk0MjczNDc5LC05MD
+c1OTAxNTYsMjAxMDc5NzA3MCwtNzMwMjU1Nzk1LDIwMzQzMjYw
+MjksLTc2NTMzODIzNCw5NTIwMzE3NzYsMjA0OTE2NTUyMCwtMT
+A3MTY1MDIyOCwtNTE4NTM5NjkzLDE2ODc1NzI3NzYsLTE5MjU4
+NTQ2NzEsMTQ3OTU5MjczOSwzOTU5NjE1MjgsLTEyNTE5MjQxNz
+gsNzU2NDc2MDY1LC0xNDE0ODQyOTgzLC0xNTAwODc2NDc3LDEw
+NjE5MDQ5MTddfQ==
 -->
