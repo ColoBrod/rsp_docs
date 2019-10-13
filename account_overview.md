@@ -415,17 +415,20 @@ FutureOrders::$schedule->serviceCalls;	// order_type_id = 2
 ~~~
 :memo: `total` just sums these 3 values
 # class InventorySummary
-~~~php
-->ffx_posts_installed	=> $fairfax_posts_installed
-->md_posts_installed	=> $md_posts_installed
-->pa_posts_installed	=> 
-->posts_avail 			=> $fairfax_posts_avail
-->posts_total
-~~~
+
+
 
 ### InventorySummary::$agentsToBeMadeInactive
 ### InventorySummary::$agenciesToBeMadeInactive
 ### InventorySummary::$postsInTheField->ffx
+:memo: FFX and 4 next values are received from `lib/inventory/inventory.json.p`
+~~~php
+->ffx_posts_installed	=> $fairfax_posts_installed
+->md_posts_installed	=> $md_posts_installed
+->pa_posts_installed	=> $pa_posts_installed
+->posts_avail 			=> $fairfax_posts_avail
+->posts_total			=> $posts_total
+~~~
 ### InventorySummary::$postsInTheField->md
 ### InventorySummary::$postsInTheField->pa
 ### InventorySummary::$postsInTheField->total
@@ -683,7 +686,7 @@ Installer Information:
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE5MjQxODcyMzAsMjAxMDc5NzA3MCwtNz
+eyJoaXN0b3J5IjpbLTEzNTQ0OTk1MjcsMjAxMDc5NzA3MCwtNz
 MwMjU1Nzk1LDIwMzQzMjYwMjksLTc2NTMzODIzNCw5NTIwMzE3
 NzYsMjA0OTE2NTUyMCwtMTA3MTY1MDIyOCwtNTE4NTM5NjkzLD
 E2ODc1NzI3NzYsLTE5MjU4NTQ2NzEsMTQ3OTU5MjczOSwzOTU5
