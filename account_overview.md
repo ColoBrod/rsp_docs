@@ -467,7 +467,19 @@ JOIN ".TABLE_EQUIPMENT_ITEMS." ei ON ( ei.equipment_item_id = eih.equipment_item
 JOIN ".TABLE_EQUIPMENT." e ON (e.equipment_id = ei.equipment_id) WHERE e.equipment_type_id = 1 
 GROUP BY e.equipment_id
 ~~~
-:
+:memo: Than we find warehouse locations and status:
+~~~sql
+SELECT 
+	e.equipment_id, 
+	e.equipment_type_id, 
+	es.equipment_status_name, 
+	wd.name, 
+	COUNT( ei.equipment_item_id ) AS  count  
+FROM  ".TABLE_EQUIPMENT_ITEMS." ei 
+JOIN ".TABLE_EQUIPMENT." e ON (e.equipment_id = ei.equipment_id) 
+JOIN ".TABLE_EQUIPMENT_STATUSES." es ON (ei.equipment_status_id = es.equipment_status_id) 
+JOIN "  . TABLE_WAREHOUSES_DESCRIPTION .  " wd ON (wd.warehouse_id = ei.warehouse_id) WHERE {$where} GROUP BY e.equipment_id, e.equipment_type_id, es.equipment_status_name, wd.name
+~~~
 
 ### InventorySummary::$postsInTheField->md
 ### InventorySummary::$postsInTheField->pa
@@ -726,11 +738,11 @@ Installer Information:
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbOTY5NjQ3MTQsLTk0MjczNDc5LC05MDc1OT
-AxNTYsMjAxMDc5NzA3MCwtNzMwMjU1Nzk1LDIwMzQzMjYwMjks
-LTc2NTMzODIzNCw5NTIwMzE3NzYsMjA0OTE2NTUyMCwtMTA3MT
-Y1MDIyOCwtNTE4NTM5NjkzLDE2ODc1NzI3NzYsLTE5MjU4NTQ2
-NzEsMTQ3OTU5MjczOSwzOTU5NjE1MjgsLTEyNTE5MjQxNzgsNz
-U2NDc2MDY1LC0xNDE0ODQyOTgzLC0xNTAwODc2NDc3LDEwNjE5
-MDQ5MTddfQ==
+eyJoaXN0b3J5IjpbNDM3NDgyMjQ5LC05NDI3MzQ3OSwtOTA3NT
+kwMTU2LDIwMTA3OTcwNzAsLTczMDI1NTc5NSwyMDM0MzI2MDI5
+LC03NjUzMzgyMzQsOTUyMDMxNzc2LDIwNDkxNjU1MjAsLTEwNz
+E2NTAyMjgsLTUxODUzOTY5MywxNjg3NTcyNzc2LC0xOTI1ODU0
+NjcxLDE0Nzk1OTI3MzksMzk1OTYxNTI4LC0xMjUxOTI0MTc4LD
+c1NjQ3NjA2NSwtMTQxNDg0Mjk4MywtMTUwMDg3NjQ3NywxMDYx
+OTA0OTE3XX0=
 -->
