@@ -469,7 +469,10 @@ GROUP BY e.equipment_id
 ~~~
 :memo: All the staff above is stored into array:
 ~~~php
-$agent_equip[$equipment_id][]
+$agent_equip[$equipment_id] = [
+	'available' => ... ,
+	'last_activity_date' => ... 
+]
 ~~~
 :memo: Than we find warehouse locations and status:
 ~~~sql
@@ -749,7 +752,7 @@ Installer Information:
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTM1MzE1ODUyMCwtOTQyNzM0NzksLTkwNz
+eyJoaXN0b3J5IjpbLTQ3NzcxOTYxMSwtOTQyNzM0NzksLTkwNz
 U5MDE1NiwyMDEwNzk3MDcwLC03MzAyNTU3OTUsMjAzNDMyNjAy
 OSwtNzY1MzM4MjM0LDk1MjAzMTc3NiwyMDQ5MTY1NTIwLC0xMD
 cxNjUwMjI4LC01MTg1Mzk2OTMsMTY4NzU3Mjc3NiwtMTkyNTg1
