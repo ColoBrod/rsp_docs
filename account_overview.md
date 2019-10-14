@@ -17,54 +17,8 @@
 [Pending/Scheduled Removals](#class-inventorysummary)
 [New/Active Agencies](#class-inventorysummary)
 [MONEY STATISTICS](#class-moneystatistics)
-[Current Year]()
-[Today (placed)]()
-[# of Installs]()
-[value of orders placed today]()
-[$ value / # of installs]()
-[% of CC Orders]()
-[% of Invoice Orders]()
-[Month (placed)]()
-[# of Installs]()
-[$ value of orders placed this month]()
-[$ value / # of installs]()
-[Month (completed)]()
-[# of Installs]()
-[$ value of orders completed this month]()
-[$ value / # of installs]()
-[% of CC Orders]()
-[% of Invoice Orders]()
-[YTD (completed)]()
-[# of Installs]()
-[$ value of orders completed from Jan 1]()
-[$ value / # of installs]()
-[% of CC Orders]()
-[% of Invoice Orders]()
-[Previous Month (completed)]()
-[# of Installs]()
-[$ value of orders completed previous month]()
-[$ value / # of installs]()
-[% of CC Orders]()
-[% of Invoice Orders]()
-[Previous Year (Completed):]()
-[Month]()
-[# of Installs]()
-[$ value of orders placed this month]()
-[$ value / # of installs]()
-[% of CC Orders]()
-[% of Invoice Orders]()
-[YTD]()
-[# of Installs]()
-[$ value of orders placed from Jan 1]()
-[value / # of installs]()
-[% of CC Orders]()
-[% of Invoice Orders]()
-[Full Year]()
-[# of Installs]()
-[$ value of orders placed from Jan 1]()
-[$ value / # of installs]()
-[% of CC Orders]()
-[% of Invoice Orders]()
+[Current Year](#class-currentyear)
+[Previous Year (Completed)](#class-previousyear)
 
 
 # Instructions for updating production site
@@ -810,16 +764,6 @@ __$ value / # of installs:__
 __% of CC Orders:__
 __% of Invoice Orders:__
 
-Installer Information:
-======================
-
-### Installer Name
-### Last Login
-### Overdue Pendings
-### Overdue Scheduled
-
-
-
 
 
 
@@ -853,7 +797,7 @@ Installer Information:
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE4NjY0NDQ4MDYsLTE4ODE1MTEzNzAsNT
+eyJoaXN0b3J5IjpbLTEwMTYzNDYzMDAsLTE4ODE1MTEzNzAsNT
 E0MjQxMTMsMjA5MzQzMTc5NCwtOTQyNzM0NzksLTkwNzU5MDE1
 NiwyMDEwNzk3MDcwLC03MzAyNTU3OTUsMjAzNDMyNjAyOSwtNz
 Y1MzM4MjM0LDk1MjAzMTc3NiwyMDQ5MTY1NTIwLC0xMDcxNjUw
