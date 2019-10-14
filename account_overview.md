@@ -438,9 +438,6 @@ FutureOrders::$schedule->serviceCalls;	// order_type_id = 2
 ~~~
 :memo: `total` just sums these 3 values
 # class InventorySummary
-
-
-
 ### InventorySummary::$agentsToBeMadeInactive
 ### InventorySummary::$agenciesToBeMadeInactive
 ### InventorySummary::$postsInTheField->ffx
@@ -472,8 +469,8 @@ GROUP BY
 ~~~sql
 SELECT 
 	e.equipment_id, count( ei.equipment_item_id ) AS  count  
-FROM  "  . TABLE_EQUIPMENT_ITEMS .  " ei 
-JOIN "  . TABLE_EQUIPMENT .  " e ON ( e.equipment_id = ei.equipment_id ) 
+FROM ".TABLE_EQUIPMENT_ITEMS." ei 
+JOIN ".TABLE_EQUIPMENT." e ON ( e.equipment_id = ei.equipment_id ) 
 WHERE 
 	ei.equipment_status_id = 0 AND 
 	e.equipment_type_id = 1 
@@ -797,11 +794,11 @@ __% of Invoice Orders:__
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEwMTYzNDYzMDAsLTE4ODE1MTEzNzAsNT
-E0MjQxMTMsMjA5MzQzMTc5NCwtOTQyNzM0NzksLTkwNzU5MDE1
-NiwyMDEwNzk3MDcwLC03MzAyNTU3OTUsMjAzNDMyNjAyOSwtNz
-Y1MzM4MjM0LDk1MjAzMTc3NiwyMDQ5MTY1NTIwLC0xMDcxNjUw
-MjI4LC01MTg1Mzk2OTMsMTY4NzU3Mjc3NiwtMTkyNTg1NDY3MS
-wxNDc5NTkyNzM5LDM5NTk2MTUyOCwtMTI1MTkyNDE3OCw3NTY0
-NzYwNjVdfQ==
+eyJoaXN0b3J5IjpbNjEyMTI2NDU0LC0xODgxNTExMzcwLDUxND
+I0MTEzLDIwOTM0MzE3OTQsLTk0MjczNDc5LC05MDc1OTAxNTYs
+MjAxMDc5NzA3MCwtNzMwMjU1Nzk1LDIwMzQzMjYwMjksLTc2NT
+MzODIzNCw5NTIwMzE3NzYsMjA0OTE2NTUyMCwtMTA3MTY1MDIy
+OCwtNTE4NTM5NjkzLDE2ODc1NzI3NzYsLTE5MjU4NTQ2NzEsMT
+Q3OTU5MjczOSwzOTU5NjE1MjgsLTEyNTE5MjQxNzgsNzU2NDc2
+MDY1XX0=
 -->
