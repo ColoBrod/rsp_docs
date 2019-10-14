@@ -9,21 +9,9 @@
 [Overdue Orders](#class-overdueorders)
 [Current Active Orders](#class-currentactiveorders)
 [Completed Orders](#class-completedorders)
-- [Completed Yesterday](#class-completedorders-completedyesterday)
-- [Completed Today](#class-completedorders-completedtoday)
-
-[Future Orders]()
-[Pending]()
-[Installs]()
-[Removals]()
-[Service Calls]()
-[Total]()
-[Schedule]()
-[Installs]()
-[Removals]()
-[Total]()
-[Agents to be made Inactive]()
-[Agencies to be made Inactive]()
+[Future Orders](#class-futureorders)
+[Agents to be made Inactive](#class-agentstobemadeinactive)
+[Agencies to be made Inactive](calss)
 [Posts in the Field]()
 [FFX]()
 [MD]()
@@ -878,11 +866,11 @@ Installer Information:
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIwNjc3ODExNSw1MTQyNDExMywyMDkzND
-MxNzk0LC05NDI3MzQ3OSwtOTA3NTkwMTU2LDIwMTA3OTcwNzAs
-LTczMDI1NTc5NSwyMDM0MzI2MDI5LC03NjUzMzgyMzQsOTUyMD
-MxNzc2LDIwNDkxNjU1MjAsLTEwNzE2NTAyMjgsLTUxODUzOTY5
-MywxNjg3NTcyNzc2LC0xOTI1ODU0NjcxLDE0Nzk1OTI3MzksMz
-k1OTYxNTI4LC0xMjUxOTI0MTc4LDc1NjQ3NjA2NSwtMTQxNDg0
-Mjk4M119
+eyJoaXN0b3J5IjpbMzc4MjE3ODc0LDUxNDI0MTEzLDIwOTM0Mz
+E3OTQsLTk0MjczNDc5LC05MDc1OTAxNTYsMjAxMDc5NzA3MCwt
+NzMwMjU1Nzk1LDIwMzQzMjYwMjksLTc2NTMzODIzNCw5NTIwMz
+E3NzYsMjA0OTE2NTUyMCwtMTA3MTY1MDIyOCwtNTE4NTM5Njkz
+LDE2ODc1NzI3NzYsLTE5MjU4NTQ2NzEsMTQ3OTU5MjczOSwzOT
+U5NjE1MjgsLTEyNTE5MjQxNzgsNzU2NDc2MDY1LC0xNDE0ODQy
+OTgzXX0=
 -->
