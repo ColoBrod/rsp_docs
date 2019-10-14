@@ -529,7 +529,7 @@ InventorySummary::$postsInTheField->pa
 InventorySummary::$postsInTheField->total
 InventorySummary::$postsAvail
 
-// check 
+// check InventorySummary::$postsInTheField->ffx
 ~~~
 ### InventorySummary::$totalOperationalPosts
 ### InventorySummary::$removals->pending
@@ -784,7 +784,7 @@ Installer Information:
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTQ3OTY3NjQ1NiwtOTQyNzM0NzksLTkwNz
+eyJoaXN0b3J5IjpbMjA5MzQzMTc5NCwtOTQyNzM0NzksLTkwNz
 U5MDE1NiwyMDEwNzk3MDcwLC03MzAyNTU3OTUsMjAzNDMyNjAy
 OSwtNzY1MzM4MjM0LDk1MjAzMTc3NiwyMDQ5MTY1NTIwLC0xMD
 cxNjUwMjI4LC01MTg1Mzk2OTMsMTY4NzU3Mjc3NiwtMTkyNTg1
