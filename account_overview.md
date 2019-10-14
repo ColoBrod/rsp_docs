@@ -10,14 +10,9 @@
 [Current Active Orders](#class-currentactiveorders)
 [Completed Orders](#class-completedorders)
 [Future Orders](#class-futureorders)
-
-[Agents to be made Inactive](#InventorySummary::$agentsToBeMadeInactive)
-[Agencies to be made Inactive](#class-agenciestobemadeinactive)
-[Posts in the Field](class)
-[FFX]()
-[MD]()
-[PA]()
-[Total]()
+[Agents to be made Inactive](#inventorysummary-agentstobemadeinactive)
+[Agencies to be made Inactive](#inventorysummary-agenciestobemadeinactive)
+[Posts in the Field](#inventorysummary-postsinthefield)
 [Total Operational Posts (Installed + Pending + Scheduled + Available)]()
 [Pending/Scheduled Removals]()
 [New/Active Agencies]()
@@ -867,7 +862,7 @@ Installer Information:
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTExODE3Mzk1ODQsNTE0MjQxMTMsMjA5Mz
+eyJoaXN0b3J5IjpbLTE4ODE1MTEzNzAsNTE0MjQxMTMsMjA5Mz
 QzMTc5NCwtOTQyNzM0NzksLTkwNzU5MDE1NiwyMDEwNzk3MDcw
 LC03MzAyNTU3OTUsMjAzNDMyNjAyOSwtNzY1MzM4MjM0LDk1Mj
 AzMTc3NiwyMDQ5MTY1NTIwLC0xMDcxNjUwMjI4LC01MTg1Mzk2
