@@ -1,3 +1,8 @@
+# Table of contents
+- [Instructions for updating production site](#instructions-for-updating-production-site)
+
+
+
 # Instructions for updating production site
 
 ### `public_html/includes/configure.php`
@@ -784,11 +789,11 @@ Installer Information:
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjA5MzQzMTc5NCwtOTQyNzM0NzksLTkwNz
-U5MDE1NiwyMDEwNzk3MDcwLC03MzAyNTU3OTUsMjAzNDMyNjAy
-OSwtNzY1MzM4MjM0LDk1MjAzMTc3NiwyMDQ5MTY1NTIwLC0xMD
-cxNjUwMjI4LC01MTg1Mzk2OTMsMTY4NzU3Mjc3NiwtMTkyNTg1
-NDY3MSwxNDc5NTkyNzM5LDM5NTk2MTUyOCwtMTI1MTkyNDE3OC
-w3NTY0NzYwNjUsLTE0MTQ4NDI5ODMsLTE1MDA4NzY0NzcsMTA2
-MTkwNDkxN119
+eyJoaXN0b3J5IjpbLTE5NzE3NzQ2MTEsMjA5MzQzMTc5NCwtOT
+QyNzM0NzksLTkwNzU5MDE1NiwyMDEwNzk3MDcwLC03MzAyNTU3
+OTUsMjAzNDMyNjAyOSwtNzY1MzM4MjM0LDk1MjAzMTc3NiwyMD
+Q5MTY1NTIwLC0xMDcxNjUwMjI4LC01MTg1Mzk2OTMsMTY4NzU3
+Mjc3NiwtMTkyNTg1NDY3MSwxNDc5NTkyNzM5LDM5NTk2MTUyOC
+wtMTI1MTkyNDE3OCw3NTY0NzYwNjUsLTE0MTQ4NDI5ODMsLTE1
+MDA4NzY0NzddfQ==
 -->
