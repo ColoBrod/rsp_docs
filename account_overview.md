@@ -10,7 +10,7 @@
 [Current Active Orders](#class-currentactiveorders)
 [Completed Orders](#class-completedorders)
 [Future Orders](#class-futureorders)
-[Agents to be made Inactive](#inventorysummary::$agentstobemadeinactive)
+[Agents to be made Inactive](#inventorysummary%58%58agentstobemadeinactive)
 [Agencies to be made Inactive](#inventorysummary-agenciestobemadeinactive)
 [Posts in the Field](#inventorysummary-postsinthefield)
 [Total Operational Posts (Installed + Pending + Scheduled + Available)]()
@@ -862,11 +862,11 @@ Installer Information:
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNTkzOTAxMTEsLTE4ODE1MTEzNzAsNTE0Mj
-QxMTMsMjA5MzQzMTc5NCwtOTQyNzM0NzksLTkwNzU5MDE1Niwy
-MDEwNzk3MDcwLC03MzAyNTU3OTUsMjAzNDMyNjAyOSwtNzY1Mz
-M4MjM0LDk1MjAzMTc3NiwyMDQ5MTY1NTIwLC0xMDcxNjUwMjI4
-LC01MTg1Mzk2OTMsMTY4NzU3Mjc3NiwtMTkyNTg1NDY3MSwxND
-c5NTkyNzM5LDM5NTk2MTUyOCwtMTI1MTkyNDE3OCw3NTY0NzYw
-NjVdfQ==
+eyJoaXN0b3J5IjpbMTc5MDc5NDYwOSwtMTg4MTUxMTM3MCw1MT
+QyNDExMywyMDkzNDMxNzk0LC05NDI3MzQ3OSwtOTA3NTkwMTU2
+LDIwMTA3OTcwNzAsLTczMDI1NTc5NSwyMDM0MzI2MDI5LC03Nj
+UzMzgyMzQsOTUyMDMxNzc2LDIwNDkxNjU1MjAsLTEwNzE2NTAy
+MjgsLTUxODUzOTY5MywxNjg3NTcyNzc2LC0xOTI1ODU0NjcxLD
+E0Nzk1OTI3MzksMzk1OTYxNTI4LC0xMjUxOTI0MTc4LDc1NjQ3
+NjA2NV19
 -->
