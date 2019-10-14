@@ -10,9 +10,10 @@
 [Current Active Orders](#class-currentactiveorders)
 [Completed Orders](#class-completedorders)
 [Future Orders](#class-futureorders)
-[Agents to be made Inactive](#class-agentstobemadeinactive)
-[Agencies to be made Inactive](calss)
-[Posts in the Field]()
+
+[Agents to be made Inactive](#InventorySummary::$agentsToBeMadeInactive)
+[Agencies to be made Inactive](#class-agenciestobemadeinactive)
+[Posts in the Field](class)
 [FFX]()
 [MD]()
 [PA]()
@@ -866,11 +867,11 @@ Installer Information:
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMzc4MjE3ODc0LDUxNDI0MTEzLDIwOTM0Mz
-E3OTQsLTk0MjczNDc5LC05MDc1OTAxNTYsMjAxMDc5NzA3MCwt
-NzMwMjU1Nzk1LDIwMzQzMjYwMjksLTc2NTMzODIzNCw5NTIwMz
-E3NzYsMjA0OTE2NTUyMCwtMTA3MTY1MDIyOCwtNTE4NTM5Njkz
-LDE2ODc1NzI3NzYsLTE5MjU4NTQ2NzEsMTQ3OTU5MjczOSwzOT
-U5NjE1MjgsLTEyNTE5MjQxNzgsNzU2NDc2MDY1LC0xNDE0ODQy
-OTgzXX0=
+eyJoaXN0b3J5IjpbLTExODE3Mzk1ODQsNTE0MjQxMTMsMjA5Mz
+QzMTc5NCwtOTQyNzM0NzksLTkwNzU5MDE1NiwyMDEwNzk3MDcw
+LC03MzAyNTU3OTUsMjAzNDMyNjAyOSwtNzY1MzM4MjM0LDk1Mj
+AzMTc3NiwyMDQ5MTY1NTIwLC0xMDcxNjUwMjI4LC01MTg1Mzk2
+OTMsMTY4NzU3Mjc3NiwtMTkyNTg1NDY3MSwxNDc5NTkyNzM5LD
+M5NTk2MTUyOCwtMTI1MTkyNDE3OCw3NTY0NzYwNjUsLTE0MTQ4
+NDI5ODNdfQ==
 -->
