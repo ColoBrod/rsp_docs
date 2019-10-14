@@ -10,22 +10,13 @@
 [Current Active Orders](#class-currentactiveorders)
 [Completed Orders](#class-completedorders)
 [Future Orders](#class-futureorders)
-[Agents to be made Inactive](#inventorysummary%25%25%24agentstobemadeinactive)
-[Agencies to be made Inactive](#inventorysummary-agenciestobemadeinactive)
-[Posts in the Field](#inventorysummary-postsinthefield)
-[Total Operational Posts (Installed + Pending + Scheduled + Available)]()
-[Pending/Scheduled Removals]()
-[New/Active Agencies]()
-[MONEY STATISTICS]()
-[Total Billed]()
-[Total Paid]()
-[Unpaid]()
-[Deferred Billing CC Total (7 days)]()
-[Deferred CC Billing Total - Current Month]()
-[Deferred CC Billing Total - Previous Month]()
-[CC Agents with Credit Balance]()
-[Total # of Agents]()
-[Total Amount of Credits]()
+[Agents to be made Inactive](#class-inventorysummary)
+[Agencies to be made Inactive](#class-inventorysummary)
+[Posts in the Field](#class-inventorysummary)
+[Total Operational Posts (Installed + Pending + Scheduled + Available)](#class-inventorysummary)
+[Pending/Scheduled Removals](#class-inventorysummary)
+[New/Active Agencies](#class-inventorysummary)
+[MONEY STATISTICS](#class-moneystatistics)
 [Current Year]()
 [Today (placed)]()
 [# of Installs]()
@@ -862,11 +853,11 @@ Installer Information:
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTI1OTAzMzk4MCwtMTg4MTUxMTM3MCw1MT
-QyNDExMywyMDkzNDMxNzk0LC05NDI3MzQ3OSwtOTA3NTkwMTU2
-LDIwMTA3OTcwNzAsLTczMDI1NTc5NSwyMDM0MzI2MDI5LC03Nj
-UzMzgyMzQsOTUyMDMxNzc2LDIwNDkxNjU1MjAsLTEwNzE2NTAy
-MjgsLTUxODUzOTY5MywxNjg3NTcyNzc2LC0xOTI1ODU0NjcxLD
-E0Nzk1OTI3MzksMzk1OTYxNTI4LC0xMjUxOTI0MTc4LDc1NjQ3
-NjA2NV19
+eyJoaXN0b3J5IjpbLTE4NjY0NDQ4MDYsLTE4ODE1MTEzNzAsNT
+E0MjQxMTMsMjA5MzQzMTc5NCwtOTQyNzM0NzksLTkwNzU5MDE1
+NiwyMDEwNzk3MDcwLC03MzAyNTU3OTUsMjAzNDMyNjAyOSwtNz
+Y1MzM4MjM0LDk1MjAzMTc3NiwyMDQ5MTY1NTIwLC0xMDcxNjUw
+MjI4LC01MTg1Mzk2OTMsMTY4NzU3Mjc3NiwtMTkyNTg1NDY3MS
+wxNDc5NTkyNzM5LDM5NTk2MTUyOCwtMTI1MTkyNDE3OCw3NTY0
+NzYwNjVdfQ==
 -->
