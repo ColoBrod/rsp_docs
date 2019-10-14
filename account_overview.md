@@ -10,7 +10,7 @@
 [Current Active Orders](#class-currentactiveorders)
 [Completed Orders](#class-completedorders)
 [Future Orders](#class-futureorders)
-[Agents to be made Inactive](#inventorysummary%58%58agentstobemadeinactive)
+[Agents to be made Inactive](#inventorysummary%25%25%24agentstobemadeinactive)
 [Agencies to be made Inactive](#inventorysummary-agenciestobemadeinactive)
 [Posts in the Field](#inventorysummary-postsinthefield)
 [Total Operational Posts (Installed + Pending + Scheduled + Available)]()
@@ -862,7 +862,7 @@ Installer Information:
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTc5MDc5NDYwOSwtMTg4MTUxMTM3MCw1MT
+eyJoaXN0b3J5IjpbMTI1OTAzMzk4MCwtMTg4MTUxMTM3MCw1MT
 QyNDExMywyMDkzNDMxNzk0LC05NDI3MzQ3OSwtOTA3NTkwMTU2
 LDIwMTA3OTcwNzAsLTczMDI1NTc5NSwyMDM0MzI2MDI5LC03Nj
 UzMzgyMzQsOTUyMDMxNzc2LDIwNDkxNjU1MjAsLTEwNzE2NTAy
