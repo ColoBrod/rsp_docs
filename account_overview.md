@@ -522,8 +522,15 @@ Increase by 1: total, pa
 ### InventorySummary::$postsInTheField->pa
 ### InventorySummary::$postsInTheField->total
 ### InventorySummary::$postsAvail
-:memo: 
+~~~php
+// For all this values:
+InventorySummary::$postsInTheField->md
+InventorySummary::$postsInTheField->pa
+InventorySummary::$postsInTheField->total
+InventorySummary::$postsAvail
 
+// check 
+~~~
 ### InventorySummary::$totalOperationalPosts
 ### InventorySummary::$removals->pending
 ### InventorySummary::$removals->scheduled
@@ -777,11 +784,11 @@ Installer Information:
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNDU5NzY4NDU4LC05NDI3MzQ3OSwtOTA3NT
-kwMTU2LDIwMTA3OTcwNzAsLTczMDI1NTc5NSwyMDM0MzI2MDI5
-LC03NjUzMzgyMzQsOTUyMDMxNzc2LDIwNDkxNjU1MjAsLTEwNz
-E2NTAyMjgsLTUxODUzOTY5MywxNjg3NTcyNzc2LC0xOTI1ODU0
-NjcxLDE0Nzk1OTI3MzksMzk1OTYxNTI4LC0xMjUxOTI0MTc4LD
-c1NjQ3NjA2NSwtMTQxNDg0Mjk4MywtMTUwMDg3NjQ3NywxMDYx
-OTA0OTE3XX0=
+eyJoaXN0b3J5IjpbLTQ3OTY3NjQ1NiwtOTQyNzM0NzksLTkwNz
+U5MDE1NiwyMDEwNzk3MDcwLC03MzAyNTU3OTUsMjAzNDMyNjAy
+OSwtNzY1MzM4MjM0LDk1MjAzMTc3NiwyMDQ5MTY1NTIwLC0xMD
+cxNjUwMjI4LC01MTg1Mzk2OTMsMTY4NzU3Mjc3NiwtMTkyNTg1
+NDY3MSwxNDc5NTkyNzM5LDM5NTk2MTUyOCwtMTI1MTkyNDE3OC
+w3NTY0NzYwNjUsLTE0MTQ4NDI5ODMsLTE1MDA4NzY0NzcsMTA2
+MTkwNDkxN119
 -->
