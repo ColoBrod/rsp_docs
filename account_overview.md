@@ -8,27 +8,10 @@
 [Post Total Change for Last Week](#class-posttotalchange)
 [Overdue Orders](#class-overdueorders)
 [Current Active Orders](#class-currentactiveorders)
-[Pending](#class-completedorders)
-[Installs]()
-[Removals]()
-[Service Calls]()
-[Total]()
-[Schedule]()
-[Installs]()
-[Removals]()
-[Service Calls]()
-[Total]()
-[Completed Orders]()
-[Completed Yesterday]()
-[Installs]()
-[Removals]()
-[Service Calls]()
-[Total]()
-[Completed Today]()
-[Installs]()
-[Removals]()
-[Service Calls]()
-[Total]()
+[Completed Orders](#class-completedorders)
+- [Completed Yesterday](#class-completedorders-completedyesterday)
+- [Completed Today](#class-completedorders-completedtoday)
+
 [Future Orders]()
 [Pending]()
 [Installs]()
@@ -895,7 +878,7 @@ Installer Information:
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjEzODcwNTEyNiw1MTQyNDExMywyMDkzND
+eyJoaXN0b3J5IjpbLTIwNjc3ODExNSw1MTQyNDExMywyMDkzND
 MxNzk0LC05NDI3MzQ3OSwtOTA3NTkwMTU2LDIwMTA3OTcwNzAs
 LTczMDI1NTc5NSwyMDM0MzI2MDI5LC03NjUzMzgyMzQsOTUyMD
 MxNzc2LDIwNDkxNjU1MjAsLTEwNzE2NTAyMjgsLTUxODUzOTY5
