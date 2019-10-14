@@ -1,15 +1,16 @@
 # Table of contents
 [Instructions for updating production site](#instructions-for-updating-production-site)
 [Issues](#class-issues)
-[Miss Utility](#class-MissUtility)
-[ORDERED TODAY]()
-[Installs]()
-[Removals]()
-[Service Calls]()
+[Miss Utility](#class-missutility)
+[ORDERED TODAY](#class-orderedtoday)
+- [Installs]()
+- [Removals]()
+- [Service Calls]()
+
 [RESCHEDULED TODAY]()
-[Removals ]()
-[Rescheduled]()
-[Pushed Back]()
+- [Removals ]()
+- [Rescheduled]()
+- [Pushed Back]()
 [Moved Up]()
 [Post Total Change for Yesterday:]()
 [Post Total Change for Last Week:]()
@@ -904,11 +905,11 @@ Installer Information:
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTc0Mzc5OTczOSw1MTQyNDExMywyMDkzND
-MxNzk0LC05NDI3MzQ3OSwtOTA3NTkwMTU2LDIwMTA3OTcwNzAs
-LTczMDI1NTc5NSwyMDM0MzI2MDI5LC03NjUzMzgyMzQsOTUyMD
-MxNzc2LDIwNDkxNjU1MjAsLTEwNzE2NTAyMjgsLTUxODUzOTY5
-MywxNjg3NTcyNzc2LC0xOTI1ODU0NjcxLDE0Nzk1OTI3MzksMz
-k1OTYxNTI4LC0xMjUxOTI0MTc4LDc1NjQ3NjA2NSwtMTQxNDg0
-Mjk4M119
+eyJoaXN0b3J5IjpbLTE5ODc4OTUxNjksNTE0MjQxMTMsMjA5Mz
+QzMTc5NCwtOTQyNzM0NzksLTkwNzU5MDE1NiwyMDEwNzk3MDcw
+LC03MzAyNTU3OTUsMjAzNDMyNjAyOSwtNzY1MzM4MjM0LDk1Mj
+AzMTc3NiwyMDQ5MTY1NTIwLC0xMDcxNjUwMjI4LC01MTg1Mzk2
+OTMsMTY4NzU3Mjc3NiwtMTkyNTg1NDY3MSwxNDc5NTkyNzM5LD
+M5NTk2MTUyOCwtMTI1MTkyNDE3OCw3NTY0NzYwNjUsLTE0MTQ4
+NDI5ODNdfQ==
 -->
