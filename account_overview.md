@@ -793,10 +793,10 @@ AND o.billing_method_id IN ('2', '3')
 ~~~
 #### PreviousYear::$$period->percentageOfCC
 #### PreviousYear::$$period->percentageOfIO
-
+We sum `PreviousYear::$$period->countOfIO` and `PreviousYear::$$period->countOfCC` in order to receive `$countOfAll`. Than we count percentage simply: self::$$varName->percentageOfIO
 ~~~php
 $countOfAll = self::$$varName->countOfCC+self::$$varName->countOfIO;
-self::$$varName->percentageOfCC = $countOfAll
+$countOfAll = $countOfAll
 	? number_format((self::$$varName->countOfCC * 100) / $countOfAll, 2)
 	: number_format(0, 2);
 self::$$varName->percentageOfIO = (self::$$varName->countOfIO == 0)
@@ -858,11 +858,11 @@ __% of Invoice Orders:__
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTcxMzIwNjUxMCwtMjA2NzYxOTUxNCwtMT
-M2NDE3NDgwMCwtNzk0OTI1NjQyLDYxMjEyNjQ1NCwtMTg4MTUx
-MTM3MCw1MTQyNDExMywyMDkzNDMxNzk0LC05NDI3MzQ3OSwtOT
-A3NTkwMTU2LDIwMTA3OTcwNzAsLTczMDI1NTc5NSwyMDM0MzI2
-MDI5LC03NjUzMzgyMzQsOTUyMDMxNzc2LDIwNDkxNjU1MjAsLT
-EwNzE2NTAyMjgsLTUxODUzOTY5MywxNjg3NTcyNzc2LC0xOTI1
-ODU0NjcxXX0=
+eyJoaXN0b3J5IjpbNzIyMTAyNzQ5LDE3MTMyMDY1MTAsLTIwNj
+c2MTk1MTQsLTEzNjQxNzQ4MDAsLTc5NDkyNTY0Miw2MTIxMjY0
+NTQsLTE4ODE1MTEzNzAsNTE0MjQxMTMsMjA5MzQzMTc5NCwtOT
+QyNzM0NzksLTkwNzU5MDE1NiwyMDEwNzk3MDcwLC03MzAyNTU3
+OTUsMjAzNDMyNjAyOSwtNzY1MzM4MjM0LDk1MjAzMTc3NiwyMD
+Q5MTY1NTIwLC0xMDcxNjUwMjI4LC01MTg1Mzk2OTMsMTY4NzU3
+Mjc3Nl19
 -->
