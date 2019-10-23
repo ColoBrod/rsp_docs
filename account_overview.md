@@ -754,12 +754,15 @@ __% of Invoice Orders:__
 
 # class PreviousYear
 
-### PreviousYear::$month
-#### PreviousYear::$month->numberOfInstalls
-#### PreviousYear::$month->valueOfOrders
-#### PreviousYear::$month->valuePerInstall
-#### PreviousYear::$month->countOfCC
-#### PreviousYear::$month->countOfIO
+:memo: Insted
+
+#### PreviousYear::$$period->numberOfInstalls
+#### PreviousYear::$$period->valueOfOrders
+#### PreviousYear::$$period->valuePerInstall
+#### PreviousYear::$$period->countOfCC
+#### PreviousYear::$$period->countOfIO
+#### PreviousYear::$$period->percentageOfCC
+#### PreviousYear::$$period->percentageOfIO
 
 ### Month:	
 __# of Installs:__
@@ -814,7 +817,7 @@ __% of Invoice Orders:__
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTgxMzI0NDU0MiwtMjA2NzYxOTUxNCwtMT
+eyJoaXN0b3J5IjpbMTczMDkyNDg1MywtMjA2NzYxOTUxNCwtMT
 M2NDE3NDgwMCwtNzk0OTI1NjQyLDYxMjEyNjQ1NCwtMTg4MTUx
 MTM3MCw1MTQyNDExMywyMDkzNDMxNzk0LC05NDI3MzQ3OSwtOT
 A3NTkwMTU2LDIwMTA3OTcwNzAsLTczMDI1NTc5NSwyMDM0MzI2
