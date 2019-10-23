@@ -762,6 +762,15 @@ __% of Invoice Orders:__
 | $ytd      | Previous year first date  | Previous year, this day |
 | $fullYear | Previous year first date  | Previous year, last date|
 
+~~~sql
+SELECT count(o.order_id) AS count, sum(order_total) AS value
+FROM ".TABLE_ORDERS." o
+WHERE
+	o.order_type_id = '1' AND
+	o.order_status_id = '3' AND
+	$timeCondition
+~~~
+
 #### PreviousYear::$$period->numberOfInstalls
 #### PreviousYear::$$period->valueOfOrders
 #### PreviousYear::$$period->valuePerInstall
@@ -769,7 +778,7 @@ __% of Invoice Orders:__
 #### PreviousYear::$$period->countOfIO
 #### PreviousYear::$$period->percentageOfCC
 #### PreviousYear::$$period->percentageOfIO
-asas
+
 ### Month:	
 __# of Installs:__
 __$ value of orders placed this month:__
@@ -823,7 +832,7 @@ __% of Invoice Orders:__
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTE4MDM3ODk5NCwtMjA2NzYxOTUxNCwtMT
+eyJoaXN0b3J5IjpbLTE3MTQyNDMzNiwtMjA2NzYxOTUxNCwtMT
 M2NDE3NDgwMCwtNzk0OTI1NjQyLDYxMjEyNjQ1NCwtMTg4MTUx
 MTM3MCw1MTQyNDExMywyMDkzNDMxNzk0LC05NDI3MzQ3OSwtOT
 A3NTkwMTU2LDIwMTA3OTcwNzAsLTczMDI1NTc5NSwyMDM0MzI2
