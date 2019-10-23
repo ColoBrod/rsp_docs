@@ -762,13 +762,14 @@ __% of Invoice Orders:__
 | $ytd      | Previous year first date  | Previous year, this day |
 | $fullYear | Previous year first date  | Previous year, last date|
 
+:memo: Following SQL counts orders where 
 ~~~sql
 SELECT count(o.order_id) AS count, sum(order_total) AS value
 FROM ".TABLE_ORDERS." o
 WHERE
 	o.order_type_id = '1' AND
 	o.order_status_id = '3' AND
-	o.date_added >= '' AND o.date_added < ''
+	o.date_added >= '$periodStart' AND o.date_added < '$periodEnd'
 ~~~
 #### PreviousYear::$$period->numberOfInstalls
 #### PreviousYear::$$period->valueOfOrders
@@ -831,11 +832,11 @@ __% of Invoice Orders:__
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNjA0NjU0NjM2LC0yMDY3NjE5NTE0LC0xMz
-Y0MTc0ODAwLC03OTQ5MjU2NDIsNjEyMTI2NDU0LC0xODgxNTEx
-MzcwLDUxNDI0MTEzLDIwOTM0MzE3OTQsLTk0MjczNDc5LC05MD
-c1OTAxNTYsMjAxMDc5NzA3MCwtNzMwMjU1Nzk1LDIwMzQzMjYw
-MjksLTc2NTMzODIzNCw5NTIwMzE3NzYsMjA0OTE2NTUyMCwtMT
-A3MTY1MDIyOCwtNTE4NTM5NjkzLDE2ODc1NzI3NzYsLTE5MjU4
-NTQ2NzFdfQ==
+eyJoaXN0b3J5IjpbLTIwMjA4ODgwMjAsLTIwNjc2MTk1MTQsLT
+EzNjQxNzQ4MDAsLTc5NDkyNTY0Miw2MTIxMjY0NTQsLTE4ODE1
+MTEzNzAsNTE0MjQxMTMsMjA5MzQzMTc5NCwtOTQyNzM0NzksLT
+kwNzU5MDE1NiwyMDEwNzk3MDcwLC03MzAyNTU3OTUsMjAzNDMy
+NjAyOSwtNzY1MzM4MjM0LDk1MjAzMTc3NiwyMDQ5MTY1NTIwLC
+0xMDcxNjUwMjI4LC01MTg1Mzk2OTMsMTY4NzU3Mjc3NiwtMTky
+NTg1NDY3MV19
 -->
