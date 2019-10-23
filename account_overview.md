@@ -182,7 +182,7 @@ SELECT count(order_id) AS count FROM ".TABLE_ORDERS." WHERE order_id > 109892
 ~~~
 :question: What does **bgdn** stand for? I saved original variable names (converted to camel case), but I don't understand this abbreviation.
 
-# class OrderedToday:
+# class OrderedToday
 All these values - `OrderedToday::$installs`,  `OrderedToday::$removals`, `OrderedToday::$serviceCalls` - are derived from pretty much the same SQL-query:
 ~~~sql
 SELECT count(o.order_id) AS count FROM ".TABLE_ORDERS." o
@@ -211,7 +211,8 @@ SELECT count(o.order_id) AS count FROM ".TABLE_ORDERS." o
 WHERE o.order_type_id = '2' AND o.date_added >= '".self::$today."'
 ~~~
 
-# class  RescheduledToday
+
+# class RescheduledToday
 :memo: First of all, we receive list of orders via following query:
 ~~~ sql
 SELECT
@@ -794,11 +795,11 @@ __% of Invoice Orders:__
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTc5NDkyNTY0Miw2MTIxMjY0NTQsLTE4OD
-E1MTEzNzAsNTE0MjQxMTMsMjA5MzQzMTc5NCwtOTQyNzM0Nzks
-LTkwNzU5MDE1NiwyMDEwNzk3MDcwLC03MzAyNTU3OTUsMjAzND
-MyNjAyOSwtNzY1MzM4MjM0LDk1MjAzMTc3NiwyMDQ5MTY1NTIw
-LC0xMDcxNjUwMjI4LC01MTg1Mzk2OTMsMTY4NzU3Mjc3NiwtMT
-kyNTg1NDY3MSwxNDc5NTkyNzM5LDM5NTk2MTUyOCwtMTI1MTky
-NDE3OF19
+eyJoaXN0b3J5IjpbLTEzNjQxNzQ4MDAsLTc5NDkyNTY0Miw2MT
+IxMjY0NTQsLTE4ODE1MTEzNzAsNTE0MjQxMTMsMjA5MzQzMTc5
+NCwtOTQyNzM0NzksLTkwNzU5MDE1NiwyMDEwNzk3MDcwLC03Mz
+AyNTU3OTUsMjAzNDMyNjAyOSwtNzY1MzM4MjM0LDk1MjAzMTc3
+NiwyMDQ5MTY1NTIwLC0xMDcxNjUwMjI4LC01MTg1Mzk2OTMsMT
+Y4NzU3Mjc3NiwtMTkyNTg1NDY3MSwxNDc5NTkyNzM5LDM5NTk2
+MTUyOF19
 -->
