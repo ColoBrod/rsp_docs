@@ -792,8 +792,18 @@ In order to count Invoice Orders, we add the following condition to SQL:
 AND o.billing_method_id IN ('2', '3')
 ~~~
 #### PreviousYear::$$period->percentageOfCC
-~~~sq
 #### PreviousYear::$$period->percentageOfIO
+
+~~~php
+$countOfAll = self::$$varName->countOfCC+self::$$varName->countOfIO;
+self::$$varName->percentageOfCC = $countOfAll
+	? number_format((self::$$varName->countOfCC * 100) / $countOfAll, 2)
+	: number_format(0, 2);
+self::$$varName->percentageOfIO = (self::$$varName->countOfIO == 0)
+	? number_format(0, 2)
+	: number_format(100 - self::$$varName->percentageOfCC, 2);
+~~~
+
 
 ### Month:	
 __# of Installs:__
@@ -848,7 +858,7 @@ __% of Invoice Orders:__
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTI1NjExMDk1NCwtMjA2NzYxOTUxNCwtMT
+eyJoaXN0b3J5IjpbMTcxMzIwNjUxMCwtMjA2NzYxOTUxNCwtMT
 M2NDE3NDgwMCwtNzk0OTI1NjQyLDYxMjEyNjQ1NCwtMTg4MTUx
 MTM3MCw1MTQyNDExMywyMDkzNDMxNzk0LC05NDI3MzQ3OSwtOT
 A3NTkwMTU2LDIwMTA3OTcwNzAsLTczMDI1NTc5NSwyMDM0MzI2
