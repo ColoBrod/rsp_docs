@@ -762,7 +762,7 @@ __% of Invoice Orders:__
 | $ytd      | Previous year first date  | Previous year, this day |
 | $fullYear | Previous year first date  | Previous year, last date|
 
-:memo: Following SQL counts orders where 
+:memo: Following SQL counts orders where `order_status_id = '3'` ()
 ~~~sql
 SELECT count(o.order_id) AS count, sum(order_total) AS value
 FROM ".TABLE_ORDERS." o
@@ -832,7 +832,7 @@ __% of Invoice Orders:__
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIwMjA4ODgwMjAsLTIwNjc2MTk1MTQsLT
+eyJoaXN0b3J5IjpbLTExODk5MDM4NzYsLTIwNjc2MTk1MTQsLT
 EzNjQxNzQ4MDAsLTc5NDkyNTY0Miw2MTIxMjY0NTQsLTE4ODE1
 MTEzNzAsNTE0MjQxMTMsMjA5MzQzMTc5NCwtOTQyNzM0NzksLT
 kwNzU5MDE1NiwyMDEwNzk3MDcwLC03MzAyNTU3OTUsMjAzNDMy
