@@ -768,9 +768,8 @@ FROM ".TABLE_ORDERS." o
 WHERE
 	o.order_type_id = '1' AND
 	o.order_status_id = '3' AND
-	$timeCondition
+	o.date_added >= '' AND o.date_added < ''
 ~~~
-
 #### PreviousYear::$$period->numberOfInstalls
 #### PreviousYear::$$period->valueOfOrders
 #### PreviousYear::$$period->valuePerInstall
@@ -832,11 +831,11 @@ __% of Invoice Orders:__
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE3MTQyNDMzNiwtMjA2NzYxOTUxNCwtMT
-M2NDE3NDgwMCwtNzk0OTI1NjQyLDYxMjEyNjQ1NCwtMTg4MTUx
-MTM3MCw1MTQyNDExMywyMDkzNDMxNzk0LC05NDI3MzQ3OSwtOT
-A3NTkwMTU2LDIwMTA3OTcwNzAsLTczMDI1NTc5NSwyMDM0MzI2
-MDI5LC03NjUzMzgyMzQsOTUyMDMxNzc2LDIwNDkxNjU1MjAsLT
-EwNzE2NTAyMjgsLTUxODUzOTY5MywxNjg3NTcyNzc2LC0xOTI1
-ODU0NjcxXX0=
+eyJoaXN0b3J5IjpbNjA0NjU0NjM2LC0yMDY3NjE5NTE0LC0xMz
+Y0MTc0ODAwLC03OTQ5MjU2NDIsNjEyMTI2NDU0LC0xODgxNTEx
+MzcwLDUxNDI0MTEzLDIwOTM0MzE3OTQsLTk0MjczNDc5LC05MD
+c1OTAxNTYsMjAxMDc5NzA3MCwtNzMwMjU1Nzk1LDIwMzQzMjYw
+MjksLTc2NTMzODIzNCw5NTIwMzE3NzYsMjA0OTE2NTUyMCwtMT
+A3MTY1MDIyOCwtNTE4NTM5NjkzLDE2ODc1NzI3NzYsLTE5MjU4
+NTQ2NzFdfQ==
 -->
