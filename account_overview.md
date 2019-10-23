@@ -754,7 +754,8 @@ __% of Invoice Orders:__
 
 # class PreviousYear
 
-:memo: Insted
+:memo: We use $month, $ytd or $fullYear instead of \$\$period.
+
 
 #### PreviousYear::$$period->numberOfInstalls
 #### PreviousYear::$$period->valueOfOrders
@@ -817,7 +818,7 @@ __% of Invoice Orders:__
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTczMDkyNDg1MywtMjA2NzYxOTUxNCwtMT
+eyJoaXN0b3J5IjpbMTc4MTU1MjMzOSwtMjA2NzYxOTUxNCwtMT
 M2NDE3NDgwMCwtNzk0OTI1NjQyLDYxMjEyNjQ1NCwtMTg4MTUx
 MTM3MCw1MTQyNDExMywyMDkzNDMxNzk0LC05NDI3MzQ3OSwtOT
 A3NTkwMTU2LDIwMTA3OTcwNzAsLTczMDI1NTc5NSwyMDM0MzI2
