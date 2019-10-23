@@ -758,9 +758,9 @@ __% of Invoice Orders:__
 
 | $$period | date_added >= | date_added < |
 |--|--|--|
-| $month    | Previous month first date | Previous month last date |
-| $ytd     | Previous year first date  | Previous year last date  |
-| $fullYear
+| $month    | Previous month first date | Previous month last date|
+| $ytd      | Previous year first date  | Previous year, this day |
+| $fullYear | Previous year first date  | Previous year, last date|
 
 #### PreviousYear::$$period->numberOfInstalls
 #### PreviousYear::$$period->valueOfOrders
@@ -769,7 +769,7 @@ __% of Invoice Orders:__
 #### PreviousYear::$$period->countOfIO
 #### PreviousYear::$$period->percentageOfCC
 #### PreviousYear::$$period->percentageOfIO
-
+asas
 ### Month:	
 __# of Installs:__
 __$ value of orders placed this month:__
@@ -823,11 +823,11 @@ __% of Invoice Orders:__
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEwMTA4ODYzMzgsLTIwNjc2MTk1MTQsLT
-EzNjQxNzQ4MDAsLTc5NDkyNTY0Miw2MTIxMjY0NTQsLTE4ODE1
-MTEzNzAsNTE0MjQxMTMsMjA5MzQzMTc5NCwtOTQyNzM0NzksLT
-kwNzU5MDE1NiwyMDEwNzk3MDcwLC03MzAyNTU3OTUsMjAzNDMy
-NjAyOSwtNzY1MzM4MjM0LDk1MjAzMTc3NiwyMDQ5MTY1NTIwLC
-0xMDcxNjUwMjI4LC01MTg1Mzk2OTMsMTY4NzU3Mjc3NiwtMTky
-NTg1NDY3MV19
+eyJoaXN0b3J5IjpbMTE4MDM3ODk5NCwtMjA2NzYxOTUxNCwtMT
+M2NDE3NDgwMCwtNzk0OTI1NjQyLDYxMjEyNjQ1NCwtMTg4MTUx
+MTM3MCw1MTQyNDExMywyMDkzNDMxNzk0LC05NDI3MzQ3OSwtOT
+A3NTkwMTU2LDIwMTA3OTcwNzAsLTczMDI1NTc5NSwyMDM0MzI2
+MDI5LC03NjUzMzgyMzQsOTUyMDMxNzc2LDIwNDkxNjU1MjAsLT
+EwNzE2NTAyMjgsLTUxODUzOTY5MywxNjg3NTcyNzc2LC0xOTI1
+ODU0NjcxXX0=
 -->
