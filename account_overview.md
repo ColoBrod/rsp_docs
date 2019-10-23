@@ -700,7 +700,20 @@ Following SQLs are pretty much the same as the one above but for CC (Credit Card
 
 _SQL example:_
 ~~~sql
-select count(o.order_id) as count, sum(order_total) as value from orders o, addresses a , order_types ot, orders_statuses os, users u where o.order_type_id = ot.order_type_id and o.user_id = u.user_id and o.order_status_id = os.order_status_id and o.order_status_id != '4' and o.order_status_id = '3' and o.address_id = a.address_id and o.order_type_id = '1' and o.billing_method_id = '1' and o.date_added > 0 and o.date_added >= '1567310400' and o.date_added < '1569556800'
+select count(o.order_id) as count, sum(order_total) as value 
+from orders o, addresses a , order_types ot, orders_statuses os, users u 
+where 
+	o.order_type_id = ot.order_type_id and 
+	o.user_id = u.user_id and 
+	o.order_status_id = os.order_status_id and 
+	o.order_status_id != '4' and 
+	o.order_status_id = '3' and 
+	o.address_id = a.address_id and 
+	o.order_type_id = '1' and 
+	o.billing_method_id = '1' and 
+	o.date_added > 0 and 
+	o.date_added >= '1567310400' and 
+	o.date_added < '1569556800'
 ~~~
 
 _Variables:_
@@ -740,6 +753,9 @@ __% of CC Orders:__
 __% of Invoice Orders:__
 
 # class PreviousYear
+
+
+
 
 ### Month:	
 __# of Installs:__
@@ -794,11 +810,11 @@ __% of Invoice Orders:__
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIwNjc2MTk1MTQsLTEzNjQxNzQ4MDAsLT
-c5NDkyNTY0Miw2MTIxMjY0NTQsLTE4ODE1MTEzNzAsNTE0MjQx
-MTMsMjA5MzQzMTc5NCwtOTQyNzM0NzksLTkwNzU5MDE1NiwyMD
-EwNzk3MDcwLC03MzAyNTU3OTUsMjAzNDMyNjAyOSwtNzY1MzM4
-MjM0LDk1MjAzMTc3NiwyMDQ5MTY1NTIwLC0xMDcxNjUwMjI4LC
-01MTg1Mzk2OTMsMTY4NzU3Mjc3NiwtMTkyNTg1NDY3MSwxNDc5
-NTkyNzM5XX0=
+eyJoaXN0b3J5IjpbLTY5Mzk5NDU5MCwtMjA2NzYxOTUxNCwtMT
+M2NDE3NDgwMCwtNzk0OTI1NjQyLDYxMjEyNjQ1NCwtMTg4MTUx
+MTM3MCw1MTQyNDExMywyMDkzNDMxNzk0LC05NDI3MzQ3OSwtOT
+A3NTkwMTU2LDIwMTA3OTcwNzAsLTczMDI1NTc5NSwyMDM0MzI2
+MDI5LC03NjUzMzgyMzQsOTUyMDMxNzc2LDIwNDkxNjU1MjAsLT
+EwNzE2NTAyMjgsLTUxODUzOTY5MywxNjg3NTcyNzc2LC0xOTI1
+ODU0NjcxXX0=
 -->
