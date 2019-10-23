@@ -773,7 +773,13 @@ WHERE
 	o.date_added >= '$periodStart' AND o.date_added < '$periodEnd'
 ~~~
 #### PreviousYear::$$period->valueOfOrders
+:memo: It's the `sum` of previous SQL-query
 #### PreviousYear::$$period->valuePerInstall
+~~~php
+self::$$varName->valuePerInstall = (self::$$varName->numberOfInstalls > 0)
+	? number_format(self::$$varName->valueOfOrders/self::$$varName->numberOfInstalls, 2)
+: number_format(0, 2);
+~~~
 #### PreviousYear::$$period->countOfCC
 #### PreviousYear::$$period->countOfIO
 #### PreviousYear::$$period->percentageOfCC
@@ -832,11 +838,11 @@ __% of Invoice Orders:__
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjE5MTgwMDEyLC0yMDY3NjE5NTE0LC0xMz
-Y0MTc0ODAwLC03OTQ5MjU2NDIsNjEyMTI2NDU0LC0xODgxNTEx
-MzcwLDUxNDI0MTEzLDIwOTM0MzE3OTQsLTk0MjczNDc5LC05MD
-c1OTAxNTYsMjAxMDc5NzA3MCwtNzMwMjU1Nzk1LDIwMzQzMjYw
-MjksLTc2NTMzODIzNCw5NTIwMzE3NzYsMjA0OTE2NTUyMCwtMT
-A3MTY1MDIyOCwtNTE4NTM5NjkzLDE2ODc1NzI3NzYsLTE5MjU4
-NTQ2NzFdfQ==
+eyJoaXN0b3J5IjpbLTIwMjg4MTUzNTUsLTIwNjc2MTk1MTQsLT
+EzNjQxNzQ4MDAsLTc5NDkyNTY0Miw2MTIxMjY0NTQsLTE4ODE1
+MTEzNzAsNTE0MjQxMTMsMjA5MzQzMTc5NCwtOTQyNzM0NzksLT
+kwNzU5MDE1NiwyMDEwNzk3MDcwLC03MzAyNTU3OTUsMjAzNDMy
+NjAyOSwtNzY1MzM4MjM0LDk1MjAzMTc3NiwyMDQ5MTY1NTIwLC
+0xMDcxNjUwMjI4LC01MTg1Mzk2OTMsMTY4NzU3Mjc3NiwtMTky
+NTg1NDY3MV19
 -->
