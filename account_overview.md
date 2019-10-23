@@ -793,7 +793,7 @@ AND o.billing_method_id IN ('2', '3')
 ~~~
 #### PreviousYear::$$period->percentageOfCC
 #### PreviousYear::$$period->percentageOfIO
-We sum `PreviousYear::$$period->countOfIO` and `PreviousYear::$$period->countOfCC` in order to receive `$countOfAll`. Than we count percentage simply `($countOfIO / $countOfAll) * 100`:
+We sum `PreviousYear::$$period->countOfIO` and `PreviousYear::$$period->countOfCC` in order to receive `$countOfAll`. Than we count percentage simply like `($countOfIO / $countOfAll) * 100`:
 ~~~php
 $countOfAll = self::$$varName->countOfCC+self::$$varName->countOfIO;
 $countOfAll = $countOfAll
@@ -803,29 +803,6 @@ self::$$varName->percentageOfIO = (self::$$varName->countOfIO == 0)
 	? number_format(0, 2)
 	: number_format(100 - self::$$varName->percentageOfCC, 2);
 ~~~
-
-
-### Month:	
-__# of Installs:__
-__$ value of orders placed this month:__
-__$ value / # of installs:__
-__% of CC Orders__
-__% of Invoice Orders:__
-
-### YTD:	
-__# of Installs:__
-__$ value of orders placed from Jan 1:__
-__$ value / # of installs:__
-__% of CC Orders:__
-__% of Invoice Orders:__
-
-### Full Year:	
-__# of Installs:__
-__$ value of orders placed from Jan 1:__
-__$ value / # of installs:__
-__% of CC Orders:__
-__% of Invoice Orders:__
-
 
 
 
@@ -858,11 +835,11 @@ __% of Invoice Orders:__
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTg3ODM0NTEzNSwxNzEzMjA2NTEwLC0yMD
-Y3NjE5NTE0LC0xMzY0MTc0ODAwLC03OTQ5MjU2NDIsNjEyMTI2
-NDU0LC0xODgxNTExMzcwLDUxNDI0MTEzLDIwOTM0MzE3OTQsLT
-k0MjczNDc5LC05MDc1OTAxNTYsMjAxMDc5NzA3MCwtNzMwMjU1
-Nzk1LDIwMzQzMjYwMjksLTc2NTMzODIzNCw5NTIwMzE3NzYsMj
-A0OTE2NTUyMCwtMTA3MTY1MDIyOCwtNTE4NTM5NjkzLDE2ODc1
-NzI3NzZdfQ==
+eyJoaXN0b3J5IjpbLTExMzE1MzA2NDMsMTcxMzIwNjUxMCwtMj
+A2NzYxOTUxNCwtMTM2NDE3NDgwMCwtNzk0OTI1NjQyLDYxMjEy
+NjQ1NCwtMTg4MTUxMTM3MCw1MTQyNDExMywyMDkzNDMxNzk0LC
+05NDI3MzQ3OSwtOTA3NTkwMTU2LDIwMTA3OTcwNzAsLTczMDI1
+NTc5NSwyMDM0MzI2MDI5LC03NjUzMzgyMzQsOTUyMDMxNzc2LD
+IwNDkxNjU1MjAsLTEwNzE2NTAyMjgsLTUxODUzOTY5MywxNjg3
+NTcyNzc2XX0=
 -->
