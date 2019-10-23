@@ -782,10 +782,17 @@ self::$$varName->valuePerInstall = (self::$$varName->numberOfInstalls > 0)
 	: number_format(0, 2);
 ~~~
 #### PreviousYear::$$period->countOfCC
-T
-
+In order to count Credit cards orders, we add the following condition to SQL:
+~~~sql
+AND o.billing_method_id = '1'
+~~~
 #### PreviousYear::$$period->countOfIO
+In order to count Invoice Orders, we add the following condition to SQL:
+~~~sql
+AND o.billing_method_id IN ('2', '3')
+~~~
 #### PreviousYear::$$period->percentageOfCC
+~~~sq
 #### PreviousYear::$$period->percentageOfIO
 
 ### Month:	
@@ -841,7 +848,7 @@ __% of Invoice Orders:__
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTIwMjMyMzYyMiwtMjA2NzYxOTUxNCwtMT
+eyJoaXN0b3J5IjpbLTI1NjExMDk1NCwtMjA2NzYxOTUxNCwtMT
 M2NDE3NDgwMCwtNzk0OTI1NjQyLDYxMjEyNjQ1NCwtMTg4MTUx
 MTM3MCw1MTQyNDExMywyMDkzNDMxNzk0LC05NDI3MzQ3OSwtOT
 A3NTkwMTU2LDIwMTA3OTcwNzAsLTczMDI1NTc5NSwyMDM0MzI2
