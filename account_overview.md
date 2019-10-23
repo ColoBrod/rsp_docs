@@ -564,6 +564,9 @@ InventorySummary::$postsAvail
 #### MoneyStatistics::$$period->totalPaid
 #### MoneyStatistics::$$period->percentUnpaid
 
+#### MoneyStatistics::$ccAgentsWithCreditBalance->totalNumberOfAgents
+#### MoneyStatistics::$ccAgentsWithCreditBalance->totalAmountOfCredits
+
 # class CurrentYear
 
 :exclamation: There was an error because of a typo (coder used function `time` instead of function `mktime`). Previously it took in account orders with `order_added` or `order_completed` less than current moment (not less than tomorrow).
@@ -838,11 +841,11 @@ self::$$varName->percentageOfIO = (self::$$varName->countOfIO == 0)
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbODA3MjQ5MzE2LC0xMTMxNTMwNjQzLDE3MT
-MyMDY1MTAsLTIwNjc2MTk1MTQsLTEzNjQxNzQ4MDAsLTc5NDky
-NTY0Miw2MTIxMjY0NTQsLTE4ODE1MTEzNzAsNTE0MjQxMTMsMj
-A5MzQzMTc5NCwtOTQyNzM0NzksLTkwNzU5MDE1NiwyMDEwNzk3
-MDcwLC03MzAyNTU3OTUsMjAzNDMyNjAyOSwtNzY1MzM4MjM0LD
-k1MjAzMTc3NiwyMDQ5MTY1NTIwLC0xMDcxNjUwMjI4LC01MTg1
-Mzk2OTNdfQ==
+eyJoaXN0b3J5IjpbLTE3OTg0MDAyOSwtMTEzMTUzMDY0MywxNz
+EzMjA2NTEwLC0yMDY3NjE5NTE0LC0xMzY0MTc0ODAwLC03OTQ5
+MjU2NDIsNjEyMTI2NDU0LC0xODgxNTExMzcwLDUxNDI0MTEzLD
+IwOTM0MzE3OTQsLTk0MjczNDc5LC05MDc1OTAxNTYsMjAxMDc5
+NzA3MCwtNzMwMjU1Nzk1LDIwMzQzMjYwMjksLTc2NTMzODIzNC
+w5NTIwMzE3NzYsMjA0OTE2NTUyMCwtMTA3MTY1MDIyOCwtNTE4
+NTM5NjkzXX0=
 -->
