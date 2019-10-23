@@ -560,6 +560,9 @@ InventorySummary::$postsAvail
 
 # class MoneyStatistics
 
+#### MoneyStatistics::$$period->totalBilled
+#### MoneyStatistics::$$period->totalPaid
+#### MoneyStatistics::$$period->percentUnpaid
 
 # class CurrentYear
 
@@ -835,11 +838,11 @@ self::$$varName->percentageOfIO = (self::$$varName->countOfIO == 0)
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTExMzE1MzA2NDMsMTcxMzIwNjUxMCwtMj
-A2NzYxOTUxNCwtMTM2NDE3NDgwMCwtNzk0OTI1NjQyLDYxMjEy
-NjQ1NCwtMTg4MTUxMTM3MCw1MTQyNDExMywyMDkzNDMxNzk0LC
-05NDI3MzQ3OSwtOTA3NTkwMTU2LDIwMTA3OTcwNzAsLTczMDI1
-NTc5NSwyMDM0MzI2MDI5LC03NjUzMzgyMzQsOTUyMDMxNzc2LD
-IwNDkxNjU1MjAsLTEwNzE2NTAyMjgsLTUxODUzOTY5MywxNjg3
-NTcyNzc2XX0=
+eyJoaXN0b3J5IjpbODA3MjQ5MzE2LC0xMTMxNTMwNjQzLDE3MT
+MyMDY1MTAsLTIwNjc2MTk1MTQsLTEzNjQxNzQ4MDAsLTc5NDky
+NTY0Miw2MTIxMjY0NTQsLTE4ODE1MTEzNzAsNTE0MjQxMTMsMj
+A5MzQzMTc5NCwtOTQyNzM0NzksLTkwNzU5MDE1NiwyMDEwNzk3
+MDcwLC03MzAyNTU3OTUsMjAzNDMyNjAyOSwtNzY1MzM4MjM0LD
+k1MjAzMTc3NiwyMDQ5MTY1NTIwLC0xMDcxNjUwMjI4LC01MTg1
+Mzk2OTNdfQ==
 -->
