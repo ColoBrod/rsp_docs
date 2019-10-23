@@ -561,6 +561,7 @@ InventorySummary::$postsAvail
 # class MoneyStatistics
 
 #### MoneyStatistics::$$period->totalBilled
+
 #### MoneyStatistics::$$period->totalPaid
 #### MoneyStatistics::$$period->percentUnpaid
 
@@ -841,7 +842,7 @@ self::$$varName->percentageOfIO = (self::$$varName->countOfIO == 0)
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE3OTg0MDAyOSwtMTEzMTUzMDY0MywxNz
+eyJoaXN0b3J5IjpbLTY5MTQyMTUxNSwtMTEzMTUzMDY0MywxNz
 EzMjA2NTEwLC0yMDY3NjE5NTE0LC0xMzY0MTc0ODAwLC03OTQ5
 MjU2NDIsNjEyMTI2NDU0LC0xODgxNTExMzcwLDUxNDI0MTEzLD
 IwOTM0MzE3OTQsLTk0MjczNDc5LC05MDc1OTAxNTYsMjAxMDc5
