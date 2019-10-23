@@ -756,10 +756,7 @@ __% of Invoice Orders:__
 
 :memo: We use $month, $ytd or $fullYear instead of \$\$period.
 
-| Content           | Content 2               |
-|------------------|--------------------------|
-| asdf             | qwer                     |
-| asdf             | asdf
+| $$period                | date_added >=       | date
 
 #### PreviousYear::$$period->numberOfInstalls
 #### PreviousYear::$$period->valueOfOrders
@@ -822,11 +819,11 @@ __% of Invoice Orders:__
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTk2NjI5MjQ3NiwtMjA2NzYxOTUxNCwtMT
-M2NDE3NDgwMCwtNzk0OTI1NjQyLDYxMjEyNjQ1NCwtMTg4MTUx
-MTM3MCw1MTQyNDExMywyMDkzNDMxNzk0LC05NDI3MzQ3OSwtOT
-A3NTkwMTU2LDIwMTA3OTcwNzAsLTczMDI1NTc5NSwyMDM0MzI2
-MDI5LC03NjUzMzgyMzQsOTUyMDMxNzc2LDIwNDkxNjU1MjAsLT
-EwNzE2NTAyMjgsLTUxODUzOTY5MywxNjg3NTcyNzc2LC0xOTI1
-ODU0NjcxXX0=
+eyJoaXN0b3J5IjpbLTIwMzg4NDU5MzYsLTIwNjc2MTk1MTQsLT
+EzNjQxNzQ4MDAsLTc5NDkyNTY0Miw2MTIxMjY0NTQsLTE4ODE1
+MTEzNzAsNTE0MjQxMTMsMjA5MzQzMTc5NCwtOTQyNzM0NzksLT
+kwNzU5MDE1NiwyMDEwNzk3MDcwLC03MzAyNTU3OTUsMjAzNDMy
+NjAyOSwtNzY1MzM4MjM0LDk1MjAzMTc3NiwyMDQ5MTY1NTIwLC
+0xMDcxNjUwMjI4LC01MTg1Mzk2OTMsMTY4NzU3Mjc3NiwtMTky
+NTg1NDY3MV19
 -->
