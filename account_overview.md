@@ -68,7 +68,11 @@ Set `$live` variable to true at following files:
 8. 
 ### .htaccess
 1. Remove this line:
-`SetEnv SERVER_MODE TEST`
+~~~
+SetEnv SERVER_MODE TEST
+php_flag display_startup_errors on
+php_flag display_errors on
+~~~
 2. Uncomment these 2 lines:
 ~~~.htaccess
 # RewriteCond %{HTTPS} off
