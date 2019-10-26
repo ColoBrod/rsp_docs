@@ -69,6 +69,11 @@ Set `$live` variable to true at following files:
 ### .htaccess
 1. Remove this line:
 `SetEnv SERVER_MODE TEST`
+2. Uncomment these 2 lines:
+~~~.htaccess
+# RewriteCond %{HTTPS} off
+# RewriteRule (.*) https://%{HTTP_HOST}%{REQUEST_URI} [R,L]
+~~~
 ### .htpasswd
 Remove this file  
   
